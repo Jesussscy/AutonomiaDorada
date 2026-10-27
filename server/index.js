@@ -43,7 +43,7 @@ app.use(
   }),
 );
 app.use(express.json({ limit: "32kb" }));
-app.get("/api/health", (_req, res) => res.json({ ok: true, name: "Prueba 1" }));
+app.get("/api/health", (_req, res) => res.json({ ok: true, name: "Autonomía Dorada" }));
 
 app.get("/api/catalog", (_req, res) => res.json(readCatalog(db)));
 
@@ -71,5 +71,5 @@ if (fs.existsSync(path.join(webBuild, "index.html"))) {
 const port = Number(process.env.PORT || 3001);
 const host = process.env.HOST || "127.0.0.1";
 app.listen(port, host, () =>
-  console.log(`API de Prueba 1 disponible en http://localhost:${port}`),
+  console.log(`API de Autonomía Dorada disponible en http://localhost:${port}`),
 );

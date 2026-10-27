@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Mejorar Prueba 1 de manera continua hasta que la experiencia se sienta profesional, clara, confiable, accesible y sencilla en escritorio y teléfono. La entrada debe responder primero a “¿Qué quieres hacer hoy?” y ayudar a personas adultas a orientarse en tareas digitales cotidianas sin exigir conocimientos técnicos ni llenar la pantalla de texto.
+Mejorar Autonomía Dorada de manera continua hasta que la experiencia se sienta profesional, clara, confiable, accesible y sencilla en escritorio y teléfono. La entrada debe responder primero a “¿Qué quieres hacer hoy?” y acompañar la autonomía de las personas mayores con orientación accesible, inicialmente en salud y bienestar.
 
 ## Experiencia que queremos construir
 

@@ -1,14 +1,14 @@
-# Prueba 1
+# Autonomía Dorada
 
-Aplicación web local, móvil primero, para encontrar guías sencillas de tareas digitales cotidianas. El nombre **Prueba 1** es provisional y puede cambiarse en `src/main.jsx` y `index.html`.
+Aplicación web móvil primero para que las personas mayores encuentren orientación clara y accesible, conserven el control de sus decisiones y realicen tareas cotidianas con mayor autonomía. Su lema es: **Más que asistencia, es tu autonomía.** Esta versión prioriza guías de salud y apoyo emocional en Colombia.
 
 ## Abrir la aplicación local
 
-En Windows, haz doble clic en **Iniciar-Prueba1.bat**. El lanzador prepara el catálogo y la compilación, inicia el servidor local y abre automáticamente:
+En Windows, haz doble clic en **Iniciar-Autonomia-Dorada.bat**. El lanzador prepara el catálogo y la compilación, inicia el servidor local y abre automáticamente:
 
 **http://localhost:3001**
 
-El servidor se ejecuta en tu computador. Para cerrarlo, haz doble clic en **Detener-Prueba1.bat**. Si algo falla, el registro se guarda en `logs/prueba1-local.log`.
+El servidor se ejecuta en tu computador. Para cerrarlo, haz doble clic en **Detener-Autonomia-Dorada.bat**. Si algo falla, el registro se guarda en `logs/autonomia-dorada-local.log`.
 
 El lanzador de Windows escucha solo en `127.0.0.1`, para que otros dispositivos de la red no puedan conectarse. El puerto se puede configurar con `PORT` en `.env`. Al ejecutar el servidor manualmente, también se leen `HOST` y `PORT` desde ese archivo; conserva `HOST=127.0.0.1` si quieres mantenerlo solo en este computador.
 
@@ -39,21 +39,23 @@ Vite abre `http://localhost:5173` y envía las peticiones de `/api` al puerto `P
 
 El catálogo inicial está en `server/seed.js` y su estructura en `server/schema.sql`. Ejecuta `npm run seed` para instalar o refrescar el catálogo. Las tablas relacionan entidades, guías, pasos, ilustraciones, enlaces y fuentes con fecha y resultado de revisión. La interfaz actual dibuja esquemas demostrativos por paso en `GuideArtwork` dentro de `src/main.jsx`; los SVG heredados de `public/illustrations/` son recursos de referencia y no se presentan como capturas oficiales. Cuando se entreguen capturas autorizadas, se podrán guardar ordenadamente en `public/guides/<id-de-guia>/` y relacionar mediante `steps.image_path` y `steps.image_alt`.
 
-El **28 de octubre de 2026** se revisaron las guías de Nequi y Bancolombia, la consulta del RUNT y los canales oficiales de Afinia, BBVA, Banco de Bogotá, Davivienda, MOVii, dale!, Movistar y Tiendas ara. Cada fuente guarda título, URL, fecha y alcance. Tener un enlace oficial no significa que el paso a paso esté verificado.
+El catálogo incluye **161 temas**: salud mental (20), bienestar físico (20), salud (21) y 20 posibles guías para cada una de estas áreas: bancos, billeteras, servicios públicos, trámites y comercios. La portada presenta dos recomendaciones por cada área y los filtros permiten cambiar de categoría. Los 87 nuevos temas de vida diaria se marcan **En revisión**: son propuestas de trabajo y no se muestran como pasos confirmados. Cada ficha enlaza una fuente o canal oficial para orientar la verificación.
 
-Solo hay pasos revisados para cuatro tareas: enviar a otro Nequi, pagar servicios públicos desde Nequi (si la empresa aparece en el catálogo actual), transferir entre cuentas Bancolombia y consultar el SOAT en el RUNT. Comprar el SOAT, el flujo de Afinia y las tareas de BBVA, Banco de Bogotá, Davivienda, MOVii, dale!, Movistar/Tigo y Tiendas ara siguen pendientes; todavía no muestran instrucciones de operación. La tarea de compra del SOAT enlaza recomendaciones de la Superintendencia Financiera y consultas oficiales para revisar aseguradoras e intermediarios autorizados, pero no propone un vendedor. El sitio de Movistar informa que sus servicios continúan en transición a Tigo; su portal permite consultar facturas, pero la app no guía la transacción. El enlace de Banco de Bogotá fue publicado en su propio portal de transparencia, aunque el destino devolvió 403 a la consulta automatizada. Los materiales oficiales de Tiendas ara no permitieron confirmar los medios de pago de una tienda.
+Las rutas explican cómo consultar afiliación, pedir citas médicas y de psicología, preguntar por cobertura, hacer seguimiento y presentar una queja. Cada EPS define sus canales y confirma disponibilidad; el catálogo no recomienda una IPS ni una clínica. ADRES muestra los datos reportados a la BDUA, pero los certificados los expide la EPS. La Línea 106 ofrece orientación inicial y no reemplaza la atención de urgencia ni una consulta clínica.
+
+Las guías de bienestar físico incluyen vacunación, prevención, salud bucal, actividad física para personas mayores y orientación sobre urgencias. Los pasos no diagnostican ni individualizan tratamientos. La guía de novedades de afiliación permanece en revisión porque Mi Seguridad Social puede requerir autenticación y los trámites disponibles dependen de cada caso. Las tareas digitales anteriores sobre pagos y SOAT siguen en el catálogo y conservan su estado.
 
 Los pasos del RUNT son una orientación de entrada al servicio; la consulta oficial vigente solicita placa, tipo de documento y número de documento de la persona propietaria. Esos datos se ingresan directamente en el dominio oficial, nunca en esta aplicación. La revisión es puntual y no implica monitoreo automático futuro. Antes de actualizar una guía se debe volver a abrir su fuente y registrar el resultado.
 
 ## Identidad visual y narración
 
-La interfaz combina azul pastel con fondos marfil y acentos amarillos suaves. El color ayuda a ordenar controles y estados sin depender solo de la percepción cromática; el estado y las acciones también se expresan con palabras e iconos. La animación es breve y acompaña la entrada de las tarjetas y el uso de controles. Se respeta la preferencia del dispositivo por movimiento reducido.
+La identidad combina superficies marfil, tinta verde petróleo y señales doradas, con el símbolo vectorial propio. El catálogo se presenta como índice de tareas y las guías como un recorrido con progreso visible. Atkinson Hyperlegible Next para lectura y Newsreader para encabezados se sirven localmente desde `public/fonts/`; cada familia incluye su licencia OFL. El movimiento de entrada es breve y se desactiva cuando el dispositivo solicita movimiento reducido.
 
-El botón **Leer al pasar** (**Leer al tocar** en teléfono) activa de forma voluntaria la narración en español de Colombia. Con mouse, lee el bloque de texto donde está el puntero; en teléfono o tableta, se puede tocar un párrafo, encabezado o elemento de lista. Al activar el modo aparece también un botón **Escuchar** en cada tarjeta para oír su tarea sin abrir la guía. La voz se apaga por defecto, puede desactivarse desde el mismo botón y usa las voces del navegador. Si el dispositivo no ofrece síntesis de voz, la interfaz lo indica. Consulta [la procedencia y las limitaciones de los logotipos](public/brands/README.md).
+El botón **Leer al pasar** (**Leer al tocar** en teléfono) activa de forma voluntaria la narración. En un celular, también se puede iniciar cada instrucción con **Escuchar**. En **Configuración**, A− disminuye el tamaño de la letra, A+ lo aumenta y **Normal** restablece el tamaño; desde allí se elige una voz de mujer o de hombre cuando el teléfono las ofrece y las identifica. Si no, aparecen los nombres de las voces disponibles. La preferencia se guarda en el dispositivo. La disponibilidad de narración depende del navegador; el texto permanece visible.
 
 ## Mejora continua
 
-El objetivo del proyecto es seguir mejorando de forma iterativa la claridad, la seguridad y la experiencia de principio a fin. Cada revisión debe recorrer la ruta principal desde “¿Qué quieres hacer hoy?” hasta los pasos y el regreso, además de revisar búsqueda, filtros, estados pendientes, accesibilidad, narración, navegación táctil y escritorio. Se deben corregir fricciones observables, mantener el texto corto, reducir errores y hacer que las acciones importantes sean fáciles de encontrar para personas adultas con distintos niveles de experiencia digital.
+El objetivo del proyecto es seguir mejorando de forma iterativa la claridad, la seguridad y la experiencia de principio a fin. Cada revisión debe recorrer la ruta principal desde “¿Qué quieres hacer hoy?” hasta los pasos y el regreso, además de revisar búsqueda, filtros, estados pendientes, accesibilidad, narración, navegación táctil y escritorio. Se deben corregir fricciones observables, mantener el texto corto, reducir errores y hacer que las acciones importantes sean fáciles de encontrar para personas mayores con distintos niveles de experiencia digital.
 
 Antes de ampliar el catálogo, revisar las fuentes oficiales actuales y dejar visibles la fecha, el alcance y las limitaciones; una fuente enlazada no equivale a pasos comprobados. Incorporar mejoras visuales con animaciones moderadas y funcionales, marcas reconocibles con procedencia clara, y estados vacíos, de carga, de recuperación y de error que orienten sin saturar. Mantener los datos personales y el progreso en el dispositivo, no introducir acciones financieras ni formularios de credenciales, y no presentar ilustraciones de muestra como capturas reales.
 
@@ -124,7 +126,7 @@ La sugerencia **Puedes continuar** se puede cerrar. Si la persona avanza a otro 
 La sugerencia no ocupa espacio durante una búsqueda ni al ver solo favoritas. El avance permanece guardado y la tarjeta vuelve al inicio cuando se despeja la búsqueda.
 Al buscar entre todas las guías, la sección de favoritas también se aparta para dejar los resultados a la vista; las guías guardadas regresan al limpiar la búsqueda.
 
-El botón **Ayuda** abre un panel con instrucciones breves, acceso al catálogo y una línea ficticia (`1 2 3 4 5`) mostrada exclusivamente como ejemplo visual. No es un número de atención y la aplicación no intenta llamarlo. La cabecera y el pie incluyen accesos a las guías, inicio y ayuda. Las tarjetas usan marcas obtenidas de los sitios de las entidades cuando se pudo confirmar el recurso; SOAT lleva un distintivo propio porque no es una entidad.
+El botón **Ayuda** abre un panel con instrucciones breves, acceso al catálogo y el enlace telefónico a la Línea Nacional de Salud Mental 106, publicado por el Ministerio de Salud. La cabecera y el pie incluyen accesos a las guías, inicio y ayuda. Las tarjetas usan marcas obtenidas de los sitios de las entidades cuando se pudo confirmar el recurso; SOAT lleva un distintivo propio porque no es una entidad.
 
 En teléfono, **Ayuda** mantiene su nombre visible junto al icono. La narración opcional se aplica al contenido y evita leer los propios controles de cabecera o pie cuando se pasa el cursor por ellos.
 

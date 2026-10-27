@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowLeft,
@@ -24,12 +24,19 @@ import {
   CarFront,
   ShoppingBasket,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
   LoaderCircle,
   RefreshCw,
   Bookmark,
   X,
   BadgeCheck,
   Phone,
+  HeartPulse,
+  Brain,
+  Settings2,
+  Accessibility,
+  Stethoscope,
 } from "lucide-react";
 import "./styles.css";
 
@@ -68,6 +75,9 @@ const initialParams = new URLSearchParams(window.location.search);
 const initialSearch = initialParams.get("q") || "";
 const categoryNames = [
   "Todas",
+  "Salud mental",
+  "Bienestar físico",
+  "Salud",
   "Bancos",
   "Billeteras",
   "Servicios",
@@ -76,6 +86,9 @@ const categoryNames = [
 ];
 const categoryIcon = {
   Todas: BookOpenCheck,
+  "Salud mental": Brain,
+  "Bienestar físico": Accessibility,
+  Salud: Stethoscope,
   Bancos: Landmark,
   Billeteras: WalletCards,
   Servicios: Zap,
@@ -84,12 +97,18 @@ const categoryIcon = {
 };
 const categoryFor = (guide) =>
   ({
+    "Salud mental": "Salud mental",
+    "Bienestar físico": "Bienestar físico",
+    Salud: "Salud",
+    "Rutas de salud": "Salud",
     Bancos: "Bancos",
     Billeteras: "Billeteras",
     "Servicios públicos": "Servicios",
     "Trámites y seguros": "Trámites",
     Comercios: "Comercios",
   })[guide.entity_category] || "Bancos";
+const categoryForGuide = (guide) => guide.category_group || categoryFor(guide);
+const categorySlug = (value) => value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const readLocalNumber = (key, fallback, min, max) => {
   try {
     const stored = localStorage.getItem(key);
@@ -132,7 +151,7 @@ const removeLocal = (key) => {
   }
 };
 const readProgress = (id) =>
-  Math.floor(readLocalNumber(`p1-progress-${id}`, 0, 0, 9999));
+  Math.floor(readLocalNumber(`autonomia-dorada-progress-${id}`, 0, 0, 9999));
 const safeStep = (value, total) => {
   const parsed = Number(value);
   const lastStep = Math.max(0, total - 1);
@@ -198,6 +217,15 @@ const searchWords = (value) =>
       word.length > 5 && word.endsWith("s") ? word.slice(0, -1) : word,
     );
 const searchSynonyms = {
+  psicologo: "psicologia",
+  psicologa: "psicologia",
+  psicologos: "psicologia",
+  psicologas: "psicologia",
+  psicologico: "psicologia",
+  psicologica: "psicologia",
+  eps: "cita",
+  doctor: "cita",
+  doctora: "cita",
   mando: "enviar",
   manda: "enviar",
   mandar: "enviar",
@@ -213,6 +241,14 @@ const searchSynonyms = {
   pagar: "pagar",
   pago: "pagar",
 };
+function chooseNarrationVoice(voices, preference) {
+  const spanish = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
+  if (!spanish.length) return null;
+  if (preference.startsWith("voice:")) return spanish.find((voice) => voice.voiceURI === preference.slice(6)) || null;
+  if (preference === "auto") return spanish.find((voice) => voice.lang?.toLowerCase() === "es-co") || spanish[0];
+  const pattern = preference === "female" ? /female|mujer|paulina|helena|sofia|mónica|monica|lucía|lucia|sabina|elena|laura/i : /male|hombre|jorge|carlos|diego|miguel|andrés|andres|pablo|juan|enrique/i;
+  return spanish.find((voice) => pattern.test(`${voice.name || ""} ${voice.voiceURI || ""}`)) || spanish[0];
+}
 const entityColors = {
   nequi: { accent: "#de3f83", soft: "#fae7f0", word: "NEQUI" },
   bancolombia: { accent: "#df9d13", soft: "#fbf1d9", word: "BANCOLOMBIA" },
@@ -232,6 +268,9 @@ const entityColors = {
   ara: { accent: "#d44738", soft: "#f8eae7", word: "TIENDAS ara" },
 };
 const entityIcons = {
+  "bienestar-fisico": Accessibility,
+  salud: HeartPulse,
+  "salud-mental": Brain,
   nequi: WalletCards,
   bancolombia: Landmark,
   afinia: Zap,
@@ -257,6 +296,10 @@ const brandLogoPaths = {
   dale: "/brands/dale-dark.svg",
   movistar: "/brands/movistar.webp",
   runt: "/brands/runt.png",
+  acuacar: "/brands/acuacar-mark.png",
+  surtigas: "/brands/surtigas.svg",
+  govco: "/brands/govco.svg",
+  sic: "/brands/sic.png",
 };
 const searchTokens = (value) =>
   searchWords(value).map((word) => searchSynonyms[word] || word);
@@ -293,8 +336,6 @@ function EntityMark({ entityId, className, size = 18 }) {
         <span className="soat-emblem"><ShieldCheck size={19} /> SOAT</span>
       ) : entityId === "banco-bogota" && logoPath ? (
         <span className="brand-crop brand-crop--bogota" />
-      ) : entityId === "davivienda" && logoPath ? (
-        <span className="brand-crop brand-crop--davivienda" />
       ) : logoPath ? (
         <img className="brand-logo-image" src={logoPath} alt="" loading="lazy" decoding="async" />
       ) : (
@@ -304,15 +345,39 @@ function EntityMark({ entityId, className, size = 18 }) {
   );
 }
 
+const institutionMarks = [
+  { match: /adres\.gov\.co/i, name: "ADRES", src: "/brands/adres.png" },
+  { match: /ins\.gov\.co/i, name: "Instituto Nacional de Salud", src: "/brands/ins.png" },
+  { match: /supersalud\.gov\.co/i, name: "Supersalud", src: "/brands/supersalud.svg" },
+  { match: /minsalud\.gov\.co/i, name: "Ministerio de Salud", src: "/brands/minsalud.png" },
+];
+function InstitutionMark({ url }) {
+  let host = "";
+  try { host = new URL(url).hostname; } catch { return null; }
+  const institution = institutionMarks.find(({ match }) => match.test(host));
+  if (!institution) return null;
+  return <span className="institution-mark"><img src={institution.src} alt="" loading="lazy" decoding="async" /><small>{institution.name}</small></span>;
+}
+
+function HealthGuideImage({ guide }) {
+  const url = guide.source_url || guide.source?.url;
+  const mark = institutionMarks.find(({ match }) => {
+    try { return match.test(new URL(url).hostname); } catch { return false; }
+  });
+  return <span className="health-guide-image" aria-hidden="true">
+    {mark ? <img className="health-guide-logo" src={mark.src} alt="" loading="lazy" decoding="async" /> : <HeartPulse size={30} />}
+  </span>;
+}
+
 function SiteFooter({ onHome, onHelp, compact = false }) {
   return (
     <footer className={`site-footer${compact ? " site-footer--compact" : ""}`}>
       <div className="site-footer-main">
         <div className="site-footer-identity">
-          <span className="brand-mark" aria-hidden="true">P<span>1</span></span>
+          <span className="brand-mark" aria-hidden="true"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
           <div>
-            <strong>Prueba 1</strong>
-            <span>Una guía a tu ritmo.</span>
+            <strong>Autonomía Dorada</strong>
+            <span>Más que asistencia, es tu autonomía.</span>
           </div>
         </div>
         <div className="site-footer-actions">
@@ -418,7 +483,7 @@ function App() {
   const [catalogState, setCatalogState] = useState("loading");
   const [catalogRetry, setCatalogRetry] = useState(0);
   const [showResume, setShowResume] = useState(() =>
-    readLocalBool("p1-show-resume", true),
+    readLocalBool("autonomia-dorada-show-resume", true),
   );
   const [query, setQuery] = useState(initialSearch);
   const [selected, setSelected] = useState(initialParams.get("guia") || null);
@@ -426,24 +491,45 @@ function App() {
     safeStep(Number(initialParams.get("paso") || 1) - 1, 9999),
   );
   const [font, setFont] = useState(() =>
-    readLocalNumber("p1-font", 1, 0.9, 1.3),
+    readLocalNumber("autonomia-dorada-font", 1, 0.9, 1.3),
   );
   const [voice, setVoice] = useState("idle");
   const [voiceAvailable, setVoiceAvailable] = useState(false);
-  const [narrativeMode, setNarrativeMode] = useState(false);
+  const [availableVoices, setAvailableVoices] = useState([]);
+  const [voicePreference, setVoicePreference] = useState(() => readLocalText("autonomia-dorada-voice-preference") || "auto");
+  const [voiceGenderOptions, setVoiceGenderOptions] = useState({ female: false, male: false });
+  const [showSettings, setShowSettings] = useState(false);
+  const [narrativeMode, setNarrativeMode] = useState(() => readLocalBool(
+    "autonomia-dorada-narrative-mode",
+    typeof window !== "undefined" && window.matchMedia?.("(pointer: coarse)").matches === true,
+  ));
   const [narration, setNarration] = useState("idle");
   const [showArtwork, setShowArtwork] = useState(true);
   const [toast, setToast] = useState("");
   const [showHelp, setShowHelp] = useState(false);
+  const [favoritePulseId, setFavoritePulseId] = useState(null);
+  const [favoritePulseAction, setFavoritePulseAction] = useState("saved");
+  const [favoriteRemovingId, setFavoriteRemovingId] = useState(null);
+  const favoritePulseTimerRef = useRef(null);
   const [category, setCategory] = useState("Todas");
   const [showPending, setShowPending] = useState(true);
+  const [showAllGuides, setShowAllGuides] = useState(false);
+  const [allGuidesManuallyOpened, setAllGuidesManuallyOpened] = useState(false);
   const [showOfficialLinks, setShowOfficialLinks] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(() => {
+    try {
+      return !initialParams.has("guia") && !sessionStorage.getItem("autonomia-dorada-welcome-seen");
+    } catch {
+      return false;
+    }
+  });
+  const [welcomeLeaving, setWelcomeLeaving] = useState(false);
   const [resumeGuideId, setResumeGuideId] = useState(() =>
-    readLocalText("p1-last-guide"),
+    readLocalText("autonomia-dorada-last-guide"),
   );
   const [favorites, setFavorites] = useState(() => {
     try {
-      const parsed = JSON.parse(readLocalText("p1-favorites") || "[]");
+      const parsed = JSON.parse(readLocalText("autonomia-dorada-favorites") || "[]");
       return Array.isArray(parsed)
         ? parsed.filter((id) => typeof id === "string").slice(0, 30)
         : [];
@@ -452,11 +538,12 @@ function App() {
     }
   });
   const [showFavorites, setShowFavorites] = useState(() =>
-    readLocalBool("p1-show-favorites"),
+    readLocalBool("autonomia-dorada-show-favorites"),
   );
   const lastNarrationTarget = React.useRef(null);
   const lastNarrationAt = React.useRef(0);
   const speechGeneration = React.useRef(0);
+  const categoryTabsRef = useRef(null);
 
   const cancelSpeech = () => {
     speechGeneration.current += 1;
@@ -502,13 +589,13 @@ function App() {
   }, [catalogRetry]);
   useEffect(() => {
     document.title = guide
-      ? `${guide.title} · Prueba 1`
+      ? `${guide.title} · Autonomía Dorada`
       : query
-        ? `${query} · Prueba 1`
-        : "Prueba 1 — ¿Qué quieres hacer hoy?";
+        ? `${query} · Autonomía Dorada`
+        : "Autonomía Dorada — ¿Qué quieres hacer hoy?";
   }, [guide?.title, query]);
   useEffect(() => {
-    writeLocal("p1-font", String(font));
+    writeLocal("autonomia-dorada-font", String(font));
     document.documentElement.style.setProperty("--text-scale", String(font));
     document.documentElement.dataset.textScale =
       font >= 1.2 ? "large" : "normal";
@@ -552,8 +639,24 @@ function App() {
     setVoiceAvailable(
       Boolean(window.speechSynthesis && window.SpeechSynthesisUtterance),
     );
-    return () => window.speechSynthesis?.cancel();
+    const updateVoices = () => {
+      const voices = window.speechSynthesis?.getVoices?.() || [];
+      setAvailableVoices(voices);
+      const spanish = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
+      setVoiceGenderOptions({
+        female: spanish.some((voice) => /female|mujer|paulina|helena|sofia|sabina|monica|lucia/i.test(voice.name || "")),
+        male: spanish.some((voice) => /male|hombre|jorge|carlos|diego|miguel|andres|ra[uú]l/i.test(voice.name || "")),
+      });
+    };
+    updateVoices();
+    window.speechSynthesis?.addEventListener?.("voiceschanged", updateVoices);
+    return () => {
+      window.speechSynthesis?.removeEventListener?.("voiceschanged", updateVoices);
+      window.speechSynthesis?.cancel();
+    };
   }, []);
+  useEffect(() => writeLocal("autonomia-dorada-voice-preference", voicePreference), [voicePreference]);
+  useEffect(() => writeLocal("autonomia-dorada-narrative-mode", String(narrativeMode)), [narrativeMode]);
   useEffect(() => {
     const onKey = (event) => {
       if (
@@ -613,7 +716,7 @@ function App() {
   };
   const backToGuides = () => {
     cancelSpeech();
-    if (history.state?.p1Guide) {
+    if (history.state?.autonomiaDoradaGuide) {
       history.back();
       return;
     }
@@ -628,12 +731,24 @@ function App() {
     setStepIndex(0);
     setQuery("");
     setShowHelp(false);
-    window.scrollTo(0, 0);
+    const homeParams = new URLSearchParams(location.search);
+    homeParams.delete("guia");
+    homeParams.delete("paso");
+    const suffix = homeParams.toString();
+    history.replaceState(history.state, "", `${location.pathname}${suffix ? `?${suffix}` : ""}`);
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   };
+  const dismissWelcome = () => {
+    try { sessionStorage.setItem("autonomia-dorada-welcome-seen", "true"); } catch { /* Welcome remains optional if storage is unavailable. */ }
+    setWelcomeLeaving(true);
+    window.setTimeout(() => setShowWelcome(false), 220);
+    requestAnimationFrame(() => document.getElementById("task-search")?.focus({ preventScroll: true }));
+  };
+  const [stepTransition, setStepTransition] = useState(false);
   const openGuide = (g) => {
     const params = new URLSearchParams({ guia: g.id, paso: "1" });
     history.pushState(
-      { p1Guide: true },
+      { autonomiaDoradaGuide: true },
       "",
       `${location.pathname}?${params.toString()}`,
     );
@@ -709,7 +824,7 @@ function App() {
     () =>
       category === "Todas"
         ? matches
-        : matches.filter((g) => categoryFor(g) === category),
+        : matches.filter((g) => categoryForGuide(g) === category),
     [matches, category],
   );
   const filteredMatches = useMemo(
@@ -721,6 +836,30 @@ function App() {
       ),
     [categoryMatches, showPending, showFavorites, favorites],
   );
+  const homeFeatured = !query.trim() && !showFavorites && category === "Todas" && !showAllGuides;
+  const featuredGuideGroups = ["Salud mental", "Bienestar físico", "Salud", "Bancos", "Billeteras", "Servicios", "Trámites", "Comercios"];
+  const visibleGuides = useMemo(() => {
+    if (!homeFeatured) return filteredMatches;
+    const preferredTitles = {
+      "Salud mental": ["Pedir orientación emocional o psicológica", "Ansiedad y manejo del estrés"],
+      "Bienestar físico": ["Consultar el programa nacional de vacunación PAI", "Consultar orientación de salud bucal"],
+      Salud: ["Solicitar una cita médica en mi EPS", "Consultar a qué EPS estoy afiliado"],
+      Bancos: ["Transferir entre cuentas Bancolombia", "Consultar movimientos y extractos en Bancolombia"],
+      Billeteras: ["Enviar plata a otro Nequi", "Pagar una factura de servicios públicos con Nequi"],
+      Servicios: ["Pagar o consultar la factura de energía", "Consultar un duplicado de la factura de Aguas de Cartagena"],
+      Trámites: ["Consultar la vigencia del SOAT", "Buscar un trámite en GOV.CO"],
+      Comercios: ["Consultar medios de pago en Tiendas Ara", "Consultar cómo pedir garantía por un producto defectuoso"],
+    };
+    return featuredGuideGroups.flatMap((group) => {
+      const groupGuides = filteredMatches.filter((g) => categoryForGuide(g) === group);
+      const ranked = [...groupGuides].sort((a, b) => {
+        const aIndex = preferredTitles[group].indexOf(a.title);
+        const bIndex = preferredTitles[group].indexOf(b.title);
+        return (aIndex < 0 ? 99 : aIndex) - (bIndex < 0 ? 99 : bIndex);
+      });
+      return ranked.slice(0, 2);
+    });
+  }, [filteredMatches, homeFeatured]);
   const pendingMatchesHidden =
     !showFavorites &&
     !showPending &&
@@ -767,13 +906,17 @@ function App() {
     }
   }, [catalogState, showFavorites, favoriteGuides.length]);
   useEffect(() => {
-    writeLocal("p1-favorites", JSON.stringify(favorites));
+    writeLocal("autonomia-dorada-favorites", JSON.stringify(favorites));
   }, [favorites]);
   useEffect(() => {
-    writeLocal("p1-show-favorites", String(showFavorites));
+    writeLocal("autonomia-dorada-show-favorites", String(showFavorites));
   }, [showFavorites]);
   const toggleFavorite = (id) => {
     const wasSaved = favorites.includes(id);
+    setFavoritePulseAction(wasSaved ? "removed" : "saved");
+    setFavoritePulseId(id);
+    window.clearTimeout(favoritePulseTimerRef.current);
+    favoritePulseTimerRef.current = window.setTimeout(() => setFavoritePulseId((current) => current === id ? null : current), 700);
     setFavorites((items) =>
       items.includes(id)
         ? items.filter((item) => item !== id)
@@ -785,6 +928,23 @@ function App() {
         : "Guardamos la guía en este dispositivo.",
     );
   };
+  const removeQuickFavorite = (id) => {
+    if (favoriteRemovingId) return;
+    setFavoritePulseAction("removed");
+    setFavoritePulseId(id);
+    setFavoriteRemovingId(id);
+    setNotice("Quitamos la guía de tus favoritas.");
+    window.clearTimeout(favoritePulseTimerRef.current);
+    favoritePulseTimerRef.current = window.setTimeout(() => setFavoritePulseId((current) => current === id ? null : current), 700);
+    window.setTimeout(() => {
+      setFavorites((items) => items.filter((item) => item !== id));
+      setFavoriteRemovingId((current) => current === id ? null : current);
+    }, 360);
+  };
+  const scrollCategoryTabs = (direction) => categoryTabsRef.current?.scrollBy({
+    left: direction * Math.max(180, Math.round(categoryTabsRef.current.clientWidth * 0.7)),
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+  });
   const startSpeak = () => {
     if (!voiceAvailable) {
       setNotice(
@@ -799,6 +959,8 @@ function App() {
     );
     utterance.lang = "es-CO";
     utterance.rate = 0.9;
+    const selectedVoice = chooseNarrationVoice(availableVoices, voicePreference);
+    if (selectedVoice) utterance.voice = selectedVoice;
     setVoice("speaking");
     utterance.onstart = () => {
       if (generation === speechGeneration.current) setVoice("speaking");
@@ -815,6 +977,8 @@ function App() {
     const utterance = new SpeechSynthesisUtterance(text.trim());
     utterance.lang = "es-CO";
     utterance.rate = 0.84;
+    const selectedVoice = chooseNarrationVoice(availableVoices, voicePreference);
+    if (selectedVoice) utterance.voice = selectedVoice;
     setNarration("speaking");
     utterance.onstart = () => {
       if (generation === speechGeneration.current) setNarration("speaking");
@@ -855,11 +1019,11 @@ function App() {
     }
   };
   const narrateTouch = (event) => {
-    if (!narrativeMode || !voiceAvailable || voice !== "idle" || event.detail === 0) return;
+    if (!narrativeMode || !voiceAvailable || voice !== "idle" || event.detail === 0 || !window.matchMedia("(pointer: coarse)").matches) return;
     const block = event.target.closest(
-      "p, h1, h2, h3, li, small",
+      "p, h1, h2, h3, li, small, button, a, label, [role='button']",
     );
-    if (!block || block.closest(".topbar, .site-footer, .voice-controls, .font-controls, input")) return;
+    if (!block || block.closest(".topbar, .site-footer, .voice-controls, .font-controls, input, .source-link, .official-link-list")) return;
     narrateText(block.innerText || block.textContent || "");
   };
   const setNarrativeEnabled = (enabled) => {
@@ -889,10 +1053,12 @@ function App() {
     if (next >= 0 && next < (guide?.steps?.length || 0)) {
       stopSpeak();
       setStepIndex(next);
+      setStepTransition(true);
+      window.setTimeout(() => setStepTransition(false), 420);
       if (guide) {
-        writeLocal(`p1-progress-${guide.id}`, String(next));
-        writeLocal("p1-last-guide", guide.id);
-        writeLocal("p1-show-resume", "true");
+        writeLocal(`autonomia-dorada-progress-${guide.id}`, String(next));
+        writeLocal("autonomia-dorada-last-guide", guide.id);
+        writeLocal("autonomia-dorada-show-resume", "true");
         setShowResume(true);
         setResumeGuideId(guide.id);
       }
@@ -913,7 +1079,7 @@ function App() {
     return (
       <div className="boot-screen">
         <span className="boot-mark">
-          P<span>1</span>
+          A<span>D</span>
         </span>
         <LoaderCircle size={24} className="spin" />
         <strong>Abriendo tus guías</strong>
@@ -924,7 +1090,7 @@ function App() {
     return (
       <div className="boot-screen boot-screen--error">
         <span className="boot-mark">
-          P<span>1</span>
+          A<span>D</span>
         </span>
         <span className="boot-error-icon">
           <Info size={24} />
@@ -932,7 +1098,7 @@ function App() {
         <strong>No pudimos conectar con la aplicación.</strong>
         <p>
           El catálogo no respondió después de varios intentos. Si acabas de
-          iniciar Prueba 1, espera un momento y vuelve a probar.
+          iniciar Autonomía Dorada, espera un momento y vuelve a probar.
         </p>
         <button
           className="button button--primary"
@@ -961,13 +1127,11 @@ function App() {
         <button
           className="brand"
           onClick={goHome}
-          aria-label="Prueba 1, volver al inicio"
+          aria-label="Autonomía Dorada, volver al inicio"
         >
-          <span className="brand-mark">
-            P<span>1</span>
-          </span>
-          <span className="brand-name">Prueba 1</span>
-          <span className="brand-pill">Guías a tu ritmo</span>
+          <span className="brand-mark" aria-hidden="true"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
+          <span className="brand-name">Autonomía Dorada</span>
+          <span className="brand-pill">Más que asistencia, es tu autonomía</span>
         </button>
         <nav className="top-nav" aria-label="Navegación principal">
           <button type="button" onClick={() => guide ? backToGuides() : focusCatalog()}>
@@ -1001,6 +1165,7 @@ function App() {
           <div className="font-controls" aria-label="Tamaño del texto">
             <button
               aria-label="Reducir tamaño de letra"
+              title="A−: disminuir el tamaño del texto"
               onClick={() =>
                 setFont((f) => Math.max(0.9, +(f - 0.1).toFixed(1)))
               }
@@ -1018,6 +1183,7 @@ function App() {
             </button>
             <button
               aria-label="Aumentar tamaño de letra"
+              title="A+: aumentar el tamaño del texto"
               onClick={() =>
                 setFont((f) => Math.min(1.3, +(f + 0.1).toFixed(1)))
               }
@@ -1026,6 +1192,9 @@ function App() {
               A+
             </button>
           </div>
+          <button type="button" className="icon-action settings-toggle" aria-expanded={showSettings} aria-controls="accessibility-settings" onClick={() => setShowSettings((value) => !value)}>
+            <Settings2 size={19} /><span>Configuración</span>
+          </button>
           <button
             id="help-toggle"
             className="icon-action"
@@ -1040,11 +1209,17 @@ function App() {
         </div>
       </header>
       <main id="main-content" className="main-content" tabIndex={-1}>
+        {showSettings && <section id="accessibility-settings" className="settings-panel" aria-labelledby="settings-title">
+              <div><h2 id="settings-title">Configuración de lectura</h2><p><strong>A−</strong> reduce el tamaño de las letras. <strong>A+</strong> lo aumenta. Toca “Normal” para restablecer.</p></div>
+          <div className="settings-font-preview"><span>Texto de ejemplo</span><div className="font-controls" aria-label="Tamaño del texto">
+            <button type="button" aria-label="Reducir tamaño de letra" title="Disminuir tamaño" disabled={font <= 0.9} onClick={() => setFont((value) => Math.max(0.9, +(value - 0.1).toFixed(1)))}>A−</button><button type="button" className="font-status" onClick={resetFont}>{font === 1 ? "Normal" : font < 1 ? "Pequeño" : "Grande"}</button><button type="button" aria-label="Aumentar tamaño de letra" title="Aumentar tamaño" disabled={font >= 1.3} onClick={() => setFont((value) => Math.min(1.3, +(value + 0.1).toFixed(1)))}>A+</button>
+          </div></div>
+          <div className="settings-voice"><strong><Headphones size={17}/> Voz de narración</strong>{voiceAvailable ? <><label htmlFor="settings-voice-select">Elige una voz disponible</label><select id="settings-voice-select" value={voicePreference} onChange={(event) => setVoicePreference(event.target.value)}><option value="auto">Automática · español de Colombia si está disponible</option>{voiceGenderOptions.female && <option value="female">Voz de mujer</option>}{voiceGenderOptions.male && <option value="male">Voz de hombre</option>}{!(voiceGenderOptions.female && voiceGenderOptions.male) && availableVoices.filter((item) => item.lang?.toLowerCase().startsWith("es")).map((item) => <option key={item.voiceURI} value={`voice:${item.voiceURI}`}>{item.name} · {item.lang}</option>)}</select><small>Las voces dependen del teléfono y del navegador. Si no se reconoce el género, podrás elegir por nombre.</small></> : <small>Este navegador no ofrece narración de texto; la guía sigue disponible por escrito.</small>}</div>
+        </section>}
         {showHelp && (
           <section id="help-panel" className="help-panel" aria-labelledby="help-title">
             <div className="help-panel-heading">
               <div>
-                <span className="help-eyebrow"><CircleHelp size={15} /> CENTRO DE AYUDA</span>
                 <h2 id="help-title" tabIndex={-1}>Estamos aquí para orientarte</h2>
                 <p>Elige una tarea, sigue los pasos y consulta la fuente oficial cuando la necesites.</p>
               </div>
@@ -1060,10 +1235,17 @@ function App() {
             </div>
             <div className="help-panel-grid">
               <div className="help-contact">
-                <span className="help-card-icon"><Phone size={20} /></span>
-                <span className="help-card-label">ASÍ SE VERÍA UNA LÍNEA DE AYUDA</span>
-                <strong className="help-number">1 2 3 4 5</strong>
-                <p>Número ficticio de demostración. No atiende llamadas; no lo marques.</p>
+                <div className="help-contact-art"><img src="/brands/minsalud.png" alt="Logo del Ministerio de Salud y Protección Social" /><span>ORIENTACIÓN OFICIAL EN SALUD MENTAL</span></div>
+                <div className="help-contact-copy">
+                  <span className="help-card-label">¿NECESITAS HABLAR CON ALGUIEN?</span>
+                  <h3>Línea Nacional de Salud Mental</h3>
+              <a className="help-number" href="tel:106" aria-label="Llamar a la Línea Nacional de Salud Mental 106"><span>106</span><span className="help-call-icon"><Phone size={20} /> Llamar ahora</span></a>
+              <a className="help-number" href="tel:125" aria-label="En Cartagena, llamar al CRUED 125 para orientación en salud"><span>125</span><span className="help-call-icon"><Phone size={20} /> CRUED Cartagena · llamar</span></a>
+                  <p>El Distrito publica también el CRUED 125 como línea local de atención. <a href="https://cartagena.gov.co/noticias/cartagena-el-primer-ente-territorial-pais-mesa-permanente-para-prevencion-conducta-suicida" target="_blank" rel="noopener noreferrer">Ver fuente de la Alcaldía</a>.</p>
+                  <div className="help-service-points"><span><CheckCircle2 size={15}/> Gratuita</span><span><ShieldCheck size={15}/> Confidencial</span><span><Clock3 size={15}/> 24 horas</span></div>
+                  <p>Recibe escucha, apoyo inicial y orientación. También puedes consultar las <a href="https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx" target="_blank" rel="noopener noreferrer">líneas de tu territorio</a>.</p>
+                  <small>La orientación no sustituye una consulta. Si hay peligro inmediato, acude a urgencias o llama a emergencias en tu territorio.</small>
+                </div>
               </div>
               <div className="help-steps">
                 <strong>¿Cómo usar esta web?</strong>
@@ -1082,17 +1264,19 @@ function App() {
         )}
         {showResults ? (
           <>
+            {showWelcome && <section className={`welcome-card${welcomeLeaving ? " is-leaving" : ""}`} aria-labelledby="welcome-title">
+              <span className="welcome-mark"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
+              <div className="welcome-copy"><h2 id="welcome-title">Bienvenido a Autonomía Dorada</h2><p>¿Qué quieres consultar hoy? Encuentra orientación clara y avanza a tu ritmo.</p></div>
+              <button type="button" className="welcome-action" onClick={dismissWelcome}>Empezar <ArrowRight size={17}/></button>
+              <button type="button" className="welcome-dismiss" aria-label="Omitir bienvenida" title="Omitir bienvenida" onClick={dismissWelcome}><X size={18}/></button>
+            </section>}
             <section className="search-intro">
-              <div className="welcome-kicker">
-                <span className="welcome-dot" /> AQUÍ ESTAMOS PARA AYUDARTE
-              </div>
               <h1>
                 ¿Qué quieres
                 <br className="mobile-break" /> hacer hoy?
               </h1>
               <p>
-                Cuéntanos qué necesitas hacer. Buscamos una guía sencilla para
-                ti.
+                Encuentra orientación sencilla para cuidar tu salud y hacer tus trámites con confianza. Tú decides cada paso.
               </p>
               <form
                 className="search-box"
@@ -1114,7 +1298,7 @@ function App() {
                     setQuery(e.target.value);
                     setCategory("Todas");
                   }}
-                  placeholder="Ej.: enviar plata, pagar la luz…"
+                  placeholder="Ej.: cita médica o psicología"
                   autoComplete="off"
                 />
                 <button type="submit" aria-label="Buscar">
@@ -1123,8 +1307,8 @@ function App() {
                 </button>
               </form>
               <div className="popular-queries">
-                <span>Prueba con:</span>
-                {["Enviar plata", "Pagar la luz", "Consultar el SOAT"].map(
+                <span>Atajos:</span>
+                {["Pedir una cita médica", "Hablar con alguien", "Consultar mi EPS"].map(
                   (term) => (
                     <button key={term} onClick={() => showSearchResults(term)}>
                       {term}
@@ -1163,7 +1347,7 @@ function App() {
                   aria-label="Ocultar sugerencia de continuación"
                   title="Ocultar esta sugerencia"
                   onClick={() => {
-                    writeLocal("p1-show-resume", "false");
+                    writeLocal("autonomia-dorada-show-resume", "false");
                     setShowResume(false);
                   }}
                 >
@@ -1178,9 +1362,6 @@ function App() {
               >
                 <div className="favorites-heading">
                   <div>
-                    <span className="section-eyebrow">
-                      GUARDADAS EN ESTE DISPOSITIVO
-                    </span>
                     <h2 id="favorites-title">Tus guías favoritas</h2>
                     <p>Guardadas solo en este dispositivo.</p>
                   </div>
@@ -1209,7 +1390,7 @@ function App() {
                 {!showFavorites && (
                   <div className="favorite-quick-list">
                     {favoriteGuides.map((g) => (
-                      <div className="favorite-quick" key={`favorite-${g.id}`}>
+                      <div className={`favorite-quick${favoriteRemovingId === g.id ? " is-removing" : ""}`} key={`favorite-${g.id}`}>
                         <button
                           type="button"
                           className="favorite-quick-open"
@@ -1222,8 +1403,9 @@ function App() {
                         </button>
                         <button
                           type="button"
-                          className="favorite-quick-remove"
-                          onClick={() => toggleFavorite(g.id)}
+                          className={`favorite-quick-remove${favoritePulseId === g.id && favoritePulseAction === "removed" ? " just-removed" : ""}`}
+                          onClick={() => removeQuickFavorite(g.id)}
+                          disabled={favoriteRemovingId === g.id}
                           aria-label={`Quitar ${g.title} de favoritos`}
                           title="Quitar de favoritos"
                         ><Bookmark size={17} fill="currentColor" /></button>
@@ -1236,13 +1418,12 @@ function App() {
             <section className="catalog-section" id="guide-list">
               <div className="section-heading">
                 <div>
-                  <span className="section-eyebrow">TU CENTRO DE GUÍAS</span>
                   <h2 id="catalog-heading" tabIndex={-1}>
                     {query
                       ? "Resultados"
                       : showFavorites
                         ? "Solo tus favoritas"
-                        : "Encuentra una tarea"}
+                        : "Encuentra orientación para tu bienestar"}
                   </h2>
                   <p aria-live="polite" aria-atomic="true">
                     {query
@@ -1269,13 +1450,17 @@ function App() {
                   )}
                 </span>}
               </div>
-              {!singleSearchResult && <nav
+              {!singleSearchResult && <div className="category-filter-shell">
+                <span className="category-label"><ListFilter size={15} /> VER POR:</span>
+                <button type="button" className="category-scroll-button category-scroll-button--left" aria-label="Ver categorías anteriores" onClick={() => scrollCategoryTabs(-1)}><ChevronLeft size={17}/></button>
+                <nav
+                ref={categoryTabsRef}
+                id="category-tabs"
                 className="category-tabs"
                 aria-label="Filtrar guías por tipo"
+                tabIndex={0}
+                aria-describedby="category-scroll-hint"
               >
-                <span className="category-label">
-                  <ListFilter size={15} /> VER POR:
-                </span>
                 {categoryNames.map((name) => {
                   const Icon = categoryIcon[name];
                   return (
@@ -1287,11 +1472,16 @@ function App() {
                     >
                       <Icon size={16} />
                       <span>{name}</span>
+                      {name !== "Todas" && <span className="category-count">{catalog.guides.filter((guide) => categoryForGuide(guide) === name).length}</span>}
                     </button>
                   );
                 })}
-              </nav>}
-              {!showFavorites && !singleSearchResult && <div className="catalog-options">
+                </nav>
+                <button type="button" className="category-scroll-button category-scroll-button--right" aria-label="Ver más categorías" onClick={() => scrollCategoryTabs(1)}><ChevronRight size={17}/></button>
+              </div>}
+              {!query && !showFavorites && category === "Todas" && <p className="catalog-health-note">Verás dos recomendaciones por área: salud mental, bienestar físico, salud, bancos, billeteras, servicios, trámites y comercios. En Colombia, bancos, billeteras, servicios públicos, trámites y comercios tienen 20 temas propuestos cada uno. Los que dicen «En revisión» todavía no son un paso a paso verificado.</p>}
+              {!singleSearchResult && <p id="category-scroll-hint" className="category-scroll-hint">En celular, desliza estas categorías hacia los lados para ver más.</p>}
+              {!showFavorites && !singleSearchResult && !homeFeatured && <div className="catalog-options">
                 <label className="pending-toggle">
                   <input
                     type="checkbox"
@@ -1314,19 +1504,36 @@ function App() {
                   <Clock3 size={14} /> En revisión
                 </p>
               </div>}
-              {filteredMatches.length ? (
-                <div className="guide-grid">
-                  {filteredMatches.map((g) => (
-                    <GuideCard
-                      key={g.id}
-                      guide={g}
-                      onClick={() => openGuide(g)}
-                      isFavorite={favoriteIdSet.has(g.id)}
-                      onToggleFavorite={() => toggleFavorite(g.id)}
-                      onNarrate={narrativeMode ? () => narrateText(`${g.entity_name}. ${g.title}. ${g.description}`) : null}
-                    />
-                  ))}
-                </div>
+              {!showFavorites && !singleSearchResult && <div className="catalog-filter-note" aria-live="polite">{homeFeatured ? "Mostrando dos recomendaciones por cada una de las ocho áreas." : category !== "Todas" ? `Mostrando guías de ${category}.` : "Mostrando todas las guías disponibles."}</div>}
+              {visibleGuides.length ? (
+                homeFeatured ? (
+                  <div className="featured-guide-groups">
+                    {featuredGuideGroups.map((group) => {
+                      const groupGuides = visibleGuides.filter((guide) => categoryForGuide(guide) === group);
+                      return (
+                        <section className="featured-guide-group" key={group} aria-labelledby={`featured-${categorySlug(group)}`}>
+                          <div className="featured-guide-heading">
+                            <div><span>2 recomendaciones</span><h3 id={`featured-${categorySlug(group)}`}>{group}</h3></div>
+                            <button type="button" onClick={() => { setCategory(group); requestAnimationFrame(() => categoryTabsRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" })); }}>
+                              Ver todas <ArrowRight size={16} />
+                            </button>
+                          </div>
+                          <div className="guide-grid">
+                            {groupGuides.map((g) => (
+                              <GuideCard key={g.id} guide={g} onClick={() => openGuide(g)} favoritePulse={favoritePulseId === g.id ? favoritePulseAction : null} isFavorite={favoriteIdSet.has(g.id)} onToggleFavorite={() => toggleFavorite(g.id)} onNarrate={narrativeMode ? () => narrateText(`${g.entity_name}. ${g.title}. ${g.description}`) : null} />
+                            ))}
+                          </div>
+                        </section>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="guide-grid">
+                    {visibleGuides.map((g) => (
+                      <GuideCard key={g.id} guide={g} onClick={() => openGuide(g)} favoritePulse={favoritePulseId === g.id ? favoritePulseAction : null} isFavorite={favoriteIdSet.has(g.id)} onToggleFavorite={() => toggleFavorite(g.id)} onNarrate={narrativeMode ? () => narrateText(`${g.entity_name}. ${g.title}. ${g.description}`) : null} />
+                    ))}
+                  </div>
+                )
               ) : (
                 <div className="empty-state">
                   <span className="empty-illustration">
@@ -1382,6 +1589,8 @@ function App() {
                   </small>
                 </div>
               )}
+              {homeFeatured && filteredMatches.length > visibleGuides.length && <div className="catalog-more"><span>16 recomendaciones iniciales · 20 temas propuestos en cada área cotidiana.</span><button type="button" onClick={() => {setShowAllGuides(true);setAllGuidesManuallyOpened(true);}}>Ver las {filteredMatches.length} guías <ArrowRight size={17}/></button></div>}
+              {!homeFeatured && !query.trim() && !showFavorites && category === "Todas" && allGuidesManuallyOpened && <div className="catalog-more"><span>Estás viendo el catálogo completo.</span><button type="button" onClick={() => {setShowAllGuides(false);setAllGuidesManuallyOpened(false);focusCatalog();}}>Volver a las recomendaciones</button></div>}
               <section
                 className="source-summary"
                 aria-labelledby="source-summary-title"
@@ -1390,9 +1599,6 @@ function App() {
                   <ShieldCheck size={21} />
                 </div>
                 <div className="source-summary-copy">
-                  <span className="section-eyebrow">
-                    TRANSPARENCIA Y CONFIANZA
-                  </span>
                   <h2 id="source-summary-title">
                     Sabes quién respalda cada guía.
                   </h2>
@@ -1445,7 +1651,7 @@ function App() {
                       <p>
                         Una página oficial puede orientar, pero no significa que
                         hayamos confirmado el paso a paso. Revisión registrada:
-                        28 de octubre de 2026.
+                        26 de octubre de 2026.
                       </p>
                     </div>
                   </div>
@@ -1457,6 +1663,7 @@ function App() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
+                        <InstitutionMark url={link.url} />
                         <span>
                           <strong>{link.purpose}</strong>
                           <small>{link.explanation}</small>
@@ -1480,7 +1687,8 @@ function App() {
             </button>
             <div className="guide-heading">
               <div>
-                <div className="guide-eyebrow">
+                <h1>{guide.title}</h1>
+                <div className="guide-identity">
                   <EntityMark
                     entityId={guide.entity_id}
                     className="entity-initial"
@@ -1490,7 +1698,6 @@ function App() {
                   <span className="eyebrow-separator">·</span>
                   <span>{guide.task}</span>
                 </div>
-                <h1>{guide.title}</h1>
                 {guide.status !== "pending" && <p>{guide.description}</p>}
               </div>
               <StatusBadge status={guide.status} />
@@ -1570,18 +1777,15 @@ function App() {
                         <span>
                           <CheckCircle2 size={17} />
                           <span>
-                            <span>Fuente oficial revisada</span>
-                            <small>
-                              Revisión:{" "}
-                              {formatCheckedDate(guide.source.checkedAt)}
-                            </small>
+                            <span>Canal oficial · {guide.source.publisher}</span>
+                            <small>{new URL(guide.source.url).hostname} · Revisado {formatCheckedDate(guide.source.checkedAt)}</small>
                           </span>
                         </span>
                         <ExternalLink size={15} />
                       </a>
                     )}
                   </aside>
-                  <article className="step-card" aria-live="polite">
+                  <article className={`step-card${stepTransition ? " is-transitioning" : ""}`} aria-live="polite">
                     <div className="step-card-top">
                       <span>
                         PASO {stepIndex + 1}{" "}
@@ -1630,40 +1834,18 @@ function App() {
                                 : "La lectura empieza cuando tú quieras"}
                           </span>
                         </div>
-                        <div className="voice-buttons">
-                          {voice === "paused" ? (
-                            <button
-                              className="voice-button"
-                              onClick={resumeSpeak}
-                            >
-                              <Volume2 size={17} />
-                              Continuar
-                            </button>
-                          ) : voice === "speaking" ? (
-                            <button
-                              className="voice-button"
-                              onClick={pauseSpeak}
-                            >
-                              <Square size={13} />
-                              Pausar
-                            </button>
-                          ) : (
-                            <button
-                              className="voice-button"
-                              onClick={startSpeak}
-                            >
-                              <Volume2 size={18} />
-                              Escuchar
-                            </button>
-                          )}
-                          {voice !== "idle" && (
-                            <button
-                              className="voice-button voice-button--quiet"
-                              onClick={stopSpeak}
-                            >
-                              Detener
-                            </button>
-                          )}
+                        <div className="voice-actions">
+                          <div className="voice-buttons">
+                            {voice === "paused" ? (
+                              <button className="voice-button" onClick={resumeSpeak}><Volume2 size={17}/> Continuar</button>
+                            ) : voice === "speaking" ? (
+                              <button className="voice-button" onClick={pauseSpeak}><Square size={13}/> Pausar</button>
+                            ) : (
+                              <button className="voice-button" onClick={startSpeak}><Volume2 size={18}/> Escuchar</button>
+                            )}
+                            {voice !== "idle" && <button className="voice-button voice-button--quiet" onClick={stopSpeak}>Detener</button>}
+                          </div>
+                          <button type="button" className="voice-settings-link" onClick={() => {setShowSettings(true); requestAnimationFrame(() => document.getElementById("settings-voice-select")?.focus());}}><Settings2 size={16}/> Configurar voz</button>
                         </div>
                         {!voiceAvailable && (
                           <small>
@@ -1691,8 +1873,8 @@ function App() {
                           <button
                             className="button button--finish"
                             onClick={() => {
-                              removeLocal(`p1-progress-${guide.id}`);
-                              removeLocal("p1-last-guide");
+                              removeLocal(`autonomia-dorada-progress-${guide.id}`);
+                              removeLocal("autonomia-dorada-last-guide");
                               setResumeGuideId("");
                               setNotice("¡Bien! Terminaste esta guía.");
                               goHome();
@@ -1725,8 +1907,8 @@ function App() {
         )}
       </main>
       {toast && (
-        <div className="toast" role="status">
-          <CheckCircle2 size={20} />
+        <div className={`toast${toast.startsWith("Quitamos") ? " toast--removed" : ""}`} role="status">
+          {toast.startsWith("Quitamos") ? <Bookmark size={20} /> : <CheckCircle2 size={20} />}
           {toast}
         </div>
       )}
@@ -1734,22 +1916,24 @@ function App() {
   );
 }
 
-function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite, onNarrate }) {
+function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite, onNarrate, favoritePulse = null }) {
   const isVerified = guide.status === "verified";
   return (
     <div
       className={`guide-card ${isVerified ? "guide-card--verified" : "guide-card--pending"}${onNarrate ? " guide-card--narrative" : ""}`}
     >
       <button
-        className={`card-open ${isVerified ? "card-open--verified" : "card-open--pending"}`}
+        className={`card-open${brandLogoPaths[guide.entity_id] || guide.entity_id === "soat" ? " card-open--with-brand" : ""} ${isVerified ? "card-open--verified" : "card-open--pending"}`}
         onClick={onClick}
         aria-label={`${guide.title}. ${isVerified ? `Guía con ${guide.steps?.length || 0} pasos revisados.` : "Pasos por verificar. Abrir información de estado y canal oficial."}`}
       >
-        <EntityMark
-          className={`card-icon ${isVerified ? "card-icon--verified" : "card-icon--pending"}`}
-          entityId={guide.entity_id}
-          size={19}
-        />
+        {guide.entity_id === "salud-mental" || guide.entity_id === "bienestar-fisico" || guide.entity_id === "rutas-salud" || ["Salud mental", "Bienestar físico", "Salud", "Rutas de salud"].includes(guide.category_group || guide.entity_category || guide.category)
+          ? <HealthGuideImage guide={guide} />
+          : <EntityMark
+              className={`card-icon ${isVerified ? "card-icon--verified" : "card-icon--pending"}`}
+              entityId={guide.entity_id}
+              size={19}
+            />}
         <span className="card-main">
           <span className="card-meta">
             {guide.entity_name}
@@ -1788,7 +1972,8 @@ function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite, onNar
       </button>
       {isVerified && onToggleFavorite && (
         <button
-          className={`favorite-button ${isFavorite ? "is-favorite" : ""}`}
+          key={`${guide.id}-${favoritePulse || "idle"}`}
+          className={`favorite-button ${isFavorite ? "is-favorite" : ""}${favoritePulse === "saved" ? " just-saved" : favoritePulse === "removed" ? " just-removed" : ""}`}
           type="button"
           aria-pressed={isFavorite}
           aria-label={
@@ -1843,7 +2028,7 @@ function PendingGuide({ guide, relatedLinks = [] }) {
         <Clock3 size={30} />
       </span>
       <div className="pending-copy">
-        <h2>{guide.source?.url ? "Consulta el canal oficial" : "Guía en revisión"}</h2>
+                <h2>{guide.source?.url ? "Consulta el canal oficial" : "Guía en revisión"}</h2>
         <p>Aún no hemos revisado los pasos de esta tarea.</p>
         {guide.source?.url && (
           <>
@@ -1909,14 +2094,14 @@ class AppErrorBoundary extends React.Component {
     return { hasError: true };
   }
   componentDidCatch(error) {
-    console.error("Prueba 1 no pudo mostrar esta pantalla.", error);
+    console.error("Autonomía Dorada no pudo mostrar esta pantalla.", error);
   }
   render() {
     if (this.state.hasError)
       return (
         <main className="boot-screen boot-screen--error" role="alert">
           <span className="boot-mark">
-            P<span>1</span>
+          A<span>D</span>
           </span>
           <span className="boot-error-icon">
             <Info size={24} />

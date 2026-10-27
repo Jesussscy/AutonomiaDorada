@@ -15,4 +15,4 @@ La función de Vercel no requiere un driver nativo de SQLite en producción. Par
 3. Comando de compilación: `npm run build:vercel`; directorio de salida: `dist` (declarados en `vercel.json`).
 4. Los siguientes cambios publicados en `main` generan nuevos despliegues. Comprueba la página, `/api/catalog` y una guía después de cada cambio de contenido o infraestructura.
 
-El frontend usa rutas internas servidas por el fallback de `vercel.json`. El rewrite deja `/api/*` disponible para la función serverless. La app local puede seguir arrancándose con `Iniciar-Prueba1.bat`; la configuración de Vercel no cambia su ejecución local.
+El frontend usa rutas internas servidas por el fallback de `vercel.json`. El rewrite deja `/api/*` disponible para la función serverless. La app local puede seguir arrancándose con `Iniciar-Autonomia-Dorada.bat`; la configuración y el enlace de Vercel no cambian con este ajuste local.

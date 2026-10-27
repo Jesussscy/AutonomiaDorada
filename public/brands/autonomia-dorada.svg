@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Símbolo de Autonomía Dorada</title>
+  <rect x="4" y="4" width="120" height="120" rx="34" fill="#155d5c"/>
+  <path d="M28 87a36 36 0 0 1 72 0" fill="none" stroke="#fffdfa" stroke-width="8" stroke-linecap="round"/>
+  <path d="M39 90c7-13 17-20 25-20s18 7 25 20" fill="none" stroke="#e6b33f" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="64" cy="43" r="13" fill="#e6b33f"/>
+  <path d="M64 18v7M38 28l5 5M90 28l-5 5" stroke="#e6b33f" stroke-width="5" stroke-linecap="round"/>
+</svg>

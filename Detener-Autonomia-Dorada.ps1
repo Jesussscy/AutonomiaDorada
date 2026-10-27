@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 $appRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $pidPath = Join-Path $appRoot '.local-server.pid'
 if (-not (Test-Path -LiteralPath $pidPath)) {
-    Write-Host 'Prueba 1 no registra un servidor local activo.'
+    Write-Host 'Autonomía Dorada no registra un servidor local activo.'
     exit 0
 }
 $metadata = $null
@@ -45,7 +45,7 @@ if ($metadata -and $metadata.root -eq $appRoot -and $metadata.startedAt) {
         if ($isOwnedServer) {
             try {
                 $health = Invoke-RestMethod -Uri 'http://127.0.0.1:3001/api/health' -TimeoutSec 2
-                $isOwnedServer = $health.ok -and $health.name -eq 'Prueba 1'
+                $isOwnedServer = $health.ok -and $health.name -eq 'Autonomía Dorada'
             } catch { $isOwnedServer = $false }
         }
     } elseif ($metadata.kind -eq 'launcher') {
@@ -60,7 +60,7 @@ if ($metadata -and $metadata.root -eq $appRoot -and $metadata.startedAt) {
         if ($isOwnedServer) {
             try {
                 $health = Invoke-RestMethod -Uri "http://127.0.0.1:$serverPort/api/health" -TimeoutSec 2
-                $isOwnedServer = $health.ok -and $health.name -eq 'Prueba 1'
+                $isOwnedServer = $health.ok -and $health.name -eq 'Autonomía Dorada'
             } catch { $isOwnedServer = $false }
         }
     } else {
@@ -71,7 +71,7 @@ if ($metadata -and $metadata.root -eq $appRoot -and $metadata.startedAt) {
 if ($isOwnedServer) {
     & taskkill.exe /PID $serverId /T /F | Out-Null
     Remove-Item -LiteralPath $pidPath -Force -ErrorAction SilentlyContinue
-    Write-Host 'Servidor local de Prueba 1 detenido.' -ForegroundColor Green
+    Write-Host 'Servidor local de Autonomía Dorada detenido.' -ForegroundColor Green
 } else {
-    Write-Host 'No se detuvo ningún proceso: el identificador guardado no corresponde al servidor de Prueba 1.' -ForegroundColor Yellow
+    Write-Host 'No se detuvo ningún proceso: el identificador guardado no corresponde al servidor de Autonomía Dorada.' -ForegroundColor Yellow
 }

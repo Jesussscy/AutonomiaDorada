@@ -12,4 +12,5 @@ logs/
 .vercel/
 coverage/
 *.log
+.impeccable/
 .DS_Store

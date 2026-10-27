@@ -20,14 +20,14 @@ $browserUrl = "http://localhost:$serverPort"
 
 try {
     $existing = Invoke-RestMethod -Uri $localHealthUrl -TimeoutSec 2
-    if ($existing.ok -and $existing.name -eq 'Prueba 1') {
+    if ($existing.ok -and $existing.name -eq 'Autonomía Dorada') {
         Start-Process $browserUrl
         exit 0
     }
 } catch {}
 
 if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
-    Write-Host 'Prueba 1 necesita Node.js 20 o posterior.' -ForegroundColor Red
+    Write-Host 'Autonomía Dorada necesita Node.js 20 o posterior.' -ForegroundColor Red
     Write-Host 'Instala Node.js y vuelve a abrir este archivo.'
     Read-Host 'Presiona Enter para cerrar'
     exit 1
@@ -35,7 +35,7 @@ if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
 $nodeVersion = (& node -p 'process.versions.node').Trim()
 $nodeMajor = [int]$nodeVersion.Split('.')[0]
 if ($nodeMajor -lt 20) {
-    Write-Host "Prueba 1 necesita Node.js 20 o posterior. Se encontró $nodeVersion." -ForegroundColor Red
+    Write-Host "Autonomía Dorada necesita Node.js 20 o posterior. Se encontró $nodeVersion." -ForegroundColor Red
     Read-Host 'Presiona Enter para cerrar'
     exit 1
 }
@@ -60,7 +60,7 @@ if ($LASTEXITCODE -ne 0) { throw 'No se pudo preparar la aplicación.' }
 $nodePath = (Get-Command node -ErrorAction Stop).Source
 $logDirectory = Join-Path $appRoot 'logs'
 New-Item -ItemType Directory -Path $logDirectory -Force | Out-Null
-$logPath = Join-Path $logDirectory 'prueba1-local.log'
+$logPath = Join-Path $logDirectory 'autonomia-dorada-local.log'
 $pidPath = Join-Path $appRoot '.local-server.pid'
 $rootForCommand = $appRoot.Replace("'", "''")
 $nodeForCommand = $nodePath.Replace("'", "''")
@@ -83,12 +83,12 @@ for ($attempt = 0; $attempt -lt 30; $attempt++) {
     Start-Sleep -Milliseconds 500
     try {
         $health = Invoke-RestMethod -Uri $localHealthUrl -TimeoutSec 2
-        if ($health.ok -and $health.name -eq 'Prueba 1') { $ready = $true; break }
+        if ($health.ok -and $health.name -eq 'Autonomía Dorada') { $ready = $true; break }
     } catch {}
 }
 
 if (-not $ready) {
-    Write-Host "No se pudo iniciar Prueba 1. Revisa el registro: $logPath" -ForegroundColor Red
+    Write-Host "No se pudo iniciar Autonomía Dorada. Revisa el registro: $logPath" -ForegroundColor Red
     Read-Host 'Presiona Enter para cerrar'
     exit 1
 }
