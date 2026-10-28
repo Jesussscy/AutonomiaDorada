@@ -3100,3 +3100,35 @@ html {
     justify-self: end;
   }
 }
+
+.artwork-toggle {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 13px;
+  padding: 9px 13px;
+  border: 1px solid #d9e5ed;
+  border-radius: 11px;
+  background: #f2f7fa;
+  color: #365d78;
+  font-size: calc(13px * var(--text-scale));
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s;
+}
+.artwork-toggle:hover {
+  background: #e7f0f6;
+  border-color: #b9d3e3;
+}
+.artwork-toggle .is-closed {
+  transform: rotate(180deg);
+}
+.step-content .guide-artwork {
+  margin-top: 0;
+}
+@media (max-width: 760px) {
+  .step-content .guide-artwork {
+    width: 100%;
+  }
+}

@@ -637,6 +637,9 @@ function App() {
   const [voiceAvailable, setVoiceAvailable] = useState(false);
   const [narrativeMode, setNarrativeMode] = useState(false);
   const [narration, setNarration] = useState("idle");
+  const [showArtwork, setShowArtwork] = useState(() =>
+    window.matchMedia("(min-width: 761px)").matches,
+  );
   const [toast, setToast] = useState("");
   const [showHelp, setShowHelp] = useState(false);
   const [category, setCategory] = useState("Todas");
@@ -664,6 +667,12 @@ function App() {
 
   const guide = selected ? catalog.guides.find((g) => g.id === selected) : null;
   const activeStep = guide?.steps?.[stepIndex];
+  useEffect(() => {
+    const layout = window.matchMedia("(min-width: 761px)");
+    const updateArtwork = () => setShowArtwork(layout.matches);
+    layout.addEventListener("change", updateArtwork);
+    return () => layout.removeEventListener("change", updateArtwork);
+  }, []);
   useEffect(() => {
     let alive = true;
     let timer;
@@ -786,6 +795,7 @@ function App() {
   };
   const openGuide = (g) => {
     setSelected(g.id);
+    setShowArtwork(window.matchMedia("(min-width: 761px)").matches);
     setStepIndex(
       g.status === "verified"
         ? safeStep(readProgress(g.id), g.steps?.length || 0)
@@ -1631,15 +1641,27 @@ function App() {
                       </span>
                       <span>{guide.entity_name}</span>
                     </div>
-                    <GuideArtwork
-                      guide={guide}
-                      stepIndex={stepIndex}
-                      instruction={activeStep?.instruction || ""}
-                    />
                     <div className="step-content">
                       <h2 className={voice === "speaking" ? "is-speaking" : ""}>
                         {activeStep?.instruction}
                       </h2>
+                      <button
+                        type="button"
+                        className="artwork-toggle"
+                        aria-expanded={showArtwork}
+                        aria-controls="step-artwork"
+                        onClick={() => setShowArtwork((visible) => !visible)}
+                      >
+                        {showArtwork ? "Ocultar esquema" : "Ver esquema del paso"}
+                        <ChevronUp size={17} className={showArtwork ? "" : "is-closed"} />
+                      </button>
+                      <div id="step-artwork" hidden={!showArtwork}>
+                        <GuideArtwork
+                          guide={guide}
+                          stepIndex={stepIndex}
+                          instruction={activeStep?.instruction || ""}
+                        />
+                      </div>
                       <div className="step-tools">
                         <button
                           type="button"
