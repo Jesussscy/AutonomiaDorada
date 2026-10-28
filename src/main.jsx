@@ -708,11 +708,28 @@ function App() {
     }
     const next = params.toString();
     history.replaceState(
-      null,
+      history.state,
       "",
       `${location.pathname}${next ? `?${next}` : ""}`,
     );
   }, [query, guide?.id, stepIndex]);
+  useEffect(() => {
+    const onPopState = () => {
+      const params = new URLSearchParams(location.search);
+      cancelSpeech();
+      setSelected(params.get("guia"));
+      setStepIndex(safeStep(Number(params.get("paso") || 1) - 1, 9999));
+      setQuery(params.get("q") || "");
+      setShowHelp(false);
+      if (params.has("guia")) {
+        window.scrollTo(0, 0);
+      } else {
+        focusCatalog();
+      }
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
   useEffect(() => {
     setVoiceAvailable(
       Boolean(window.speechSynthesis && window.SpeechSynthesisUtterance),
@@ -777,6 +794,10 @@ function App() {
   };
   const backToGuides = () => {
     cancelSpeech();
+    if (history.state?.p1Guide) {
+      history.back();
+      return;
+    }
     setSelected(null);
     setStepIndex(0);
     setShowHelp(false);
@@ -791,6 +812,12 @@ function App() {
     window.scrollTo(0, 0);
   };
   const openGuide = (g) => {
+    const params = new URLSearchParams({ guia: g.id, paso: "1" });
+    history.pushState(
+      { p1Guide: true },
+      "",
+      `${location.pathname}?${params.toString()}`,
+    );
     setSelected(g.id);
     setShowArtwork(window.matchMedia("(min-width: 761px)").matches);
     setStepIndex(
