@@ -309,7 +309,9 @@ const formatCheckedDate = (value) => {
 
 function EntityMark({ entityId, className, size = 18 }) {
   const Icon = entityIcons[entityId] || BookOpenCheck;
-  const logoPath = className === "card-icon" ? brandLogoPaths[entityId] : null;
+  const logoPath = className.split(/\s+/).includes("card-icon")
+    ? brandLogoPaths[entityId]
+    : null;
   return (
     <span
       className={`${className}${logoPath ? " card-icon--brand" : ""}`}
@@ -936,6 +938,7 @@ function App() {
     }
     if (!textNode || textNode.nodeType !== Node.TEXT_NODE) return;
     const content = textNode.textContent || "";
+    if (!Number.isFinite(offset)) return;
     const wordPattern = /[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu;
     let match;
     while ((match = wordPattern.exec(content))) {
