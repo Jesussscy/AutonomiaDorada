@@ -1,0 +1,31 @@
+{
+  "name": "prueba-1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c green,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node server/index.js",
+    "dev:web": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "export:vercel-catalog": "node scripts/export-vercel-catalog.js",
+    "build:vercel": "npm run seed && npm run export:vercel-catalog && npm run build",
+    "start": "node server/index.js",
+    "seed": "node server/seed.js",
+    "start:web": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.9"
+  }
+}

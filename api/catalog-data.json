@@ -1,0 +1,925 @@
+{
+  "entities": [
+    {
+      "id": "afinia",
+      "name": "Afinia",
+      "category": "Servicios públicos",
+      "icon": "A",
+      "note": "Energía eléctrica en Cartagena y la región."
+    },
+    {
+      "id": "bbva",
+      "name": "BBVA",
+      "category": "Bancos",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "banco-bogota",
+      "name": "Banco de Bogotá",
+      "category": "Bancos",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "bancolombia",
+      "name": "Bancolombia",
+      "category": "Bancos",
+      "icon": "B",
+      "note": "Incluye búsquedas como «Banco Colombia»."
+    },
+    {
+      "id": "davivienda",
+      "name": "Davivienda",
+      "category": "Bancos",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "movii",
+      "name": "MOVii",
+      "category": "Billeteras",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "movistar",
+      "name": "Movistar",
+      "category": "Servicios públicos",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "nequi",
+      "name": "Nequi",
+      "category": "Billeteras",
+      "icon": "N",
+      "note": "Billetera digital"
+    },
+    {
+      "id": "runt",
+      "name": "RUNT",
+      "category": "Trámites y seguros",
+      "icon": "R",
+      "note": "Consulta ciudadana de vehículos."
+    },
+    {
+      "id": "soat",
+      "name": "SOAT",
+      "category": "Trámites y seguros",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "ara",
+      "name": "Tiendas Ara",
+      "category": "Comercios",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    },
+    {
+      "id": "dale",
+      "name": "dale!",
+      "category": "Billeteras",
+      "icon": "•",
+      "note": "El contenido de esta guía está pendiente de revisión con fuentes oficiales."
+    }
+  ],
+  "guides": [
+    {
+      "id": "afinia-bill-pending",
+      "entity_id": "afinia",
+      "title": "Pagar o consultar la factura de energía",
+      "task": "Consultar o pagar un servicio",
+      "description": "Queremos guiarte con seguridad, pero aún no confirmamos el flujo actual de pago en la oficina virtual.",
+      "preparation": "No compartas aquí tu número de contrato, datos bancarios ni claves.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "afinia-channels",
+      "common_errors": "[]",
+      "aliases": [
+        "luz",
+        "pagar la luz",
+        "factura afinia",
+        "energía",
+        "energia"
+      ],
+      "entity_name": "Afinia",
+      "entity_category": "Servicios públicos",
+      "entity_icon": "A",
+      "source_title": "Canales virtuales y de atención de Afinia",
+      "source_url": "https://www.afinia.com.co/",
+      "source_publisher": "Afinia",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
+      "commonErrors": [],
+      "source": {
+        "title": "Canales virtuales y de atención de Afinia",
+        "url": "https://www.afinia.com.co/",
+        "publisher": "Afinia",
+        "checkedAt": "2026-10-28",
+        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
+      },
+      "steps": []
+    },
+    {
+      "id": "bbva-pending",
+      "entity_id": "bbva",
+      "title": "Enviar plata o pagar desde BBVA",
+      "task": "Enviar dinero",
+      "description": "La guía está pendiente de revisión con la fuente oficial de la entidad. Por ahora, puedes abrir su canal oficial y consultar allí directamente.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "bbva-official-channel",
+      "common_errors": "[]",
+      "aliases": [
+        "bbva",
+        "transferir",
+        "pagar"
+      ],
+      "entity_name": "BBVA",
+      "entity_category": "Bancos",
+      "entity_icon": "•",
+      "source_title": "Sitio oficial de BBVA Colombia",
+      "source_url": "https://www.bbva.com.co/",
+      "source_publisher": "BBVA Colombia",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Portada HTTPS de BBVA Colombia consultada; muestra opciones de personas, app y atención. No se verificó un flujo de transferencias para esta guía, que continúa pendiente.",
+      "commonErrors": [],
+      "source": {
+        "title": "Sitio oficial de BBVA Colombia",
+        "url": "https://www.bbva.com.co/",
+        "publisher": "BBVA Colombia",
+        "checkedAt": "2026-10-28",
+        "result": "Portada HTTPS de BBVA Colombia consultada; muestra opciones de personas, app y atención. No se verificó un flujo de transferencias para esta guía, que continúa pendiente."
+      },
+      "steps": []
+    },
+    {
+      "id": "bogota-pending",
+      "entity_id": "banco-bogota",
+      "title": "Enviar plata o pagar desde Banco de Bogotá",
+      "task": "Enviar dinero",
+      "description": "La guía está pendiente de revisión con la fuente oficial de la entidad. Por ahora, puedes abrir su canal oficial y consultar allí directamente.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "banco-bogota-official-channel",
+      "common_errors": "[]",
+      "aliases": [
+        "banco",
+        "de",
+        "bogota",
+        "transferir",
+        "pagar"
+      ],
+      "entity_name": "Banco de Bogotá",
+      "entity_category": "Bancos",
+      "entity_icon": "•",
+      "source_title": "Portal de Personas del Banco de Bogotá",
+      "source_url": "https://www.bancodebogota.com/personas",
+      "source_publisher": "Banco de Bogotá",
+      "source_checked_at": "2026-10-28",
+      "source_result": "El enlace HTTPS a Personas está publicado por el propio Banco en su portal de transparencia. La consulta automatizada del destino devolvió 403; no se revisó el flujo de transferencias y la guía sigue pendiente.",
+      "commonErrors": [],
+      "source": {
+        "title": "Portal de Personas del Banco de Bogotá",
+        "url": "https://www.bancodebogota.com/personas",
+        "publisher": "Banco de Bogotá",
+        "checkedAt": "2026-10-28",
+        "result": "El enlace HTTPS a Personas está publicado por el propio Banco en su portal de transparencia. La consulta automatizada del destino devolvió 403; no se revisó el flujo de transferencias y la guía sigue pendiente."
+      },
+      "steps": []
+    },
+    {
+      "id": "bancolombia-own-transfer",
+      "entity_id": "bancolombia",
+      "title": "Transferir entre cuentas Bancolombia",
+      "task": "Hacer una transferencia",
+      "description": "Envía plata desde la app Mi Bancolombia a una cuenta Bancolombia.",
+      "preparation": "Necesitas una cuenta activa con saldo disponible y la app Mi Bancolombia. Las cuentas destino no inscritas pueden requerir pasos diferentes.",
+      "status": "verified",
+      "updated_at": "2026-10-28",
+      "source_id": "bancolombia-transfer-guide",
+      "common_errors": "[\"Si no encuentras el botón, consulta la ayuda de Mi Bancolombia porque los nombres de la app pueden cambiar.\",\"Revisa el producto de destino y el valor antes de confirmar.\"]",
+      "aliases": [
+        "banco colombia",
+        "bancolombia",
+        "transferir",
+        "enviar plata desde bancolombia",
+        "cuenta bancolombia"
+      ],
+      "entity_name": "Bancolombia",
+      "entity_category": "Bancos",
+      "entity_icon": "B",
+      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
+      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
+      "source_publisher": "Bancolombia — Centro de ayuda",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
+      "commonErrors": [
+        "Si no encuentras el botón, consulta la ayuda de Mi Bancolombia porque los nombres de la app pueden cambiar.",
+        "Revisa el producto de destino y el valor antes de confirmar."
+      ],
+      "source": {
+        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
+        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
+        "publisher": "Bancolombia — Centro de ayuda",
+        "checkedAt": "2026-10-28",
+        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
+      },
+      "steps": [
+        {
+          "id": "bancolombia-own-transfer-1",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 1,
+          "instruction": "Abre la app Mi Bancolombia.",
+          "image_path": "/illustrations/phone.svg",
+          "image_alt": "Abre la aplicación de tu banco"
+        },
+        {
+          "id": "bancolombia-own-transfer-2",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 2,
+          "instruction": "En el menú de abajo, toca «Transacciones» y luego «Transferir Plata».",
+          "image_path": "/illustrations/menu.svg",
+          "image_alt": "Busca las transacciones y la opción de transferir"
+        },
+        {
+          "id": "bancolombia-own-transfer-3",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 3,
+          "instruction": "Ingresa con tu método habitual y elige «Transferir Plata» en la app.",
+          "image_path": "/illustrations/secure.svg",
+          "image_alt": "Entra a tu aplicación con tu método habitual"
+        },
+        {
+          "id": "bancolombia-own-transfer-4",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 4,
+          "instruction": "Escoge la cuenta de donde saldrá la plata y escribe el valor. Toca «Continuar».",
+          "image_path": "/illustrations/details.svg",
+          "image_alt": "Escoge la cuenta y el valor"
+        },
+        {
+          "id": "bancolombia-own-transfer-5",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 5,
+          "instruction": "Elige una cuenta Bancolombia inscrita o «De Bancolombia» si aún no está inscrita.",
+          "image_path": "/illustrations/destination.svg",
+          "image_alt": "Elige la cuenta Bancolombia de destino"
+        },
+        {
+          "id": "bancolombia-own-transfer-6",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 6,
+          "instruction": "Revisa la información y el nombre de la persona. Si todo está correcto, confirma la transferencia en la app.",
+          "image_path": "/illustrations/check.svg",
+          "image_alt": "Verifica quién recibe y cuánto vas a enviar"
+        },
+        {
+          "id": "bancolombia-own-transfer-7",
+          "guide_id": "bancolombia-own-transfer",
+          "position": 7,
+          "instruction": "Mira el comprobante de la transferencia.",
+          "image_path": "/illustrations/done.svg",
+          "image_alt": "Revisa el comprobante"
+        }
+      ]
+    },
+    {
+      "id": "davivienda-pending",
+      "entity_id": "davivienda",
+      "title": "Enviar plata o pagar desde Davivienda",
+      "task": "Enviar dinero",
+      "description": "La guía está pendiente de revisión con la fuente oficial de la entidad. Por ahora, puedes abrir su canal oficial y consultar allí directamente.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "davivienda-official-channel",
+      "common_errors": "[]",
+      "aliases": [
+        "davivienda",
+        "enviar",
+        "plata",
+        "transferencia",
+        "pagar"
+      ],
+      "entity_name": "Davivienda",
+      "entity_category": "Bancos",
+      "entity_icon": "•",
+      "source_title": "Sitio oficial de Davivienda",
+      "source_url": "https://www.davivienda.com/",
+      "source_publisher": "Banco Davivienda / Davivienda Group",
+      "source_checked_at": "2026-10-28",
+      "source_result": "La página oficial de contacto de Davivienda Group dirige a clientes de Colombia a davivienda.com y a la app Davivienda. La portada no fue legible en esta consulta; no se verificó el flujo de transferencias y la guía sigue pendiente.",
+      "commonErrors": [],
+      "source": {
+        "title": "Sitio oficial de Davivienda",
+        "url": "https://www.davivienda.com/",
+        "publisher": "Banco Davivienda / Davivienda Group",
+        "checkedAt": "2026-10-28",
+        "result": "La página oficial de contacto de Davivienda Group dirige a clientes de Colombia a davivienda.com y a la app Davivienda. La portada no fue legible en esta consulta; no se verificó el flujo de transferencias y la guía sigue pendiente."
+      },
+      "steps": []
+    },
+    {
+      "id": "movii-pending",
+      "entity_id": "movii",
+      "title": "Enviar plata desde MOVii",
+      "task": "Enviar dinero",
+      "description": "La guía está pendiente de revisión con la fuente oficial de la entidad. Por ahora, puedes abrir su canal oficial y consultar allí directamente.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "movii-official-channel",
+      "common_errors": "[]",
+      "aliases": [
+        "movii",
+        "billetera",
+        "transferir"
+      ],
+      "entity_name": "MOVii",
+      "entity_category": "Billeteras",
+      "entity_icon": "•",
+      "source_title": "Canal oficial de MOVii",
+      "source_url": "https://www.movii.com.co/",
+      "source_publisher": "MOVii",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Portada HTTPS de MOVii consultada; incluye acceso a Personas y presenta la app. No se verificó el flujo de envío de dinero para esta guía, que continúa pendiente.",
+      "commonErrors": [],
+      "source": {
+        "title": "Canal oficial de MOVii",
+        "url": "https://www.movii.com.co/",
+        "publisher": "MOVii",
+        "checkedAt": "2026-10-28",
+        "result": "Portada HTTPS de MOVii consultada; incluye acceso a Personas y presenta la app. No se verificó el flujo de envío de dinero para esta guía, que continúa pendiente."
+      },
+      "steps": []
+    },
+    {
+      "id": "movistar-pending",
+      "entity_id": "movistar",
+      "title": "Consultar o pagar una factura Movistar",
+      "task": "Consultar o pagar un servicio",
+      "description": "Movistar informa que sus servicios continúan en transición a Tigo. El portal oficial permite consultar facturas, pero aún no hemos revisado el paso a paso.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "movistar-payment-portal",
+      "common_errors": "[]",
+      "aliases": [
+        "movistar",
+        "tigo",
+        "factura",
+        "pagar",
+        "celular"
+      ],
+      "entity_name": "Movistar",
+      "entity_category": "Servicios públicos",
+      "entity_icon": "•",
+      "source_title": "Portal de pagos Movistar",
+      "source_url": "https://payment.movistar.co/invoice-details",
+      "source_publisher": "Movistar Colombia",
+      "source_checked_at": "2026-10-28",
+      "source_result": "La página oficial de Movistar enlaza este portal para pagar la factura. El portal permite consultar saldo, agregar o editar facturas y pagar. Movistar informa que sus servicios continúan en transición a Tigo. No se documentan aquí los pasos de una transacción.",
+      "commonErrors": [],
+      "source": {
+        "title": "Portal de pagos Movistar",
+        "url": "https://payment.movistar.co/invoice-details",
+        "publisher": "Movistar Colombia",
+        "checkedAt": "2026-10-28",
+        "result": "La página oficial de Movistar enlaza este portal para pagar la factura. El portal permite consultar saldo, agregar o editar facturas y pagar. Movistar informa que sus servicios continúan en transición a Tigo. No se documentan aquí los pasos de una transacción."
+      },
+      "steps": []
+    },
+    {
+      "id": "nequi-send",
+      "entity_id": "nequi",
+      "title": "Enviar plata a otro Nequi",
+      "task": "Enviar dinero",
+      "description": "Envía plata a otro número Nequi. Revisa el nombre antes de confirmar: el envío no se puede cancelar.",
+      "preparation": "Ten listo el número de celular de la persona y revisa que tengas saldo. No compartas tu clave ni códigos de seguridad.",
+      "status": "verified",
+      "updated_at": "2026-10-28",
+      "source_id": "nequi-send-guide",
+      "common_errors": "[\"Si no tienes saldo, vuelve al inicio de Nequi y revisa tu Disponible.\",\"Si el nombre que aparece no corresponde a la persona, toca Corregir datos y no envíes.\"]",
+      "aliases": [
+        "mandar plata",
+        "pasar dinero",
+        "transferir a nequi",
+        "enviar a nequi",
+        "plata a otra persona"
+      ],
+      "entity_name": "Nequi",
+      "entity_category": "Billeteras",
+      "entity_icon": "N",
+      "source_title": "¿Cómo enviar plata a otro Nequi?",
+      "source_url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
+      "source_publisher": "Centro de ayuda Nequi",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28.",
+      "commonErrors": [
+        "Si no tienes saldo, vuelve al inicio de Nequi y revisa tu Disponible.",
+        "Si el nombre que aparece no corresponde a la persona, toca Corregir datos y no envíes."
+      ],
+      "source": {
+        "title": "¿Cómo enviar plata a otro Nequi?",
+        "url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
+        "publisher": "Centro de ayuda Nequi",
+        "checkedAt": "2026-10-28",
+        "result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28."
+      },
+      "steps": [
+        {
+          "id": "nequi-send-1",
+          "guide_id": "nequi-send",
+          "position": 1,
+          "instruction": "Abre la app Nequi en tu celular.",
+          "image_path": "/illustrations/phone.svg",
+          "image_alt": "Abre una aplicación en un celular"
+        },
+        {
+          "id": "nequi-send-2",
+          "guide_id": "nequi-send",
+          "position": 2,
+          "instruction": "Toca el signo pesos ($) y luego toca «Envía».",
+          "image_path": "/illustrations/money.svg",
+          "image_alt": "Busca el signo de pesos y la opción para enviar"
+        },
+        {
+          "id": "nequi-send-3",
+          "guide_id": "nequi-send",
+          "position": 3,
+          "instruction": "Elige «Nequi» como destino.",
+          "image_path": "/illustrations/destination.svg",
+          "image_alt": "Escoge una persona que usa Nequi"
+        },
+        {
+          "id": "nequi-send-4",
+          "guide_id": "nequi-send",
+          "position": 4,
+          "instruction": "Escribe el número de celular y el valor. Escoge de dónde sale la plata; luego toca «Sigue».",
+          "image_path": "/illustrations/details.svg",
+          "image_alt": "Escribe el celular y el valor que vas a enviar"
+        },
+        {
+          "id": "nequi-send-5",
+          "guide_id": "nequi-send",
+          "position": 5,
+          "instruction": "Revisa el nombre que aparece y el valor. Si todo coincide, toca «Enviar». No podrás cancelar este envío.",
+          "image_path": "/illustrations/check.svg",
+          "image_alt": "Revisa con cuidado el destino antes de enviar"
+        },
+        {
+          "id": "nequi-send-6",
+          "guide_id": "nequi-send",
+          "position": 6,
+          "instruction": "Mira el detalle del movimiento. Puedes compartir el comprobante con la otra persona.",
+          "image_path": "/illustrations/done.svg",
+          "image_alt": "Revisa el comprobante del movimiento"
+        }
+      ]
+    },
+    {
+      "id": "nequi-public-bill",
+      "entity_id": "nequi",
+      "title": "Pagar una factura de servicios públicos con Nequi",
+      "task": "Pagar una factura",
+      "description": "La guía explica el recorrido general para encontrar servicios públicos en Nequi. No confirma que una empresa específica esté disponible; comprueba el catálogo que aparece hoy en la aplicación.",
+      "preparation": "Ten la factura a mano. El número de referencia depende del servicio. No compartas ese dato aquí.",
+      "status": "verified",
+      "updated_at": "2026-10-28",
+      "source_id": "nequi-public-bill-guide",
+      "common_errors": "[\"No confirmamos que Afinia u otro proveedor específico aparezca en el catálogo. Si tu empresa no aparece con su nombre exacto, no selecciones otra parecida y consulta a tu proveedor.\",\"Si la referencia o los datos de la factura no coinciden, detente y revísalos antes de continuar.\"]",
+      "aliases": [
+        "pagar la luz",
+        "pagar factura de luz",
+        "pagar energía",
+        "pagar energia",
+        "factura de servicios públicos",
+        "pagar recibo",
+        "pagar servicios públicos"
+      ],
+      "entity_name": "Nequi",
+      "entity_category": "Billeteras",
+      "entity_icon": "N",
+      "source_title": "¿Cómo pagar servicios públicos en línea con Nequi?",
+      "source_url": "https://ayuda.nequi.com.co/hc/es/articles/33955587381389--C%C3%B3mo-pagar-servicios-p%C3%BAblicos-en-l%C3%ADnea-con-Nequi",
+      "source_publisher": "Centro de ayuda Nequi",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Página oficial HTTPS revisada. Guía genérica del catálogo de servicios en Nequi. No se confirma disponibilidad individual de Afinia ni de otra empresa; comprueba el catálogo actualizado antes de iniciar.",
+      "commonErrors": [
+        "No confirmamos que Afinia u otro proveedor específico aparezca en el catálogo. Si tu empresa no aparece con su nombre exacto, no selecciones otra parecida y consulta a tu proveedor.",
+        "Si la referencia o los datos de la factura no coinciden, detente y revísalos antes de continuar."
+      ],
+      "source": {
+        "title": "¿Cómo pagar servicios públicos en línea con Nequi?",
+        "url": "https://ayuda.nequi.com.co/hc/es/articles/33955587381389--C%C3%B3mo-pagar-servicios-p%C3%BAblicos-en-l%C3%ADnea-con-Nequi",
+        "publisher": "Centro de ayuda Nequi",
+        "checkedAt": "2026-10-28",
+        "result": "Página oficial HTTPS revisada. Guía genérica del catálogo de servicios en Nequi. No se confirma disponibilidad individual de Afinia ni de otra empresa; comprueba el catálogo actualizado antes de iniciar."
+      },
+      "steps": [
+        {
+          "id": "nequi-public-bill-1",
+          "guide_id": "nequi-public-bill",
+          "position": 1,
+          "instruction": "Abre Nequi y busca «Servicios».",
+          "image_path": "/illustrations/phone.svg",
+          "image_alt": "Abre Nequi y busca la sección Servicios"
+        },
+        {
+          "id": "nequi-public-bill-2",
+          "guide_id": "nequi-public-bill",
+          "position": 2,
+          "instruction": "Toca «Servicios públicos».",
+          "image_path": "/illustrations/menu.svg",
+          "image_alt": "Busca Servicios públicos"
+        },
+        {
+          "id": "nequi-public-bill-3",
+          "guide_id": "nequi-public-bill",
+          "position": 3,
+          "instruction": "En «Servicios básicos», toca «Otras empresas». Allí aparece el catálogo disponible.",
+          "image_path": "/illustrations/menu.svg",
+          "image_alt": "Consulta el catálogo actual de empresas disponibles"
+        },
+        {
+          "id": "nequi-public-bill-4",
+          "guide_id": "nequi-public-bill",
+          "position": 4,
+          "instruction": "Busca el nombre exacto de tu empresa. Si no aparece, detente y consulta los canales oficiales de tu proveedor.",
+          "image_path": "/illustrations/destination.svg",
+          "image_alt": "Comprueba que aparezca el nombre exacto de tu empresa"
+        },
+        {
+          "id": "nequi-public-bill-5",
+          "guide_id": "nequi-public-bill",
+          "position": 5,
+          "instruction": "Si aparece, selecciónala y escribe la referencia que indica tu factura. Luego toca «Consultar».",
+          "image_path": "/illustrations/details.svg",
+          "image_alt": "Escribe la referencia que aparece en tu factura"
+        },
+        {
+          "id": "nequi-public-bill-6",
+          "guide_id": "nequi-public-bill",
+          "position": 6,
+          "instruction": "Revisa los datos consultados. Escribe el valor de la factura y toca «Continuar».",
+          "image_path": "/illustrations/check.svg",
+          "image_alt": "Revisa que los datos de la factura coincidan"
+        },
+        {
+          "id": "nequi-public-bill-7",
+          "guide_id": "nequi-public-bill",
+          "position": 7,
+          "instruction": "Haz una última revisión y toca «Pagar» solo si la empresa, la referencia y el valor son correctos.",
+          "image_path": "/illustrations/check.svg",
+          "image_alt": "Confirma únicamente si todos los datos son correctos"
+        },
+        {
+          "id": "nequi-public-bill-8",
+          "guide_id": "nequi-public-bill",
+          "position": 8,
+          "instruction": "Consulta el mensaje de confirmación y el movimiento en la app. Algunas empresas pueden tardar en confirmar el pago.",
+          "image_path": "/illustrations/done.svg",
+          "image_alt": "Revisa el movimiento y el mensaje de confirmación"
+        }
+      ]
+    },
+    {
+      "id": "runt-soat-consult",
+      "entity_id": "runt",
+      "title": "Consultar la vigencia del SOAT",
+      "task": "Consultar un trámite o seguro",
+      "description": "El RUNT ofrece una consulta ciudadana de vehículos. Su instructivo oficial describe la búsqueda por placa con datos del propietario; el formulario puede cambiar y se abre directamente en el portal del RUNT.",
+      "preparation": "Ten a mano la placa y el tipo y número de documento del propietario del vehículo. Ingrésalos únicamente en el formulario oficial del RUNT. Esta aplicación no los solicita, almacena ni recibe.",
+      "status": "verified",
+      "updated_at": "2026-10-28",
+      "source_id": "runt-soat-query",
+      "common_errors": "[\"Si la página cambió, vuelve a la consulta ciudadana oficial del RUNT y usa el enlace «Ingrese aquí al módulo».\",\"Si los datos no coinciden, verifica la placa y consulta directamente con el RUNT o con la aseguradora.\"]",
+      "aliases": [
+        "soat",
+        "consultar mi soat",
+        "vencimiento soat",
+        "vigencia seguro",
+        "seguro del carro",
+        "moto"
+      ],
+      "entity_name": "RUNT",
+      "entity_category": "Trámites y seguros",
+      "entity_icon": "R",
+      "source_title": "Consulta de vehículos por placa",
+      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
+      "source_publisher": "RUNT",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
+      "commonErrors": [
+        "Si la página cambió, vuelve a la consulta ciudadana oficial del RUNT y usa el enlace «Ingrese aquí al módulo».",
+        "Si los datos no coinciden, verifica la placa y consulta directamente con el RUNT o con la aseguradora."
+      ],
+      "source": {
+        "title": "Consulta de vehículos por placa",
+        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
+        "publisher": "RUNT",
+        "checkedAt": "2026-10-28",
+        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
+      },
+      "steps": [
+        {
+          "id": "runt-soat-consult-1",
+          "guide_id": "runt-soat-consult",
+          "position": 1,
+          "instruction": "Abre el enlace oficial del RUNT. En esta guía no te pediremos ningún dato.",
+          "image_path": "/illustrations/link.svg",
+          "image_alt": "Entra a la página oficial del RUNT"
+        },
+        {
+          "id": "runt-soat-consult-2",
+          "guide_id": "runt-soat-consult",
+          "position": 2,
+          "instruction": "En la página «Consulta de vehículos por placa», selecciona «Ingrese aquí al módulo» para abrir el portal público del RUNT.",
+          "image_path": "/illustrations/menu.svg",
+          "image_alt": "Busca la consulta de vehículos"
+        },
+        {
+          "id": "runt-soat-consult-3",
+          "guide_id": "runt-soat-consult",
+          "position": 3,
+          "instruction": "Para la consulta por placa, el instructivo del RUNT indica que te pedirán la placa y el tipo y número de documento del propietario. Escríbelos solo en el portal oficial; nunca en esta aplicación.",
+          "image_path": "/illustrations/details.svg",
+          "image_alt": "Ten a la mano la placa y los datos solicitados"
+        },
+        {
+          "id": "runt-soat-consult-4",
+          "guide_id": "runt-soat-consult",
+          "position": 4,
+          "instruction": "Sigue las indicaciones del formulario oficial y envía la consulta.",
+          "image_path": "/illustrations/check.svg",
+          "image_alt": "Completa la verificación y revisa el resultado"
+        },
+        {
+          "id": "runt-soat-consult-5",
+          "guide_id": "runt-soat-consult",
+          "position": 5,
+          "instruction": "El resultado oficial muestra la información registrada. Si algo no coincide, consulta al RUNT o a tu aseguradora.",
+          "image_path": "/illustrations/done.svg",
+          "image_alt": "Revisa la información registrada"
+        }
+      ]
+    },
+    {
+      "id": "soat-purchase-pending",
+      "entity_id": "soat",
+      "title": "Comprar el SOAT de forma segura",
+      "task": "Comprar un seguro",
+      "description": "Aún no revisamos un proceso de compra ni un vendedor específico. Consulta las recomendaciones oficiales de la Superintendencia Financiera y confirma que el canal de venta esté autorizado.",
+      "preparation": "No compartas aquí datos del vehículo, documentos personales ni información de pago.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "sfc-soat",
+      "common_errors": "[]",
+      "aliases": [
+        "comprar soat",
+        "renovar soat",
+        "sacar soat",
+        "seguro obligatorio",
+        "comprar seguro del carro",
+        "soat para moto"
+      ],
+      "entity_name": "SOAT",
+      "entity_category": "Trámites y seguros",
+      "entity_icon": "•",
+      "source_title": "Recomendaciones para comprar SOAT y evitar fraude",
+      "source_url": "https://www.superfinanciera.gov.co/publicaciones/10115953/superfinanciera-divulga-las-tarifas-maximas-del-soat-para-2026/",
+      "source_publisher": "Superintendencia Financiera de Colombia",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Página oficial de la SFC, modificada el 2 de enero de 2026 y consultada de nuevo el 28 de octubre de 2026. Recomienda usar canales oficiales, comprobar que la aseguradora esté vigilada y verificar a los intermediarios en el sistema de consulta. No documenta una compra específica ni identifica un vendedor.",
+      "commonErrors": [],
+      "source": {
+        "title": "Recomendaciones para comprar SOAT y evitar fraude",
+        "url": "https://www.superfinanciera.gov.co/publicaciones/10115953/superfinanciera-divulga-las-tarifas-maximas-del-soat-para-2026/",
+        "publisher": "Superintendencia Financiera de Colombia",
+        "checkedAt": "2026-10-28",
+        "result": "Página oficial de la SFC, modificada el 2 de enero de 2026 y consultada de nuevo el 28 de octubre de 2026. Recomienda usar canales oficiales, comprobar que la aseguradora esté vigilada y verificar a los intermediarios en el sistema de consulta. No documenta una compra específica ni identifica un vendedor."
+      },
+      "steps": []
+    },
+    {
+      "id": "ara-pending",
+      "entity_id": "ara",
+      "title": "Consultar medios de pago en Tiendas Ara",
+      "task": "Pagar una compra",
+      "description": "Encontramos materiales oficiales de Tiendas ara, pero no confirmamos los medios de pago ni un paso a paso para esta tarea.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "ara-official-channel",
+      "common_errors": "[]",
+      "aliases": [
+        "ara",
+        "tiendas",
+        "pagar",
+        "compra"
+      ],
+      "entity_name": "Tiendas Ara",
+      "entity_category": "Comercios",
+      "entity_icon": "•",
+      "source_title": "Sitio oficial de Tiendas ara",
+      "source_url": "https://aratiendas.com/home/centro/",
+      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
+      "source_checked_at": "2026-10-28",
+      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
+      "commonErrors": [],
+      "source": {
+        "title": "Sitio oficial de Tiendas ara",
+        "url": "https://aratiendas.com/home/centro/",
+        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
+        "checkedAt": "2026-10-28",
+        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
+      },
+      "steps": []
+    },
+    {
+      "id": "dale-pending",
+      "entity_id": "dale",
+      "title": "Enviar plata desde dale!",
+      "task": "Enviar dinero",
+      "description": "La guía está pendiente de revisión con la fuente oficial de la entidad. Por ahora, puedes abrir su canal oficial y consultar allí directamente.",
+      "preparation": "No compartas contraseñas, claves ni códigos de seguridad.",
+      "status": "pending",
+      "updated_at": null,
+      "source_id": "dale-official-channel",
+      "common_errors": "[]",
+      "aliases": [
+        "dale",
+        "billetera",
+        "transferir"
+      ],
+      "entity_name": "dale!",
+      "entity_category": "Billeteras",
+      "entity_icon": "•",
+      "source_title": "Sitio oficial de dale!",
+      "source_url": "https://www.dale.com.co/nowrap/",
+      "source_publisher": "Aval Soluciones Digitales S.A. — dale!",
+      "source_checked_at": "2026-10-28",
+      "source_result": "Página indexada como sitio oficial de dale! con servicios para pasar, pagar y recibir plata. El destino bloqueó la lectura automatizada en esta consulta; no se verificó un flujo de transferencia y la guía sigue pendiente.",
+      "commonErrors": [],
+      "source": {
+        "title": "Sitio oficial de dale!",
+        "url": "https://www.dale.com.co/nowrap/",
+        "publisher": "Aval Soluciones Digitales S.A. — dale!",
+        "checkedAt": "2026-10-28",
+        "result": "Página indexada como sitio oficial de dale! con servicios para pasar, pagar y recibir plata. El destino bloqueó la lectura automatizada en esta consulta; no se verificó un flujo de transferencia y la guía sigue pendiente."
+      },
+      "steps": []
+    }
+  ],
+  "links": [
+    {
+      "id": "link-9",
+      "entity_id": "soat",
+      "purpose": "Consulta de entidades vigiladas por la SFC",
+      "url": "https://www.superfinanciera.gov.co/publicaciones/61694",
+      "checked_at": "2026-10-28",
+      "result": "El artículo de recomendaciones SOAT de la SFC enlaza directamente esta lista; el destino oficial muestra el directorio general de entidades vigiladas. Consultado el 28 de octubre de 2026.",
+      "explanation": "Comprueba directamente en la lista oficial de la SFC si una aseguradora está vigilada. Esta consulta no reemplaza revisar el producto ni la oferta que te presenten."
+    },
+    {
+      "id": "link-10",
+      "entity_id": "soat",
+      "purpose": "Consulta de intermediarios de seguros",
+      "url": "https://www.superfinanciera.gov.co/publicaciones/10089684",
+      "checked_at": "2026-10-28",
+      "result": "El artículo de recomendaciones SOAT de la SFC enlaza directamente este sistema; el destino oficial se identifica como consulta de intermediarios de seguros. Consultado el 28 de octubre de 2026.",
+      "explanation": "Verifica en el sistema oficial de la SFC si un intermediario de seguros está autorizado para comercializarlos."
+    },
+    {
+      "id": "link-7",
+      "entity_id": "runt",
+      "purpose": "Consulta oficial de automotores y SOAT",
+      "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
+      "checked_at": "2026-10-28",
+      "result": "Página oficial vigente y enlace al módulo público confirmados el 28 de octubre de 2026. El instructivo oficial RUNT2-IN-1010 (03-10-2025) documenta la consulta por placa con tipo y número de documento del propietario.",
+      "explanation": "Abre la página oficial «Consulta de vehículos por placa». Desde allí, el enlace «Ingrese aquí al módulo» lleva al portal público del RUNT."
+    },
+    {
+      "id": "link-4",
+      "entity_id": "bancolombia",
+      "purpose": "Guía oficial de transferencias en Mi Bancolombia",
+      "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el centro de ayuda oficial de Bancolombia."
+    },
+    {
+      "id": "link-1",
+      "entity_id": "nequi",
+      "purpose": "Guía oficial para enviar a otro Nequi",
+      "url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre la ayuda oficial de Nequi con los pasos e imágenes de su aplicación."
+    },
+    {
+      "id": "link-3",
+      "entity_id": "nequi",
+      "purpose": "Guía oficial para pagar servicios públicos en Nequi",
+      "url": "https://ayuda.nequi.com.co/hc/es/articles/33955587381389--C%C3%B3mo-pagar-servicios-p%C3%BAblicos-en-l%C3%ADnea-con-Nequi",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Explica los pasos generales para pagar desde Nequi; confirma que tu empresa aparezca primero en el catálogo actual de la app."
+    },
+    {
+      "id": "link-12",
+      "entity_id": "banco-bogota",
+      "purpose": "Portal Personas del Banco de Bogotá",
+      "url": "https://www.bancodebogota.com/personas",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el canal oficial de Personas del Banco de Bogotá. No hemos verificado aún el flujo de transferencias."
+    },
+    {
+      "id": "link-6",
+      "entity_id": "movistar",
+      "purpose": "Portal oficial de pagos Movistar",
+      "url": "https://payment.movistar.co/invoice-details",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el portal oficial de pagos Movistar. Para una transacción, sigue las instrucciones de ese sitio y confirma los datos directamente allí."
+    },
+    {
+      "id": "link-2",
+      "entity_id": "nequi",
+      "purpose": "Página oficial de Nequi",
+      "url": "https://www.nequi.com.co/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el sitio oficial de Nequi."
+    },
+    {
+      "id": "link-8",
+      "entity_id": "soat",
+      "purpose": "Recomendaciones oficiales de la Superintendencia Financiera",
+      "url": "https://www.superfinanciera.gov.co/publicaciones/10115953/superfinanciera-divulga-las-tarifas-maximas-del-soat-para-2026/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre recomendaciones para comprar SOAT por canales autorizados y evitar fraudes."
+    },
+    {
+      "id": "link-5",
+      "entity_id": "afinia",
+      "purpose": "Sitio oficial de Afinia",
+      "url": "https://www.afinia.com.co/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el sitio de Afinia, donde se encuentran sus canales virtuales y de atención."
+    },
+    {
+      "id": "link-11",
+      "entity_id": "bbva",
+      "purpose": "Sitio oficial de BBVA Colombia",
+      "url": "https://www.bbva.com.co/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el canal oficial de BBVA Colombia. El paso a paso para transferir está pendiente de revisión."
+    },
+    {
+      "id": "link-13",
+      "entity_id": "davivienda",
+      "purpose": "Sitio oficial de Davivienda",
+      "url": "https://www.davivienda.com/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el canal oficial de Davivienda. La guía de transferencias sigue pendiente de revisión."
+    },
+    {
+      "id": "link-14",
+      "entity_id": "movii",
+      "purpose": "Sitio oficial de MOVii",
+      "url": "https://www.movii.com.co/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre la página oficial de MOVii; allí puedes encontrar sus servicios y canales de ayuda."
+    },
+    {
+      "id": "link-16",
+      "entity_id": "ara",
+      "purpose": "Sitio oficial de Tiendas ara",
+      "url": "https://aratiendas.com/home/centro/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre la página de Tiendas ara. Esta guía no confirma los medios de pago disponibles en una tienda."
+    },
+    {
+      "id": "link-15",
+      "entity_id": "dale",
+      "purpose": "Sitio oficial de dale!",
+      "url": "https://www.dale.com.co/nowrap/",
+      "checked_at": "2026-10-28",
+      "result": "Dominio o centro de ayuda oficial HTTPS consultado el 28 de octubre de 2026. El alcance se registra en la fuente relacionada.",
+      "explanation": "Abre el sitio oficial de dale! El paso a paso de transferencias está pendiente de revisión."
+    }
+  ]
+}

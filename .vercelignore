@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+!.env.example
+data/
+logs/
+node_modules/
+dist/
+coverage/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.local-server.pid
