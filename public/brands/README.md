@@ -8,6 +8,7 @@ Los archivos de esta carpeta se usan para ayudar a identificar la entidad en el 
 | `bancolombia.svg` | Bancolombia | https://www.bancolombia.com/ | Sitio oficial Bancolombia |
 | `bbva.png` | BBVA Colombia | https://www.bbva.com.co/ | Sitio oficial BBVA Colombia |
 | `davivienda.png` | Davivienda | https://www.davivienda.com/ | Sitio oficial Davivienda |
+| `banco-bogota.png` | Banco de Bogotá | https://saladeprensa.bancodebogota.com/logos-y-marca/ | Sala de prensa oficial del Banco de Bogotá; logotipo publicado para descarga |
 | `afinia.svg` | Afinia | https://www.afinia.com.co/ | Sitio oficial Afinia |
 | `ara.svg` | Tiendas ara | https://www.aratiendas.com/home/centro/ | Sitio oficial de Tiendas ara |
 

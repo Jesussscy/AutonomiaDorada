@@ -460,6 +460,9 @@ button {
   height: 100%;
   object-fit: contain;
 }
+.brand-logo-image[src="/brands/banco-bogota.png"] {
+  transform: scale(1.45);
+}
 .guide-card:nth-child(3n + 2) .card-icon {
   background: #f5ede0;
   color: #98734a;

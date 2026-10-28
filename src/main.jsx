@@ -257,6 +257,7 @@ const brandLogoPaths = {
   bancolombia: "/brands/bancolombia.svg",
   bbva: "/brands/bbva.png",
   davivienda: "/brands/davivienda.png",
+  "banco-bogota": "/brands/banco-bogota.png",
   afinia: "/brands/afinia.svg",
   ara: "/brands/ara.svg",
 };
