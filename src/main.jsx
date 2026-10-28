@@ -765,6 +765,19 @@ function App() {
         : "smooth",
     });
   };
+  const showSearchResults = (term = query) => {
+    setQuery(term);
+    setCategory("Todas");
+    requestAnimationFrame(() => {
+      document.getElementById("catalog-heading")?.focus({ preventScroll: true });
+      document.getElementById("guide-list")?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
+      });
+    });
+  };
   const goHome = () => {
     cancelSpeech();
     setSelected(null);
@@ -1162,15 +1175,7 @@ function App() {
                 role="search"
                 onSubmit={(e) => {
                   e.preventDefault();
-                  setCategory("Todas");
-                  document.getElementById("guide-list")?.scrollIntoView({
-                    behavior: window.matchMedia(
-                      "(prefers-reduced-motion: reduce)",
-                    ).matches
-                      ? "auto"
-                      : "smooth",
-                    block: "start",
-                  });
+                  showSearchResults();
                 }}
               >
                 <Search size={25} strokeWidth={2.4} />
@@ -1197,7 +1202,7 @@ function App() {
                 <span>Prueba con:</span>
                 {["Enviar plata", "Pagar la luz", "Consultar el SOAT"].map(
                   (term) => (
-                    <button key={term} onClick={() => setQuery(term)}>
+                    <button key={term} onClick={() => showSearchResults(term)}>
                       {term}
                       <ArrowRight size={13} />
                     </button>
@@ -1289,7 +1294,7 @@ function App() {
               <div className="section-heading">
                 <div>
                   <span className="section-eyebrow">TU CENTRO DE GUÍAS</span>
-                  <h2>
+                  <h2 id="catalog-heading" tabIndex={-1}>
                     {query
                       ? `Resultados para “${query}”`
                       : showFavorites

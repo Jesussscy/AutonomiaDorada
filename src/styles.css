@@ -353,6 +353,7 @@ button {
 .catalog-section {
   padding: 27px 0 72px;
   border-top: 1px solid rgba(62, 73, 61, 0.11);
+  scroll-margin-top: 96px;
 }
 .section-heading {
   display: flex;
@@ -1188,6 +1189,7 @@ button {
   }
   .catalog-section {
     padding-top: 23px;
+    scroll-margin-top: 116px;
   }
   .section-heading h2 {
     font-size: calc((22px) * var(--text-scale));
