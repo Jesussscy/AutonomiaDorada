@@ -91,33 +91,6 @@ const categoryFor = (guide) =>
     "Trámites y seguros": "Trámites",
     Comercios: "Comercios",
   })[guide.entity_category] || "Bancos";
-const categorySearchAliases = {
-  Bancos: ["banco", "bancos", "bancario"],
-  Billeteras: ["billetera", "billeteras", "wallet"],
-  Servicios: [
-    "servicio",
-    "servicios",
-    "recibo",
-    "factura",
-    "pagar",
-    "luz",
-    "agua",
-    "gas",
-    "internet",
-    "celular",
-  ],
-  Trámites: ["tramite", "tramites", "soat", "runt", "vehiculo", "seguro"],
-  Comercios: [
-    "comercio",
-    "tienda",
-    "tiendas",
-    "supermercado",
-    "supermercados",
-    "compra",
-    "compras",
-    "mercado",
-  ],
-};
 const readLocalNumber = (key, fallback, min, max) => {
   try {
     const stored = localStorage.getItem(key);
@@ -849,13 +822,13 @@ function App() {
     const byCategory =
       category === "Todas"
         ? matches
-        : matches.filter(
-            (g) =>
-              categoryFor(g) === category ||
-              matchesQuery(query, ...(categorySearchAliases[category] || [])),
-          );
-    return byCategory.filter((g) => showPending || g.status === "verified");
-  }, [matches, category, query, showPending]);
+        : matches.filter((g) => categoryFor(g) === category);
+    return byCategory.filter(
+      (g) =>
+        (showPending || g.status === "verified") &&
+        (!showFavorites || favorites.includes(g.id)),
+    );
+  }, [matches, category, showPending, showFavorites, favorites]);
   const sourceCounts = useMemo(
     () => ({
       reviewed: catalog.guides.filter((g) => g.status === "verified").length,
@@ -885,6 +858,11 @@ function App() {
     () => new Set(favoriteGuides.map((g) => g.id)),
     [favoriteGuides],
   );
+  useEffect(() => {
+    if (catalogState === "ready" && showFavorites && !favoriteGuides.length) {
+      setShowFavorites(false);
+    }
+  }, [catalogState, showFavorites, favoriteGuides.length]);
   useEffect(() => {
     writeLocal("p1-favorites", JSON.stringify(favorites));
   }, [favorites]);
@@ -1266,7 +1244,7 @@ function App() {
                       GUARDADAS EN ESTE DISPOSITIVO
                     </span>
                     <h2 id="favorites-title">Tus guías favoritas</h2>
-                    <p>Solo tú puedes ver esta lista en este computador.</p>
+                    <p>Guardadas solo en este dispositivo.</p>
                   </div>
                   <button
                     className="favorite-filter"
@@ -1305,22 +1283,33 @@ function App() {
                   <h2>
                     {query
                       ? `Resultados para “${query}”`
-                      : "Encuentra una tarea"}
+                      : showFavorites
+                        ? "Solo tus favoritas"
+                        : "Encuentra una tarea"}
                   </h2>
                   <p aria-live="polite" aria-atomic="true">
                     {query
-                      ? `${filteredMatches.length} ${filteredMatches.length === 1 ? "resultado" : "resultados"} para tu búsqueda.`
-                      : "Elige una categoría o busca con tus propias palabras."}
+                      ? `${filteredMatches.length} ${filteredMatches.length === 1 ? "resultado" : "resultados"}${showFavorites ? " entre tus favoritas" : " para tu búsqueda"}.`
+                      : showFavorites
+                        ? "Las guías que guardaste en este dispositivo."
+                        : "Elige una categoría o busca con tus propias palabras."}
                   </p>
                 </div>
                 <span className="catalog-count">
-                  <CheckCircle2 size={14} />
-                  {
-                    catalog.guides.filter((g) => g.status === "verified").length
-                  }{" "}
-                  guías revisadas <span>·</span>{" "}
-                  {catalog.guides.filter((g) => g.status === "pending").length}{" "}
-                  en revisión
+                  {showFavorites ? (
+                    <>
+                      <Bookmark size={14} /> {favoriteGuides.length}{" "}
+                      {favoriteGuides.length === 1 ? "guía guardada" : "guías guardadas"}
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle2 size={14} />
+                      {catalog.guides.filter((g) => g.status === "verified").length}{" "}
+                      guías revisadas <span>·</span>{" "}
+                      {catalog.guides.filter((g) => g.status === "pending").length}{" "}
+                      en revisión
+                    </>
+                  )}
                 </span>
               </div>
               <nav
@@ -1345,7 +1334,7 @@ function App() {
                   );
                 })}
               </nav>
-              <div className="catalog-options">
+              {!showFavorites && <div className="catalog-options">
                 <label className="pending-toggle">
                   <input
                     type="checkbox"
@@ -1367,7 +1356,7 @@ function App() {
                   <CheckCircle2 size={14} /> Pasos revisados <span>·</span>
                   <Clock3 size={14} /> Sin pasos publicados
                 </p>
-              </div>
+              </div>}
               {filteredMatches.length ? (
                 <div className="guide-grid">
                   {filteredMatches.map((g) => (
@@ -1386,14 +1375,18 @@ function App() {
                     <Search size={30} />
                   </span>
                   <h3>
-                    {matches.length
-                      ? "No hay guías en esta categoría."
-                      : "No encontramos esa guía todavía."}
+                    {showFavorites
+                      ? "No hay favoritas con este filtro."
+                      : matches.length
+                        ? "No hay guías en esta categoría."
+                        : "No encontramos esa guía todavía."}
                   </h3>
                   <p>
-                    {matches.length
-                      ? "Prueba con otra categoría o muestra las guías que están en revisión."
-                      : "Prueba con otras palabras o vuelve a ver las guías disponibles."}
+                    {showFavorites
+                      ? "Prueba otra categoría o vuelve a ver todas las guías."
+                      : matches.length
+                        ? "Prueba con otra categoría o muestra las guías que están en revisión."
+                        : "Prueba con otras palabras o vuelve a ver las guías disponibles."}
                   </p>
                   <div>
                     <button
@@ -1402,6 +1395,7 @@ function App() {
                         setQuery("");
                         setCategory("Todas");
                         setShowPending(true);
+                        setShowFavorites(false);
                       }}
                     >
                       Ver las guías
@@ -1543,7 +1537,6 @@ function App() {
             {guide.status === "pending" ? (
               <PendingGuide
                 guide={guide}
-                onHome={goHome}
                 relatedLinks={catalog.links.filter(
                   (link) =>
                     link.entity_id === guide.entity_id &&
@@ -1899,21 +1892,18 @@ function StatusBadge({ status }) {
     </span>
   );
 }
-function PendingGuide({ guide, onHome, relatedLinks = [] }) {
+function PendingGuide({ guide, relatedLinks = [] }) {
   return (
     <div className="pending-panel">
       <span className="pending-symbol">
         <Clock3 size={30} />
       </span>
       <div className="pending-copy">
-        <span className="section-eyebrow">CONTENIDO PENDIENTE DE REVISIÓN</span>
-        <h2>Queremos compartirte pasos confiables.</h2>
+        <h2>Aún no hay pasos revisados.</h2>
         <p>{guide.description}</p>
         <p className="pending-limit">
-          <strong>¿Qué significa esto?</strong> Encontramos una página o canal
-          relacionado con esta tarea, pero aún no hemos confirmado un paso a
-          paso vigente. Por eso, no publicamos instrucciones que puedan estar
-          desactualizadas.
+          <strong>Por ahora</strong> Consulta la fuente oficial enlazada antes de
+          actuar.
         </p>
         {guide.source?.url && (
           <a
@@ -1930,13 +1920,12 @@ function PendingGuide({ guide, onHome, relatedLinks = [] }) {
         )}
         {guide.source?.checkedAt && (
           <small className="pending-source-date">
-            Fuente consultada: {formatCheckedDate(guide.source.checkedAt)}. Los
-            pasos siguen pendientes.
+            Fuente consultada: {formatCheckedDate(guide.source.checkedAt)}.
           </small>
         )}
         {relatedLinks.length > 0 && (
           <div className="pending-related">
-            <h3>Consultas oficiales que pueden ayudarte</h3>
+            <h3>Enlaces oficiales útiles</h3>
             <div className="official-link-list pending-related-links">
               {relatedLinks.map((link) => (
                 <a
@@ -1959,13 +1948,9 @@ function PendingGuide({ guide, onHome, relatedLinks = [] }) {
           </div>
         )}
         <p className="pending-small">
-          <ShieldCheck size={16} /> Verifica que la dirección corresponda a la
-          entidad. Esta aplicación no hace transacciones ni solicita datos
-          financieros.
+          <ShieldCheck size={16} /> Comprueba la dirección oficial. Aquí nunca
+          te pedimos claves ni datos de pago.
         </p>
-        <button className="pending-back" onClick={onHome}>
-          <ArrowLeft size={16} /> Volver a las guías
-        </button>
       </div>
     </div>
   );

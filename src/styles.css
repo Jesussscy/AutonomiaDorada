@@ -1121,19 +1121,6 @@ button {
 .pending-small svg {
   flex: 0 0 16px;
 }
-.pending-back {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 15px;
-  padding: 8px 0;
-  border: 0;
-  background: none;
-  color: #5a7182;
-  font-size: calc((12px) * var(--text-scale));
-  font-weight: 600;
-  cursor: pointer;
-}
 .toast {
   position: fixed;
   bottom: 22px;
@@ -2715,8 +2702,7 @@ html {
 }
 .back-link,
 .guide-footer button,
-.home-footer button,
-.pending-back {
+.home-footer button {
   min-height: 44px;
 }
 @media (max-width: 760px) {
@@ -2985,8 +2971,7 @@ html {
 .back-link,
 .icon-action,
 .home-footer button,
-.guide-footer button,
-.pending-back {
+.guide-footer button {
   min-height: 44px;
 }
 .source-link {
