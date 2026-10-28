@@ -186,12 +186,6 @@ const searchStopWords = new Set([
   "celular",
   "telefono",
   "teléfono",
-  "factura",
-  "recibo",
-  "servicio",
-  "servicios",
-  "pago",
-  "pagar",
 ]);
 const searchWords = (value) =>
   value
