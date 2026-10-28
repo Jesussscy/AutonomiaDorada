@@ -911,6 +911,7 @@ button {
   border-radius: 19px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  scroll-margin-top: 92px;
 }
 .step-card-top {
   height: 44px;
@@ -1257,6 +1258,7 @@ button {
   }
   .step-card {
     border-radius: 16px;
+    scroll-margin-top: 126px;
   }
   .illustration {
     display: none;

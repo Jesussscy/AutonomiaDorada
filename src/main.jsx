@@ -1003,7 +1003,15 @@ function App() {
         writeLocal("p1-last-guide", guide.id);
         setResumeGuideId(guide.id);
       }
-      window.scrollTo(0, 0);
+      requestAnimationFrame(() => {
+        document.getElementById("active-step-heading")?.focus({ preventScroll: true });
+        document.querySelector(".step-card")?.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "auto"
+            : "smooth",
+          block: "start",
+        });
+      });
     }
   };
   const showResults = !guide;
@@ -1643,7 +1651,11 @@ function App() {
                       <span>{guide.entity_name}</span>
                     </div>
                     <div className="step-content">
-                      <h2 className={voice === "speaking" ? "is-speaking" : ""}>
+                      <h2
+                        id="active-step-heading"
+                        tabIndex={-1}
+                        className={voice === "speaking" ? "is-speaking" : ""}
+                      >
                         {activeStep?.instruction}
                       </h2>
                       <button
