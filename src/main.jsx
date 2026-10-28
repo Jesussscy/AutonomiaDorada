@@ -637,6 +637,14 @@ function App() {
   );
   const lastNarrationTarget = React.useRef(null);
   const lastNarrationAt = React.useRef(0);
+  const speechGeneration = React.useRef(0);
+
+  const cancelSpeech = () => {
+    speechGeneration.current += 1;
+    window.speechSynthesis?.cancel();
+    setVoice("idle");
+    setNarration("idle");
+  };
 
   const guide = selected ? catalog.guides.find((g) => g.id === selected) : null;
   const activeStep = guide?.steps?.[stepIndex];
@@ -757,9 +765,7 @@ function App() {
     });
   };
   const goHome = () => {
-    window.speechSynthesis?.cancel();
-    setVoice("idle");
-    setNarration("idle");
+    cancelSpeech();
     setSelected(null);
     setStepIndex(0);
     setQuery("");
@@ -774,9 +780,7 @@ function App() {
         ? safeStep(readProgress(g.id), g.steps?.length || 0)
         : 0,
     );
-    window.speechSynthesis?.cancel();
-    setVoice("idle");
-    setNarration("idle");
+    cancelSpeech();
     window.scrollTo(0, 0);
   };
   const matches = useMemo(() => {
@@ -889,30 +893,40 @@ function App() {
       );
       return;
     }
-    window.speechSynthesis.cancel();
+    cancelSpeech();
+    const generation = speechGeneration.current;
     const utterance = new SpeechSynthesisUtterance(
       activeStep?.instruction || guide?.description || "",
     );
     utterance.lang = "es-CO";
     utterance.rate = 0.9;
-    utterance.onstart = () => setVoice("speaking");
-    utterance.onend = () => setVoice("idle");
-    utterance.onerror = () => setVoice("idle");
+    setVoice("speaking");
+    utterance.onstart = () => {
+      if (generation === speechGeneration.current) setVoice("speaking");
+    };
+    utterance.onend = utterance.onerror = () => {
+      if (generation === speechGeneration.current) setVoice("idle");
+    };
     window.speechSynthesis.speak(utterance);
   };
   const narrateText = (text) => {
-    if (!narrativeMode || !voiceAvailable || !text?.trim()) return;
-    window.speechSynthesis.cancel();
+    if (!narrativeMode || !voiceAvailable || voice !== "idle" || !text?.trim()) return;
+    cancelSpeech();
+    const generation = speechGeneration.current;
     const utterance = new SpeechSynthesisUtterance(text.trim());
     utterance.lang = "es-CO";
     utterance.rate = 0.84;
-    utterance.onstart = () => setNarration("speaking");
-    utterance.onend = () => setNarration("idle");
-    utterance.onerror = () => setNarration("idle");
+    setNarration("speaking");
+    utterance.onstart = () => {
+      if (generation === speechGeneration.current) setNarration("speaking");
+    };
+    utterance.onend = utterance.onerror = () => {
+      if (generation === speechGeneration.current) setNarration("idle");
+    };
     window.speechSynthesis.speak(utterance);
   };
   const narrateAtPoint = (event) => {
-    if (!narrativeMode || !voiceAvailable) return;
+    if (!narrativeMode || !voiceAvailable || voice !== "idle") return;
     const now = performance.now();
     if (now - lastNarrationAt.current < 120) return;
     lastNarrationAt.current = now;
@@ -942,7 +956,7 @@ function App() {
     }
   };
   const narrateTouch = (event) => {
-    if (!narrativeMode || !voiceAvailable || event.detail === 0) return;
+    if (!narrativeMode || !voiceAvailable || voice !== "idle" || event.detail === 0) return;
     const block = event.target.closest(
       "p, h1, h2, h3, li, small",
     );
@@ -954,9 +968,7 @@ function App() {
       setNotice("La lectura en voz alta no está disponible en este navegador.");
       return;
     }
-    window.speechSynthesis?.cancel();
-    setNarration("idle");
-    setVoice("idle");
+    cancelSpeech();
     setNarrativeMode(enabled);
     lastNarrationTarget.current = null;
   };
@@ -968,11 +980,7 @@ function App() {
     window.speechSynthesis.resume();
     setVoice("speaking");
   };
-  const stopSpeak = () => {
-    window.speechSynthesis.cancel();
-    setVoice("idle");
-    setNarration("idle");
-  };
+  const stopSpeak = () => cancelSpeech();
   useEffect(() => {
     if (voice !== "idle") stopSpeak();
   }, [selected, stepIndex]);
@@ -1712,15 +1720,6 @@ function App() {
                               onClick={stopSpeak}
                             >
                               Detener
-                            </button>
-                          )}
-                          {voice === "idle" && (
-                            <button
-                              className="voice-button voice-button--quiet"
-                              onClick={startSpeak}
-                            >
-                              <Headphones size={16} />
-                              Volver a escuchar
                             </button>
                           )}
                         </div>

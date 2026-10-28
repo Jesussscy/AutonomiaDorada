@@ -66,7 +66,7 @@ La configuración base está lista en `vercel.json` y [docs/deployment/VERCEL.md
 ## Accesibilidad y seguridad
 
 - Controles A−/A+ y tamaño de texto guardado localmente en el dispositivo. El texto se adapta al espacio disponible para evitar ampliar el lienzo y provocar desplazamiento horizontal; los botones conservan áreas táctiles amplias.
-- Lectura en voz alta a demanda con el sintetizador del navegador, controles Escuchar/Pausar/Continuar/Detener/Repetir y texto visible.
+- Lectura en voz alta a demanda con el sintetizador del navegador, controles Escuchar/Pausar/Continuar/Detener y texto visible. Al terminar, Escuchar vuelve a estar disponible.
 - Teclado, enlace para saltar al contenido, estados accesibles, áreas táctiles amplias, adaptación a pantallas angostas y respeto por movimiento reducido.
 - Los esquemas originales de cada paso son demostrativos; no representan pantallas oficiales. Las imágenes futuras requieren procedencia, permiso de uso y guía/paso identificables.
 - Los enlaces a sitios externos abren en otra pestaña con `noopener noreferrer`. La aplicación no procesa transacciones.
