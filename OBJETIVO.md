@@ -26,6 +26,8 @@ Mejorar Prueba 1 de manera continua hasta que la experiencia se sienta profesion
 
 No considerar terminado el proyecto por haber completado una lista inicial. Después de implementar una mejora, recorrer otra vez la experiencia completa desde el inicio hasta cada estado de guía y el regreso. Buscar fricciones en microcopy, jerarquía, búsqueda, navegación, respuesta visual, pantallas pequeñas, teclado, lector de voz y accesibilidad. Priorizar una mejora cuando elimine una duda, reduzca pasos, prevenga un error o haga más fácil completar la tarea.
 
+Este chat tiene una revisión horaria activa para retomar el proyecto durante el día. Cada ejecución debe buscar una mejora nueva, aplicar las que tengan valor claro y registrar límites o hallazgos pendientes. Las ejecuciones requieren que el equipo y la aplicación local estén disponibles; el horario no significa trabajo ininterrumpido entre revisiones. El objetivo permanece activo hasta que el usuario decida pausarlo o cerrarlo.
+
 Para cada iteración:
 
 1. Observar un recorrido real de la interfaz en escritorio y teléfono.
@@ -35,6 +37,8 @@ Para cada iteración:
 5. Ejecutar las comprobaciones de build y API adecuadas al cambio.
 6. Revisar fuentes, documentación, cambios del repositorio y cualquier limitación restante.
 7. Volver al paso 1 y buscar la siguiente oportunidad de mejora.
+
+En las revisiones móviles, observar como mínimo anchos de 320 y 390 px, además del texto ampliado al 130 %. No debe haber desplazamiento horizontal accidental; los controles principales deben seguir visibles y cómodos de tocar. Comprobar también el flujo real de búsqueda, apertura de guía y regreso, no solo una captura de la portada.
 
 El criterio de calidad es que una persona pueda encontrar una tarea, saber qué pasos son confiables, seguir la orientación con comodidad y volver atrás sin miedo; la interfaz debe ser agradable e interactiva, sin sacrificar sencillez ni transparencia.
 

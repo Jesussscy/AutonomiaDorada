@@ -3026,3 +3026,77 @@ html {
     min-width: 54px;
   }
 }
+
+/* Keep the first mobile task in view and make guide cards comfortable to read. */
+@media (max-width: 760px) {
+  .search-intro {
+    padding-top: 34px;
+    padding-bottom: 32px;
+  }
+  .search-intro::before,
+  .search-intro::after {
+    display: none;
+  }
+  .search-intro > p {
+    margin: 14px 0 22px;
+  }
+  .card-meta,
+  .card-status {
+    font-size: calc(12px * var(--text-scale));
+  }
+  .card-description {
+    font-size: calc(13px * var(--text-scale));
+    line-height: 1.45;
+  }
+  .source-summary-copy > p,
+  .source-stats dd {
+    font-size: calc(13px * var(--text-scale));
+  }
+}
+@media (max-width: 420px) {
+  .search-intro {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .card-main > strong {
+    font-size: calc(16px * var(--text-scale));
+  }
+  .card-description {
+    font-size: calc(13px * var(--text-scale));
+  }
+  .catalog-count,
+  .category-label {
+    font-size: calc(11px * var(--text-scale));
+  }
+}
+@media (max-width: 360px) {
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 4px;
+    padding-block: 7px;
+  }
+  .top-actions {
+    display: contents;
+  }
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+  .topbar .icon-action {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .narrative-toggle {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+  .font-controls {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+}
