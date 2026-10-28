@@ -3089,6 +3089,9 @@ html {
     grid-row: 2;
     justify-self: end;
   }
+  .guide-aside {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .artwork-toggle {
