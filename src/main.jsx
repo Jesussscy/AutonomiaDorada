@@ -732,7 +732,7 @@ function App() {
       if (event.key === "Escape") {
         if (document.querySelector("dialog[open]")) return;
         if (showHelp) setShowHelp(false);
-        else if (guide) goHome();
+        else if (guide) backToGuides();
       }
       if (guide && event.altKey && event.key === "ArrowRight") {
         event.preventDefault();
@@ -762,6 +762,9 @@ function App() {
   const showSearchResults = (term = query) => {
     setQuery(term);
     setCategory("Todas");
+    focusCatalog();
+  };
+  const focusCatalog = () => {
     requestAnimationFrame(() => {
       document.getElementById("catalog-heading")?.focus({ preventScroll: true });
       document.getElementById("guide-list")?.scrollIntoView({
@@ -771,6 +774,13 @@ function App() {
         block: "start",
       });
     });
+  };
+  const backToGuides = () => {
+    cancelSpeech();
+    setSelected(null);
+    setStepIndex(0);
+    setShowHelp(false);
+    focusCatalog();
   };
   const goHome = () => {
     cancelSpeech();
@@ -1530,7 +1540,7 @@ function App() {
           </>
         ) : (
           <section className="guide-page">
-            <button className="back-link" onClick={goHome}>
+            <button className="back-link" onClick={backToGuides}>
               <ArrowLeft size={19} /> Volver a las guías
             </button>
             <div className="guide-heading">
