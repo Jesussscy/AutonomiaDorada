@@ -1951,6 +1951,36 @@ html {
   outline: 3px solid #bc9554;
   outline-offset: 2px;
 }
+.guide-card--narrative .card-open {
+  padding-bottom: 59px;
+}
+.card-listen {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  z-index: 1;
+  min-width: 102px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 11px;
+  border: 1px solid #cbdde8;
+  border-radius: 12px;
+  background: #edf5f9;
+  color: #3d7191;
+  font-size: calc(12px * var(--text-scale));
+  font-weight: 700;
+  cursor: pointer;
+}
+.card-listen:hover {
+  background: #dfeef6;
+}
+.card-listen:focus-visible {
+  outline: 3px solid #bc9554;
+  outline-offset: 2px;
+}
 .card-meta {
   font-size: calc((10px) * var(--text-scale));
   letter-spacing: 0.01em;
@@ -3093,6 +3123,31 @@ html {
   }
   .guide-aside {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .guide-card .card-open {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-right: 17px;
+  }
+  .guide-card .card-main {
+    flex: 0 0 100%;
+  }
+  .guide-card .card-arrow {
+    display: none;
+  }
+  .resume-card {
+    padding-left: 14px;
+    align-items: flex-start;
+  }
+  .resume-open {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .resume-icon {
+    display: none;
+  }
+  .resume-copy {
+    flex: 0 0 100%;
   }
 }
 

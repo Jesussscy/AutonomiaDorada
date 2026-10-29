@@ -1323,6 +1323,7 @@ function App() {
                         onClick={() => openGuide(g)}
                         isFavorite
                         onToggleFavorite={() => toggleFavorite(g.id)}
+                        onNarrate={narrativeMode ? () => narrateText(`${g.entity_name}. ${g.title}. ${g.description}`) : null}
                       />
                     ))}
                   </div>
@@ -1419,6 +1420,7 @@ function App() {
                       onClick={() => openGuide(g)}
                       isFavorite={favoriteIdSet.has(g.id)}
                       onToggleFavorite={() => toggleFavorite(g.id)}
+                      onNarrate={narrativeMode ? () => narrateText(`${g.entity_name}. ${g.title}. ${g.description}`) : null}
                     />
                   ))}
                 </div>
@@ -1853,11 +1855,11 @@ function App() {
   );
 }
 
-function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite }) {
+function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite, onNarrate }) {
   const isVerified = guide.status === "verified";
   return (
     <div
-      className={`guide-card ${isVerified ? "guide-card--verified" : "guide-card--pending"}`}
+      className={`guide-card ${isVerified ? "guide-card--verified" : "guide-card--pending"}${onNarrate ? " guide-card--narrative" : ""}`}
     >
       <button
         className={`card-open ${isVerified ? "card-open--verified" : "card-open--pending"}`}
@@ -1918,6 +1920,17 @@ function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite }) {
           }}
         >
           <Bookmark size={17} fill={isFavorite ? "currentColor" : "none"} />
+        </button>
+      )}
+      {onNarrate && (
+        <button
+          className="card-listen"
+          type="button"
+          aria-label={`Escuchar ${guide.title}`}
+          onClick={onNarrate}
+        >
+          <Volume2 size={19} />
+          <span>Escuchar</span>
         </button>
       )}
     </div>
