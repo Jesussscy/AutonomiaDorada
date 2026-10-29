@@ -3150,6 +3150,30 @@ html {
     flex: 0 0 100%;
   }
 }
+@media (max-width: 420px) {
+  html[data-text-scale="large"] .guide-card .card-open {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-right: 17px;
+  }
+  html[data-text-scale="large"] .guide-card .card-main {
+    flex: 0 0 100%;
+  }
+  html[data-text-scale="large"] .guide-card .card-arrow,
+  html[data-text-scale="large"] .resume-icon {
+    display: none;
+  }
+  html[data-text-scale="large"] .resume-card {
+    align-items: flex-start;
+  }
+  html[data-text-scale="large"] .resume-open {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  html[data-text-scale="large"] .resume-copy {
+    flex: 0 0 100%;
+  }
+}
 
 .artwork-toggle {
   min-height: 44px;
