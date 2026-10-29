@@ -1872,7 +1872,7 @@ h1, h2, h3, .card-main > strong {font-family: var(--display-face); font-weight: 
   .topbar {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px 8px;padding:8px 12px;}
   .topbar .brand {grid-column:1;grid-row:1;min-width:0;}
   .topbar .top-actions {display:contents;}
-  .topbar .icon-action {grid-column:2;grid-row:1;justify-self:end;width:auto;min-height:42px;padding:7px 10px;}
+  .topbar .icon-action {grid-column:2;grid-row:1;justify-self:end;padding:7px 10px;width:auto;min-height:42px;}
   .topbar .icon-action span {display:inline;}
   .topbar .settings-toggle {grid-column:1/-1;grid-row:3;justify-self:stretch;justify-content:center;}
   .topbar #help-toggle {display:flex;}
@@ -3950,4 +3950,20 @@ html {
 @media (max-width:760px) {
   .card-icon--bancolombia .brand-logo-image {transform:scale(1.2);}
   .brand-crop--bogota {transform:scale(1.05);}
+}
+
+/* Keep every mobile header action on two rows, with 44px touch targets. */
+@media (max-width:420px) {
+  .topbar {grid-template-columns:minmax(0,1fr) 44px 44px;column-gap:6px;}
+  .topbar .brand {grid-column:1;grid-row:1;gap:6px;}
+  .topbar .brand-name {max-width:132px;font-size:13px;}
+  .topbar .settings-toggle {grid-column:2;grid-row:1;justify-self:stretch;width:44px;min-width:44px;padding:0;}
+  .topbar #help-toggle {grid-column:3;grid-row:1;justify-self:stretch;width:44px;min-width:44px;padding:0;}
+  .topbar .icon-action span {display:none;}
+  .topbar .narrative-toggle {grid-column:1;grid-row:2;}
+  .topbar .font-controls {grid-column:2/4;grid-row:2;justify-self:end;}
+  .guide-heading {padding-block:12px;}
+  .guide-heading h1 {font-size:clamp(30px,8.4vw,35px);}
+  .prep-safety {font-size:calc(12px * var(--text-scale));}
+  .source-link {min-height:62px;padding-block:8px;}
 }

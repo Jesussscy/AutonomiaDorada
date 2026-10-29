@@ -1192,7 +1192,7 @@ function App() {
               A+
             </button>
           </div>
-          <button type="button" className="icon-action settings-toggle" aria-expanded={showSettings} aria-controls="accessibility-settings" onClick={() => setShowSettings((value) => !value)}>
+          <button type="button" className="icon-action settings-toggle" aria-label="Configuración de lectura" title="Configuración de lectura" aria-expanded={showSettings} aria-controls="accessibility-settings" onClick={() => setShowSettings((value) => !value)}>
             <Settings2 size={19} /><span>Configuración</span>
           </button>
           <button
@@ -1764,7 +1764,11 @@ function App() {
                       <h3>Antes de empezar</h3>
                       <p>{guide.preparation}</p>
                       {!/clave|código|contraseña/i.test(guide.preparation) && (
-                        <p className="prep-safety"><ShieldCheck size={17} /> Nunca compartas claves ni códigos.</p>
+                        <p className="prep-safety"><ShieldCheck size={17} />
+                          {guide.entity_id === "salud-mental" || guide.entity_id === "bienestar-fisico" || guide.entity_id === "rutas-salud" || ["Salud mental", "Bienestar físico", "Salud", "Rutas de salud"].includes(guide.category_group || guide.entity_category || guide.category)
+                            ? "Confirma que consultes un sitio oficial."
+                            : "Nunca compartas claves ni códigos."}
+                        </p>
                       )}
                     </div>
                     {guide.source && (
