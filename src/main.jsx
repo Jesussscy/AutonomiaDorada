@@ -1266,7 +1266,7 @@ function App() {
           <>
             {showWelcome && <section className={`welcome-card${welcomeLeaving ? " is-leaving" : ""}`} aria-labelledby="welcome-title">
               <span className="welcome-mark"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
-              <div className="welcome-copy"><h2 id="welcome-title">Bienvenido a Autonomía Dorada</h2><p>¿Qué quieres consultar hoy? Encuentra orientación clara y avanza a tu ritmo.</p></div>
+              <div className="welcome-copy"><h2 id="welcome-title"><span className="welcome-title-full">Bienvenido a Autonomía Dorada</span><span className="welcome-title-short">Bienvenido</span></h2><p>¿Qué quieres consultar hoy? Encuentra orientación clara y avanza a tu ritmo.</p></div>
               <button type="button" className="welcome-action" onClick={dismissWelcome}>Empezar <ArrowRight size={17}/></button>
               <button type="button" className="welcome-dismiss" aria-label="Omitir bienvenida" title="Omitir bienvenida" onClick={dismissWelcome}><X size={18}/></button>
             </section>}

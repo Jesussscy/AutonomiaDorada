@@ -2022,6 +2022,17 @@ h1, h2, h3, .card-main > strong {font-family: var(--display-face); font-weight: 
   .catalog-more {align-items:flex-start;flex-direction:column;}
   .catalog-more button {width:100%;}
 }
+@media (max-width:760px) {
+  .welcome-card {grid-template-columns:minmax(0,1fr) auto 40px;gap:8px;padding:10px 12px;}
+  .welcome-mark,.welcome-copy p,.welcome-title-full {display:none;}
+  .welcome-title-short {display:inline;}
+  .welcome-copy h2 {font-size:16px;line-height:1.2;}
+  .welcome-action {grid-column:auto;justify-self:end;min-height:44px;padding:6px 10px;font-size:calc(12px * var(--text-scale));}
+  .welcome-dismiss {grid-column:auto;grid-row:auto;}
+}
+@media (min-width:761px) {
+  .welcome-title-short {display:none;}
+}
 @media (prefers-reduced-motion:reduce) {
   .search-intro,.guide-page,.welcome-card,.welcome-card.is-leaving {animation:none!important;transition:none!important;}
   .voice-button {transition:none!important;}

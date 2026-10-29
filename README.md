@@ -103,6 +103,8 @@ npm start
 
 `npm run build:vercel` es el mismo flujo declarado en Vercel; al ejecutarlo genera `api/catalog-data.json`, archivo derivado del catálogo y versionado para que la función serverless pueda importarlo. Si cambia una guía, vuelve a ejecutar el build para actualizarlo. `npm start` sirve `dist/` y el catálogo local por Express. En Vercel, la función responde a `/api/catalog` y las rutas de la interfaz se reescriben a la SPA.
 
+La bienvenida inicial conserva la orientación y se puede omitir; en teléfonos se compacta para dejar la búsqueda a la vista antes.
+
 Las guías marcadas como **Pendiente** aún no muestran pasos de operación. La guía genérica de facturas públicas de Nequi solo aplica si el proveedor aparece en el catálogo dentro de la aplicación; no confirma que Afinia esté disponible. Esta primera versión no afirma incluir todos los bancos o servicios. No se han incorporado capturas reales porque todavía no fueron entregadas.
 En las guías pendientes, una frase breve deja claro que los pasos siguen en revisión y el acceso al canal oficial aparece antes de la explicación detallada, también en teléfonos pequeños.
 El dominio de destino se muestra bajo ese acceso para que la persona pueda reconocerlo antes de abrir el sitio externo.
