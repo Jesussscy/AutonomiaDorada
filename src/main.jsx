@@ -29,6 +29,7 @@ import {
   Bookmark,
   X,
   BadgeCheck,
+  Phone,
 } from "lucide-react";
 import "./styles.css";
 
@@ -252,6 +253,10 @@ const brandLogoPaths = {
   "banco-bogota": "/brands/banco-bogota.png",
   afinia: "/brands/afinia.svg",
   ara: "/brands/ara.svg",
+  movii: "/brands/movii.webp",
+  dale: "/brands/dale-dark.svg",
+  movistar: "/brands/movistar.webp",
+  runt: "/brands/runt.png",
 };
 const searchTokens = (value) =>
   searchWords(value).map((word) => searchSynonyms[word] || word);
@@ -280,10 +285,12 @@ function EntityMark({ entityId, className, size = 18 }) {
     : null;
   return (
     <span
-      className={`${className}${logoPath ? ` card-icon--brand card-icon--${entityId}` : ""}`}
+      className={`${className}${logoPath || (entityId === "soat" && className.includes("card-icon")) ? ` card-icon--brand card-icon--${entityId}` : ""}`}
       aria-hidden="true"
     >
-      {entityId === "banco-bogota" && logoPath ? (
+      {entityId === "soat" && className.includes("card-icon") ? (
+        <span className="soat-emblem"><ShieldCheck size={19} /> SOAT</span>
+      ) : entityId === "banco-bogota" && logoPath ? (
         <span className="brand-crop brand-crop--bogota" />
       ) : entityId === "davivienda" && logoPath ? (
         <span className="brand-crop brand-crop--davivienda" />
@@ -293,6 +300,30 @@ function EntityMark({ entityId, className, size = 18 }) {
         <Icon size={size} />
       )}
     </span>
+  );
+}
+
+function SiteFooter({ onHome, onHelp, compact = false }) {
+  return (
+    <footer className={`site-footer${compact ? " site-footer--compact" : ""}`}>
+      <div className="site-footer-main">
+        <div className="site-footer-identity">
+          <span className="brand-mark" aria-hidden="true">P<span>1</span></span>
+          <div>
+            <strong>Prueba 1</strong>
+            <span>Una guía a tu ritmo.</span>
+          </div>
+        </div>
+        <div className="site-footer-actions">
+          <button type="button" onClick={onHome}><Home size={17} /> Inicio</button>
+          <button type="button" onClick={onHelp}><CircleHelp size={17} /> Ayuda</button>
+        </div>
+      </div>
+      <div className="site-footer-bottom">
+        <span><ShieldCheck size={15} /> Nunca pedimos claves ni códigos.</span>
+        <span>Proyecto orientativo · Cartagena, Colombia</span>
+      </div>
+    </footer>
   );
 }
 
@@ -555,6 +586,7 @@ function App() {
   };
   const openHelp = () => {
     setShowHelp(true);
+    requestAnimationFrame(() => document.getElementById("help-title")?.focus());
     window.scrollTo({
       top: 0,
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -906,8 +938,13 @@ function App() {
             P<span>1</span>
           </span>
           <span className="brand-name">Prueba 1</span>
-          <span className="brand-pill">Cartagena</span>
+          <span className="brand-pill">Guías a tu ritmo</span>
         </button>
+        <nav className="top-nav" aria-label="Navegación principal">
+          <button type="button" onClick={() => guide ? backToGuides() : focusCatalog()}>
+            <BookOpenCheck size={17} /> Explorar guías
+          </button>
+        </nav>
         <div className="top-actions">
           <button
             className="narrative-toggle"
@@ -961,9 +998,11 @@ function App() {
             </button>
           </div>
           <button
+            id="help-toggle"
             className="icon-action"
-            onClick={() => setShowHelp(!showHelp)}
+            onClick={() => showHelp ? setShowHelp(false) : openHelp()}
             aria-expanded={showHelp}
+            aria-controls="help-panel"
             aria-label="Ayuda"
           >
             <CircleHelp />
@@ -973,22 +1012,44 @@ function App() {
       </header>
       <main id="main-content" className="main-content" tabIndex={-1}>
         {showHelp && (
-          <aside className="help-banner">
-            <Info size={19} />
-            <div>
-              <strong>Este espacio es para orientarte.</strong>
-              <p>
-                No hacemos pagos ni pedimos claves, contraseñas o códigos. Las
-                guías verificadas incluyen el enlace a su fuente oficial.
-              </p>
+          <section id="help-panel" className="help-panel" aria-labelledby="help-title">
+            <div className="help-panel-heading">
+              <div>
+                <span className="help-eyebrow"><CircleHelp size={15} /> CENTRO DE AYUDA</span>
+                <h2 id="help-title" tabIndex={-1}>Estamos aquí para orientarte</h2>
+                <p>Elige una tarea, sigue los pasos y consulta la fuente oficial cuando la necesites.</p>
+              </div>
+              <button
+                className="help-close"
+                type="button"
+                onClick={() => {
+                  setShowHelp(false);
+                  document.getElementById("help-toggle")?.focus();
+                }}
+                aria-label="Cerrar ayuda"
+              ><X size={20} /></button>
             </div>
-            <button
-              onClick={() => setShowHelp(false)}
-              aria-label="Cerrar ayuda"
-            >
-              ×
-            </button>
-          </aside>
+            <div className="help-panel-grid">
+              <div className="help-contact">
+                <span className="help-card-icon"><Phone size={20} /></span>
+                <span className="help-card-label">ASÍ SE VERÍA UNA LÍNEA DE AYUDA</span>
+                <strong className="help-number">1 2 3 4 5</strong>
+                <p>Número ficticio de demostración. No atiende llamadas; no lo marques.</p>
+              </div>
+              <div className="help-steps">
+                <strong>¿Cómo usar esta web?</strong>
+                <ol>
+                  <li>Busca lo que quieres hacer.</li>
+                  <li>Abre una guía y avanza a tu ritmo.</li>
+                  <li>Revisa el enlace oficial antes de actuar.</li>
+                </ol>
+                <button type="button" onClick={() => { setShowHelp(false); guide ? backToGuides() : focusCatalog(); }}>
+                  Ver las guías <ArrowRight size={17} />
+                </button>
+              </div>
+            </div>
+            <p className="help-safety"><ShieldCheck size={17} /> Nunca solicitamos contraseñas, claves ni códigos de seguridad.</p>
+          </section>
         )}
         {showResults ? (
           <>
@@ -1354,13 +1415,7 @@ function App() {
                 </section>
               )}
             </section>
-            <footer className="home-footer">
-              <span>Hecho para acompañarte, con calma.</span>
-              <button onClick={openHelp}>
-                <ShieldCheck size={17} /> <span>Tu seguridad importa</span>
-              </button>
-              <p>Prueba 1 · Cartagena, Colombia</p>
-            </footer>
+            <SiteFooter onHome={goHome} onHelp={openHelp} />
           </>
         ) : (
           <section className="guide-page">
@@ -1613,12 +1668,7 @@ function App() {
                 )}
               </>
             )}
-            <footer className="guide-footer">
-              <button onClick={goHome}>
-                <Home size={16} /> Volver al inicio
-              </button>
-              <span>Prueba 1 · Guía orientativa</span>
-            </footer>
+            <SiteFooter onHome={goHome} onHelp={openHelp} compact />
           </section>
         )}
       </main>

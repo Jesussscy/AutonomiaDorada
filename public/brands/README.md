@@ -11,7 +11,11 @@ Los archivos de esta carpeta se usan para ayudar a identificar la entidad en el 
 | `banco-bogota.png` | Banco de Bogotá | https://saladeprensa.bancodebogota.com/logos-y-marca/ | Sala de prensa oficial del Banco de Bogotá; logotipo publicado para descarga |
 | `afinia.svg` | Afinia | https://www.afinia.com.co/ | Sitio oficial Afinia |
 | `ara.svg` | Tiendas ara | https://www.aratiendas.com/home/centro/ | Sitio oficial de Tiendas ara |
+| `movii.webp` | MOVii | https://www.movii.com.co/ | Logotipo mostrado en la página oficial de MOVii |
+| `dale-dark.svg` | dale! | https://store.dale.com.co/ | Recurso del sitio oficial de dale!, identificado como «Logo de dale!» |
+| `movistar.webp` | Movistar | https://www.movistar.com.co/ | Imagen de marca indicada por el sitio oficial de Movistar Colombia |
+| `runt.png` | RUNT | https://www.runt.gov.co/ | Marca mostrada en la cabecera del portal oficial del RUNT |
 
-Los nombres y logotipos siguen perteneciendo a sus titulares. La presencia del archivo en el sitio oficial no se presenta como licencia general para usos ajenos a la identificación de cada proveedor. El proyecto no es patrocinado ni respaldado por esas entidades. Los proveedores para los que no se pudo confirmar un recurso utilizable conservan iconos neutrales y su nombre escrito.
+Los nombres y logotipos siguen perteneciendo a sus titulares. La presencia del archivo en el sitio oficial no se presenta como licencia general para usos ajenos a la identificación de cada proveedor. El proyecto no es patrocinado ni respaldado por esas entidades. SOAT es un seguro, no una entidad con logotipo único: su tarjeta usa un distintivo creado para esta interfaz.
 
 En tarjetas angostas se muestra solo el símbolo de Banco de Bogotá y Davivienda, recortado visualmente de sus archivos oficiales; el nombre completo permanece junto al símbolo. BBVA usa su logotipo, en lugar de una ilustración publicitaria.
