@@ -1128,7 +1128,7 @@ function App() {
                 )}
               </div>
             </section>
-            {resumeGuide && showResume && (
+            {resumeGuide && showResume && !query.trim() && !showFavorites && (
               <div className="resume-card">
                 <button
                   className="resume-open"
