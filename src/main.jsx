@@ -705,17 +705,27 @@ function App() {
       )
       .map((x) => x.g);
   }, [catalog, query]);
-  const filteredMatches = useMemo(() => {
-    const byCategory =
+  const categoryMatches = useMemo(
+    () =>
       category === "Todas"
         ? matches
-        : matches.filter((g) => categoryFor(g) === category);
-    return byCategory.filter(
-      (g) =>
-        (showPending || g.status === "verified") &&
-        (!showFavorites || favorites.includes(g.id)),
-    );
-  }, [matches, category, showPending, showFavorites, favorites]);
+        : matches.filter((g) => categoryFor(g) === category),
+    [matches, category],
+  );
+  const filteredMatches = useMemo(
+    () =>
+      categoryMatches.filter(
+        (g) =>
+          (showPending || g.status === "verified") &&
+          (!showFavorites || favorites.includes(g.id)),
+      ),
+    [categoryMatches, showPending, showFavorites, favorites],
+  );
+  const pendingMatchesHidden =
+    !showFavorites &&
+    !showPending &&
+    categoryMatches.length > 0 &&
+    categoryMatches.every((g) => g.status === "pending");
   const sourceCounts = useMemo(
     () => ({
       reviewed: catalog.guides.filter((g) => g.status === "verified").length,
@@ -1308,28 +1318,37 @@ function App() {
                   <h3>
                     {showFavorites
                       ? "No hay favoritas con este filtro."
-                      : matches.length
-                        ? "No hay guías en esta categoría."
-                        : "No encontramos esa guía todavía."}
+                      : pendingMatchesHidden
+                        ? "Hay guías en revisión ocultas."
+                        : matches.length
+                          ? "No hay guías en esta categoría."
+                          : "No encontramos esa guía todavía."}
                   </h3>
                   <p>
                     {showFavorites
                       ? "Prueba otra categoría o vuelve a ver todas las guías."
-                      : matches.length
-                        ? "Prueba con otra categoría o muestra las guías que están en revisión."
-                        : "Prueba con otras palabras o vuelve a ver las guías disponibles."}
+                      : pendingMatchesHidden
+                        ? "Muéstralas para ver su estado y el canal oficial."
+                        : matches.length
+                          ? "Prueba con otra categoría."
+                          : "Prueba con otras palabras o vuelve a ver las guías disponibles."}
                   </p>
                   <div>
                     <button
                       className="button button--primary"
                       onClick={() => {
-                        setQuery("");
-                        setCategory("Todas");
-                        setShowPending(true);
-                        setShowFavorites(false);
+                        if (pendingMatchesHidden) setShowPending(true);
+                        else {
+                          setQuery("");
+                          setCategory("Todas");
+                          setShowPending(true);
+                          setShowFavorites(false);
+                        }
                       }}
                     >
-                      Ver las guías
+                      {pendingMatchesHidden
+                        ? "Mostrar guías en revisión"
+                        : "Ver las guías"}
                     </button>
                     <button
                       className="button button--secondary"
