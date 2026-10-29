@@ -1826,8 +1826,8 @@ function PendingGuide({ guide, relatedLinks = [] }) {
         <Clock3 size={30} />
       </span>
       <div className="pending-copy">
-        <h2>Aún no hay pasos revisados.</h2>
-        <p>{guide.description}</p>
+        <h2>{guide.source?.url ? "Consulta el canal oficial" : "Guía en revisión"}</h2>
+        <p>Aún no hemos revisado los pasos de esta tarea.</p>
         {guide.source?.url && (
           <a
             className="button button--primary"
@@ -1841,6 +1841,7 @@ function PendingGuide({ guide, relatedLinks = [] }) {
             <ExternalLink size={17} />
           </a>
         )}
+        <p>{guide.description}</p>
         {guide.source?.checkedAt && (
           <small className="pending-source-date">
             Fuente consultada: {formatCheckedDate(guide.source.checkedAt)}.
