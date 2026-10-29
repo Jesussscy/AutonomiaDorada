@@ -903,6 +903,17 @@ button {
   line-height: 1.6;
   color: #74796f;
 }
+.prep-card .prep-safety {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 11px;
+  padding-top: 10px;
+  border-top: 1px solid #e5ebef;
+  color: #456d88;
+  font-weight: 700;
+}
+.prep-safety svg {flex: 0 0 auto; margin-top: 2px;}
 .safety-note {
   display: flex;
   gap: 9px;
@@ -3120,4 +3131,10 @@ html {
   .topbar .brand {gap: 5px;}
   .topbar .brand-name {white-space: nowrap; font-size: calc(14px * var(--text-scale));}
   .help-panel h2 {font-size: calc(21px * var(--text-scale));}
+}
+@media (max-width: 760px) {
+  .guide-layout {display: flex; flex-direction: column;}
+  .guide-aside {display: flex; flex-direction: column; width: 100%;}
+  .progress-card {display: none;}
+  .step-card {width: 100%;}
 }

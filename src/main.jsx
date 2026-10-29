@@ -1539,13 +1539,7 @@ function App() {
                       </span>
                       <h3>Antes de empezar</h3>
                       <p>{guide.preparation}</p>
-                    </div>
-                    <div className="safety-note">
-                      <ShieldCheck size={19} />
-                      <p>
-                        <strong>Cuida tu información.</strong> Nunca compartas
-                        claves ni códigos de seguridad.
-                      </p>
+                      <p className="prep-safety"><ShieldCheck size={17} /> Nunca compartas claves ni códigos.</p>
                     </div>
                     {guide.source && (
                       <a
