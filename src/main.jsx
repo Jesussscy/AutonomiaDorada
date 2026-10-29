@@ -1479,7 +1479,7 @@ function App() {
                 </nav>
                 <button type="button" className="category-scroll-button category-scroll-button--right" aria-label="Ver más categorías" onClick={() => scrollCategoryTabs(1)}><ChevronRight size={17}/></button>
               </div>}
-              {!query && !showFavorites && category === "Todas" && <p className="catalog-health-note">Verás dos recomendaciones por área: salud mental, bienestar físico, salud, bancos, billeteras, servicios, trámites y comercios. En Colombia, bancos, billeteras, servicios públicos, trámites y comercios tienen 20 temas propuestos cada uno. Los que dicen «En revisión» todavía no son un paso a paso verificado.</p>}
+              {!query && !showFavorites && category === "Todas" && <p className="catalog-health-note">Las guías «En revisión» aún no tienen sus pasos verificados.</p>}
               {!singleSearchResult && <p id="category-scroll-hint" className="category-scroll-hint">En celular, desliza estas categorías hacia los lados para ver más.</p>}
               {!showFavorites && !singleSearchResult && !homeFeatured && <div className="catalog-options">
                 <label className="pending-toggle">
