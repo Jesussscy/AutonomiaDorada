@@ -3952,18 +3952,29 @@ html {
   .brand-crop--bogota {transform:scale(1.05);}
 }
 
-/* Keep every mobile header action on two rows, with 44px touch targets. */
+.settings-label-mobile {display:none;}
+
+/* Keep mobile header actions visible and easy to tap. */
+@media (max-width:520px) {
+  .topbar {display:flex;flex-wrap:wrap;gap:6px 8px;padding:8px 12px;align-items:center;}
+  .topbar .brand {order:0;flex:0 0 100%;grid-column:auto;grid-row:auto;min-width:0;}
+  .topbar .top-actions {display:flex!important;order:1;flex:0 0 100%;flex-flow:row nowrap;justify-content:space-between;align-items:center;gap:6px;margin:0;min-width:0;}
+  .topbar .narrative-toggle {order:0;flex:1 1 120px;grid-column:auto;grid-row:auto;min-width:110px;width:auto;justify-self:stretch;}
+  .topbar .font-controls {display:none;}
+  .topbar .settings-toggle {order:1;grid-column:auto;grid-row:auto;justify-self:stretch;flex:0 0 auto;width:auto;min-width:0;padding:0 9px;}
+  .topbar .settings-toggle .settings-label-desktop {display:none!important;}
+  .topbar .settings-toggle .settings-label-mobile {display:inline!important;}
+  .topbar #help-toggle {order:2;display:flex!important;grid-column:auto;grid-row:auto;justify-self:stretch;flex:0 0 auto;width:auto;min-width:44px;padding:0 9px;}
+  .topbar .icon-action span {display:inline;}
+}
 @media (max-width:420px) {
-  .topbar {grid-template-columns:minmax(0,1fr) 44px 44px;column-gap:6px;}
-  .topbar .brand {grid-column:1;grid-row:1;gap:6px;}
+  .topbar .brand {gap:6px;}
   .topbar .brand-name {max-width:132px;font-size:13px;}
-  .topbar .settings-toggle {grid-column:2;grid-row:1;justify-self:stretch;width:44px;min-width:44px;padding:0;}
-  .topbar #help-toggle {grid-column:3;grid-row:1;justify-self:stretch;width:44px;min-width:44px;padding:0;}
-  .topbar .icon-action span {display:none;}
-  .topbar .narrative-toggle {grid-column:1;grid-row:2;}
-  .topbar .font-controls {grid-column:2/4;grid-row:2;justify-self:end;}
   .guide-heading {padding-block:12px;}
   .guide-heading h1 {font-size:clamp(30px,8.4vw,35px);}
   .prep-safety {font-size:calc(12px * var(--text-scale));}
   .source-link {min-height:62px;padding-block:8px;}
+}
+@media (max-width:360px) {
+  .topbar #help-toggle span {display:none;}
 }

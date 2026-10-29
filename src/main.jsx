@@ -1193,7 +1193,7 @@ function App() {
             </button>
           </div>
           <button type="button" className="icon-action settings-toggle" aria-label="Configuración de lectura" title="Configuración de lectura" aria-expanded={showSettings} aria-controls="accessibility-settings" onClick={() => setShowSettings((value) => !value)}>
-            <Settings2 size={19} /><span>Configuración</span>
+            <Settings2 size={19} /><span className="settings-label-desktop">Configuración</span><span className="settings-label-mobile">Ajustes</span>
           </button>
           <button
             id="help-toggle"
