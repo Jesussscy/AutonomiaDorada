@@ -3099,7 +3099,8 @@ html {
   .topbar {display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 7px 8px;}
   .topbar .brand {grid-column: 1; grid-row: 1;}
   .topbar .top-actions {display: contents;}
-  .topbar .icon-action {grid-column: 2; grid-row: 1; justify-self: end; padding: 7px; width: 44px;}
+  .topbar .icon-action {grid-column: 2; grid-row: 1; justify-self: end; padding: 7px 11px; width: auto;}
+  .topbar .icon-action span {display: inline;}
   .topbar .narrative-toggle {grid-column: 1; grid-row: 2; justify-self: stretch; min-width: 0; white-space: normal; line-height: 1.2;}
   .topbar .font-controls {grid-column: 2; grid-row: 2; justify-self: end;}
   .help-panel {margin-top: 14px; padding: 18px 14px;}

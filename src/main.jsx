@@ -820,7 +820,7 @@ function App() {
       const block = textNode.parentElement?.closest(
         "p, h1, h2, h3, button, a, label, li, small, summary, [role='button']",
       );
-      if (!block || block.closest(".voice-controls, .font-controls, input")) return;
+      if (!block || block.closest(".topbar, .site-footer, .voice-controls, .font-controls, input")) return;
       if (block === lastNarrationTarget.current) return;
       lastNarrationTarget.current = block;
       narrateText(block.innerText || block.textContent || match[0]);
@@ -832,7 +832,7 @@ function App() {
     const block = event.target.closest(
       "p, h1, h2, h3, li, small",
     );
-    if (!block || block.closest(".voice-controls, .font-controls, input")) return;
+    if (!block || block.closest(".topbar, .site-footer, .voice-controls, .font-controls, input")) return;
     narrateText(block.innerText || block.textContent || "");
   };
   const setNarrativeEnabled = (enabled) => {

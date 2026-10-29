@@ -113,4 +113,6 @@ Las guías revisadas se pueden guardar como favoritas desde la tarjeta; la selec
 
 El botón **Ayuda** abre un panel con instrucciones breves, acceso al catálogo y una línea ficticia (`1 2 3 4 5`) mostrada exclusivamente como ejemplo visual. No es un número de atención y la aplicación no intenta llamarlo. La cabecera y el pie incluyen accesos a las guías, inicio y ayuda. Las tarjetas usan marcas obtenidas de los sitios de las entidades cuando se pudo confirmar el recurso; SOAT lleva un distintivo propio porque no es una entidad.
 
+En teléfono, **Ayuda** mantiene su nombre visible junto al icono. La narración opcional se aplica al contenido y evita leer los propios controles de cabecera o pie cuando se pasa el cursor por ellos.
+
 En teléfonos, las tarjetas muestran un resumen de hasta tres líneas y una acción explícita: **Abrir guía** o **Ver información**. El detalle conserva el texto completo y las advertencias de cada tarea.
