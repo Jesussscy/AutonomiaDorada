@@ -1207,16 +1207,27 @@ function App() {
                   </button>
                 </div>
                 {!showFavorites && (
-                  <div className="guide-grid favorites-grid">
+                  <div className="favorite-quick-list">
                     {favoriteGuides.map((g) => (
-                      <GuideCard
-                        key={`favorite-${g.id}`}
-                        guide={g}
-                        onClick={() => openGuide(g)}
-                        isFavorite
-                        onToggleFavorite={() => toggleFavorite(g.id)}
-                        onNarrate={narrativeMode ? () => narrateText(`${g.entity_name}. ${g.title}. ${g.description}`) : null}
-                      />
+                      <div className="favorite-quick" key={`favorite-${g.id}`}>
+                        <button
+                          type="button"
+                          className="favorite-quick-open"
+                          onClick={() => openGuide(g)}
+                          aria-label={`Abrir ${g.title}`}
+                        >
+                          <EntityMark className="card-icon" entityId={g.entity_id} />
+                          <span className="favorite-quick-copy"><small>{g.entity_name}</small><strong>{g.title}</strong></span>
+                          <ArrowRight size={18} />
+                        </button>
+                        <button
+                          type="button"
+                          className="favorite-quick-remove"
+                          onClick={() => toggleFavorite(g.id)}
+                          aria-label={`Quitar ${g.title} de favoritos`}
+                          title="Quitar de favoritos"
+                        ><Bookmark size={17} fill="currentColor" /></button>
+                      </div>
                     ))}
                   </div>
                 )}
