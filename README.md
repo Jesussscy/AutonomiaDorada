@@ -109,6 +109,7 @@ El catálogo se muestra en dos estados visuales: tareas con pasos revisados y ta
 Al abrir una guía desde el catálogo, el botón **Atrás** del navegador o el gesto equivalente en teléfono recupera la búsqueda anterior. **Volver a las guías** hace lo mismo; **Volver al inicio** limpia la búsqueda. Un enlace directo a una guía también permite volver al catálogo.
 
 La búsqueda reconoce nombres de entidades y evita ofrecer guías de otros proveedores cuando se escribe uno concreto. Una tarea sin coincidencia muestra un resultado vacío y permite volver a intentar; en móvil el encabezado de resultados deja espacio para leer el texto ampliado.
+Cuando una búsqueda tiene una sola coincidencia y no hay otras ocultas, se presenta la tarjeta sin categorías ni controles innecesarios delante. Los filtros vuelven al limpiar la búsqueda o cuando hay varias opciones.
 
 Si una coincidencia está oculta porque se desactivaron las guías en revisión, el estado vacío lo explica y permite mostrarlas sin perder la búsqueda ni la categoría seleccionada.
 

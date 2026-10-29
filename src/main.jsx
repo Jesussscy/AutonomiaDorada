@@ -726,6 +726,12 @@ function App() {
     !showPending &&
     categoryMatches.length > 0 &&
     categoryMatches.every((g) => g.status === "pending");
+  const singleSearchResult =
+    Boolean(query.trim()) &&
+    category === "Todas" &&
+    !showFavorites &&
+    matches.length === 1 &&
+    filteredMatches.length === 1;
   const sourceCounts = useMemo(
     () => ({
       reviewed: catalog.guides.filter((g) => g.status === "verified").length,
@@ -1235,7 +1241,7 @@ function App() {
                         : "Elige una categoría o busca con tus propias palabras."}
                   </p>
                 </div>
-                <span className="catalog-count">
+                {!singleSearchResult && <span className="catalog-count">
                   {showFavorites ? (
                     <>
                       <Bookmark size={14} /> {favoriteGuides.length}{" "}
@@ -1250,9 +1256,9 @@ function App() {
                       en revisión
                     </>
                   )}
-                </span>
+                </span>}
               </div>
-              <nav
+              {!singleSearchResult && <nav
                 className="category-tabs"
                 aria-label="Filtrar guías por tipo"
               >
@@ -1273,8 +1279,8 @@ function App() {
                     </button>
                   );
                 })}
-              </nav>
-              {!showFavorites && <div className="catalog-options">
+              </nav>}
+              {!showFavorites && !singleSearchResult && <div className="catalog-options">
                 <label className="pending-toggle">
                   <input
                     type="checkbox"
