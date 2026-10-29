@@ -378,12 +378,12 @@ const guides = [
   {
     id: "nequi-send",
     entity_id: "nequi",
-    title: "Enviar plata a otro Nequi",
+    title: "Enviar a otro Nequi",
     task: "Enviar dinero",
     description:
-      "Envía plata a otro número Nequi. Revisa el nombre antes de confirmar: el envío no se puede cancelar.",
+      "Envía al número Nequi correcto. Revisa el nombre: el envío confirmado no se puede cancelar.",
     preparation:
-      "Ten listo el número de celular de la persona y revisa que tengas saldo. No compartas tu clave ni códigos de seguridad.",
+      "Ten el número y saldo necesario. Revisa el nombre antes de confirmar. Nunca compartas tu clave ni códigos.",
     status: "verified",
     updated_at: "2026-10-28",
     source_id: "nequi-send-guide",
