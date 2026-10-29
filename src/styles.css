@@ -552,6 +552,9 @@ button {
   color: #496d84;
   margin-top: 11px;
 }
+.card-bottom {display: flex; align-items: center; justify-content: space-between; gap: 9px; margin-top: 11px;}
+.card-bottom .card-status {margin-top: 0;}
+.card-open-cue {display: none; align-items: center; gap: 4px; color: #315f7e; font-size: calc(11px * var(--text-scale)); font-weight: 800; white-space: nowrap;}
 .card-status svg {
   color: #4f819f;
 }
@@ -3080,6 +3083,15 @@ html {
   .topbar {min-height: 0; padding: 10px 17px 11px; row-gap: 7px;}
   .topbar .brand-pill {display: none;}
   .topbar .top-actions {gap: 7px;}
+  .guide-card .card-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .guide-card .card-arrow {display: none;}
+  .guide-card .card-open-cue {display: inline-flex;}
+  .guide-card .card-bottom {flex-wrap: wrap;}
   .help-panel-grid {grid-template-columns: 1fr;}
   .site-footer-main,.site-footer-bottom {align-items: flex-start;}
 }

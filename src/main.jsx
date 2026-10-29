@@ -1706,23 +1706,28 @@ function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite, onNar
           </span>
           <strong>{guide.title}</strong>
           <span className="card-description">{guide.description}</span>
-          <span
-            className={`card-status ${isVerified ? "card-status--verified" : "card-status--pending"}`}
-          >
-            {isVerified ? (
-              <>
-                <CheckCircle2 size={15} />
-                <span>Pasos revisados</span>
-                <span className="card-step-count">
-                  {guide.steps?.length || 0} pasos
-                </span>
-              </>
-            ) : (
-              <>
-                <Clock3 size={15} />
-                <span>En revisión</span>
-              </>
-            )}
+          <span className="card-bottom">
+            <span
+              className={`card-status ${isVerified ? "card-status--verified" : "card-status--pending"}`}
+            >
+              {isVerified ? (
+                <>
+                  <CheckCircle2 size={15} />
+                  <span>Pasos revisados</span>
+                  <span className="card-step-count">
+                    {guide.steps?.length || 0} pasos
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Clock3 size={15} />
+                  <span>En revisión</span>
+                </>
+              )}
+            </span>
+            <span className="card-open-cue">
+              {isVerified ? "Abrir guía" : "Ver información"} <ArrowRight size={16} />
+            </span>
           </span>
         </span>
         <span className="card-arrow">
