@@ -33,7 +33,7 @@ Vite abre `http://localhost:5173` y envía las peticiones de `/api` al puerto `P
 - Node.js y Express para una API de solo lectura del catálogo.
 - SQLite mediante `better-sqlite3`; la serialización común del catálogo está aislada en `server/catalog.js`.
 - Variables locales en `.env`; `.env.example` muestra los nombres de configuración. Nunca agregar secretos reales al repositorio.
-- Sin cuenta, analítica, pagos ni automatización de transacciones. Las capturas opcionales seleccionadas por la persona se guardan solo en el almacenamiento local del navegador; evita incluir datos personales o financieros.
+- Sin cuenta, analítica, pagos ni automatización de transacciones. El progreso y las favoritas se guardan solo en el navegador.
 
 ## Catálogo y fuentes
 
@@ -68,7 +68,7 @@ La aplicación está publicada en **https://trabajo-social-omega.vercel.app/** d
 - Controles A−/A+ y tamaño de texto guardado localmente en el dispositivo. El texto se adapta al espacio disponible para evitar ampliar el lienzo y provocar desplazamiento horizontal; los botones conservan áreas táctiles amplias.
 - Lectura en voz alta a demanda con el sintetizador del navegador, controles Escuchar/Pausar/Continuar/Detener y texto visible. Al terminar, Escuchar vuelve a estar disponible.
 - Teclado, enlace para saltar al contenido, estados accesibles, áreas táctiles amplias, adaptación a pantallas angostas y respeto por movimiento reducido.
-- Los esquemas originales de cada paso son demostrativos; no representan pantallas oficiales. Las imágenes futuras requieren procedencia, permiso de uso y guía/paso identificables.
+- Los ejemplos recreados de cada paso son demostrativos; no representan pantallas oficiales. Las imágenes futuras requieren procedencia, permiso de uso y guía/paso identificables.
 - Los enlaces a sitios externos abren en otra pestaña con `noopener noreferrer`. La aplicación no procesa transacciones.
 
 ## Archivos principales
@@ -109,4 +109,4 @@ Al abrir una guía desde el catálogo, el botón **Atrás** del navegador o el g
 
 El tamaño de texto se ajusta entre 90 % y 130 % y se puede restablecer pulsando su indicador. La interfaz conserva un ancho legible al aumentar la escala. El progreso de una guía revisada solo se guarda al avanzar un paso y se conserva localmente en el dispositivo; abrir una tarea pendiente no altera ese progreso.
 
-Las guías revisadas se pueden guardar como favoritas desde la tarjeta; la selección y el avance se almacenan únicamente en el navegador actual y no se envían a la API local. El modo **Ver solo favoritas** filtra el catálogo y funciona junto con la búsqueda y las categorías; al quitar la última guía guardada, se vuelve a la lista general. En cada paso aparece primero la instrucción. El esquema original que la acompaña se puede mostrar u ocultar con un botón; en teléfono empieza oculto para dar prioridad al texto y en escritorio empieza visible. Es una ilustración orientativa, no una pantalla real del proveedor. De manera opcional, el usuario puede asociar una imagen PNG/JPG/WebP propia (hasta 5 MB); el navegador la reduce para previsualizarla y la guarda localmente en ese dispositivo. Antes de cargarla, la interfaz recomienda cubrir datos personales o bancarios. No se sube a SQLite ni al servidor.
+Las guías revisadas se pueden guardar como favoritas desde la tarjeta; la selección y el avance se almacenan únicamente en el navegador actual y no se envían a la API local. El modo **Ver solo favoritas** filtra el catálogo y funciona junto con la búsqueda y las categorías; al quitar la última guía guardada, se vuelve a la lista general. En cada paso aparece primero la instrucción y un ejemplo recreado con aspecto de teléfono, visible también en móvil; se puede ocultar con un botón. Es una orientación visual, no una pantalla real del proveedor. No hay control para subir capturas; cuando se entreguen imágenes autorizadas, se incorporarán tras revisar su procedencia.

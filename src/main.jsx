@@ -28,8 +28,6 @@ import {
   RefreshCw,
   Bookmark,
   X,
-  Camera,
-  LockKeyhole,
   BadgeCheck,
 } from "lucide-react";
 import "./styles.css";
@@ -249,7 +247,7 @@ const entityIcons = {
 const brandLogoPaths = {
   nequi: "/brands/nequi.svg",
   bancolombia: "/brands/bancolombia.svg",
-  bbva: "/brands/bbva.png",
+  bbva: "/brands/bbva-logo.png",
   davivienda: "/brands/davivienda.png",
   "banco-bogota": "/brands/banco-bogota.png",
   afinia: "/brands/afinia.svg",
@@ -282,10 +280,14 @@ function EntityMark({ entityId, className, size = 18 }) {
     : null;
   return (
     <span
-      className={`${className}${logoPath ? " card-icon--brand" : ""}`}
+      className={`${className}${logoPath ? ` card-icon--brand card-icon--${entityId}` : ""}`}
       aria-hidden="true"
     >
-      {logoPath ? (
+      {entityId === "banco-bogota" && logoPath ? (
+        <span className="brand-crop brand-crop--bogota" />
+      ) : entityId === "davivienda" && logoPath ? (
+        <span className="brand-crop brand-crop--davivienda" />
+      ) : logoPath ? (
         <img className="brand-logo-image" src={logoPath} alt="" loading="lazy" decoding="async" />
       ) : (
         <Icon size={size} />
@@ -319,18 +321,9 @@ function GuideArtwork({ guide, stepIndex, instruction }) {
     >
       <div className="artwork-window">
         <div className="artwork-window-head">
-          <span />
-          <span />
-          <span />
-          <small>ESQUEMA DE ORIENTACIÓN</small>
+          <small>VISTA RECREADA</small>
         </div>
         <div className="artwork-layout">
-          <aside className="artwork-rail">
-            <span className="artwork-logo">{guide?.entity_icon || "P"}</span>
-            <i />
-            <i />
-            <i />
-          </aside>
           <div className="artwork-content">
             <div className="artwork-identity">
               <span className="artwork-avatar">
@@ -377,208 +370,10 @@ function GuideArtwork({ guide, stepIndex, instruction }) {
       <div className="artwork-caption">
         <Info size={13} />
         <span>
-          Gráfico original de orientación · no es una captura ni una interfaz
-          oficial
+          Ejemplo orientativo · no es una pantalla oficial
         </span>
       </div>
     </div>
-  );
-}
-
-function ScreenshotRequest({ guideId, stepIndex, onClose }) {
-  const inputRef = React.useRef(null);
-  const [image, setImage] = useState(() => {
-    try {
-      return (
-        JSON.parse(readLocalText(`p1-screenshots-${guideId}`) || "{}")[
-          stepIndex
-        ] || null
-      );
-    } catch {
-      return null;
-    }
-  });
-  const [error, setError] = useState("");
-  useEffect(() => {
-    const control = document.getElementById("guide-screenshot-dialog");
-    if (!control) return;
-    control.showModal();
-    const escape = (event) => {
-      if (event.key === "Escape") onClose();
-    };
-    control.addEventListener("cancel", escape);
-    return () => control.removeEventListener("cancel", escape);
-  }, []);
-  const saveScreenshot = async (file) => {
-    setError("");
-    if (!file) return;
-    if (!["image/png", "image/jpeg", "image/webp"].includes(file.type)) {
-      setError("Elige una imagen PNG, JPG o WebP.");
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      setError("La imagen supera 5 MB. Elige una imagen más pequeña.");
-      return;
-    }
-    try {
-      const objectUrl = URL.createObjectURL(file);
-      try {
-        const imageElement = await new Promise((resolve, reject) => {
-          const element = new Image();
-          element.onload = () => resolve(element);
-          element.onerror = () => reject(new Error("read"));
-          element.src = objectUrl;
-        });
-        const scale = Math.min(
-          1,
-          1280 / imageElement.width,
-          1280 / imageElement.height,
-        );
-        const canvas = document.createElement("canvas");
-        canvas.width = Math.max(1, Math.round(imageElement.width * scale));
-        canvas.height = Math.max(1, Math.round(imageElement.height * scale));
-        canvas
-          .getContext("2d")
-          .drawImage(imageElement, 0, 0, canvas.width, canvas.height);
-        const preview = canvas.toDataURL("image/jpeg", 0.78);
-        const storeKey = `p1-screenshots-${guideId}`;
-        const all = (() => {
-          try {
-            return JSON.parse(readLocalText(storeKey) || "{}");
-          } catch {
-            return {};
-          }
-        })();
-        all[stepIndex] = {
-          name: file.name.slice(0, 90),
-          preview,
-          savedAt: new Date().toISOString(),
-        };
-        const payload = JSON.stringify(all);
-        try {
-          localStorage.setItem(storeKey, payload);
-        } catch {
-          throw new Error("storage");
-        }
-        setImage(all[stepIndex]);
-      } finally {
-        URL.revokeObjectURL(objectUrl);
-      }
-    } catch (err) {
-      setError(
-        err.message === "storage"
-          ? "No hay espacio disponible en este navegador para guardar la imagen."
-          : "No pudimos abrir la imagen. Intenta con otro archivo.",
-      );
-    }
-  };
-  const deleteScreenshot = () => {
-    const storeKey = `p1-screenshots-${guideId}`;
-    const all = (() => {
-      try {
-        return JSON.parse(readLocalText(storeKey) || "{}");
-      } catch {
-        return {};
-      }
-    })();
-    delete all[stepIndex];
-    try {
-      if (Object.keys(all).length)
-        localStorage.setItem(storeKey, JSON.stringify(all));
-      else localStorage.removeItem(storeKey);
-      setImage(null);
-      setError("");
-    } catch {
-      setError("No pudimos quitar la imagen guardada.");
-    }
-  };
-  return (
-    <dialog
-      id="guide-screenshot-dialog"
-      className="screenshot-dialog"
-      aria-labelledby="screenshot-title"
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
-      <div className="screenshot-dialog-head">
-        <span className="screenshot-dialog-icon">
-          <Camera size={20} />
-        </span>
-        <div>
-          <span className="section-eyebrow">RECURSO LOCAL</span>
-          <h2 id="screenshot-title">Captura de este paso</h2>
-        </div>
-        <button
-          type="button"
-          className="screenshot-close"
-          aria-label="Cerrar"
-          onClick={onClose}
-        >
-          <X size={19} />
-        </button>
-      </div>
-      <p className="screenshot-privacy">
-        Esta captura se guarda solo en el navegador de este computador. Recorta
-        u oculta antes nombres, saldos, números de cuenta y códigos.
-      </p>
-      {image ? (
-        <div className="screenshot-saved">
-          <img src={image.preview} alt={`Captura local ${image.name}`} />
-          <div>
-            <strong>{image.name}</strong>
-            <small>{new Date(image.savedAt).toLocaleString("es-CO")}</small>
-          </div>
-          <button
-            type="button"
-            className="screenshot-remove"
-            onClick={deleteScreenshot}
-          >
-            Quitar captura
-          </button>
-        </div>
-      ) : (
-        <button
-          type="button"
-          className="screenshot-upload"
-          onClick={() => inputRef.current?.click()}
-        >
-          <span>
-            <Camera size={22} />
-          </span>
-          <strong>Agregar captura a este paso</strong>
-          <small>PNG, JPG o WebP · máximo 5 MB</small>
-        </button>
-      )}
-      {error && (
-        <p className="screenshot-error" role="alert">
-          {error}
-        </p>
-      )}
-      <input
-        ref={inputRef}
-        className="sr-only"
-        type="file"
-        accept="image/png,image/jpeg,image/webp"
-        onChange={(event) => {
-          saveScreenshot(event.target.files?.[0]);
-          event.target.value = "";
-        }}
-      />
-      <div className="screenshot-dialog-foot">
-        <p>
-          <LockKeyhole size={15} /> No se envía al servidor ni se comparte con
-          otras personas.
-        </p>
-        <button
-          type="button"
-          className="button button--primary"
-          onClick={onClose}
-        >
-          Cerrar
-        </button>
-      </div>
-    </dialog>
   );
 }
 
@@ -605,15 +400,12 @@ function App() {
   const [voiceAvailable, setVoiceAvailable] = useState(false);
   const [narrativeMode, setNarrativeMode] = useState(false);
   const [narration, setNarration] = useState("idle");
-  const [showArtwork, setShowArtwork] = useState(() =>
-    window.matchMedia("(min-width: 761px)").matches,
-  );
+  const [showArtwork, setShowArtwork] = useState(true);
   const [toast, setToast] = useState("");
   const [showHelp, setShowHelp] = useState(false);
   const [category, setCategory] = useState("Todas");
   const [showPending, setShowPending] = useState(true);
   const [showOfficialLinks, setShowOfficialLinks] = useState(false);
-  const [showScreenshot, setShowScreenshot] = useState(false);
   const [resumeGuideId, setResumeGuideId] = useState(() =>
     readLocalText("p1-last-guide"),
   );
@@ -643,12 +435,6 @@ function App() {
 
   const guide = selected ? catalog.guides.find((g) => g.id === selected) : null;
   const activeStep = guide?.steps?.[stepIndex];
-  useEffect(() => {
-    const layout = window.matchMedia("(min-width: 761px)");
-    const updateArtwork = () => setShowArtwork(layout.matches);
-    layout.addEventListener("change", updateArtwork);
-    return () => layout.removeEventListener("change", updateArtwork);
-  }, []);
   useEffect(() => {
     let alive = true;
     let timer;
@@ -819,7 +605,7 @@ function App() {
       `${location.pathname}?${params.toString()}`,
     );
     setSelected(g.id);
-    setShowArtwork(window.matchMedia("(min-width: 761px)").matches);
+    setShowArtwork(true);
     setStepIndex(
       g.status === "verified"
         ? safeStep(readProgress(g.id), g.steps?.length || 0)
@@ -1417,7 +1203,7 @@ function App() {
                 </label>
                 <p className="catalog-status-legend">
                   <CheckCircle2 size={14} /> Pasos revisados <span>·</span>
-                  <Clock3 size={14} /> Sin pasos publicados
+                  <Clock3 size={14} /> En revisión
                 </p>
               </div>}
               {filteredMatches.length ? (
@@ -1523,7 +1309,7 @@ function App() {
                   </div>
                   <div>
                     <dt>{sourceCounts.pending}</dt>
-                    <dd>tareas sin pasos publicados</dd>
+                    <dd>guías en revisión</dd>
                   </div>
                 </dl>
               </section>
@@ -1713,7 +1499,7 @@ function App() {
                         aria-controls="step-artwork"
                         onClick={() => setShowArtwork((visible) => !visible)}
                       >
-                        {showArtwork ? "Ocultar esquema" : "Ver esquema del paso"}
+                        {showArtwork ? "Ocultar ejemplo" : "Ver ejemplo del paso"}
                         <ChevronUp size={17} className={showArtwork ? "" : "is-closed"} />
                       </button>
                       <div id="step-artwork" hidden={!showArtwork}>
@@ -1722,17 +1508,6 @@ function App() {
                           stepIndex={stepIndex}
                           instruction={activeStep?.instruction || ""}
                         />
-                      </div>
-                      <div className="step-tools">
-                        <button
-                          type="button"
-                          className="step-tool"
-                          onClick={() => setShowScreenshot(true)}
-                        >
-                          <Camera size={17} />
-                          <span>Agregar mi captura</span>
-                          <small>Opcional · solo en este dispositivo</small>
-                        </button>
                       </div>
                       <div
                         className={`voice-controls ${voice === "speaking" ? "is-speaking" : ""}`}
@@ -1847,13 +1622,6 @@ function App() {
           </section>
         )}
       </main>
-      {showScreenshot && guide && (
-        <ScreenshotRequest
-          guideId={guide.id}
-          stepIndex={stepIndex}
-          onClose={() => setShowScreenshot(false)}
-        />
-      )}
       {toast && (
         <div className="toast" role="status">
           <CheckCircle2 size={20} />
@@ -1902,8 +1670,7 @@ function GuideCard({ guide, onClick, isFavorite = false, onToggleFavorite, onNar
             ) : (
               <>
                 <Clock3 size={15} />
-                <span>Sin pasos publicados</span>
-                <span className="card-step-count">Pendiente</span>
+                <span>En revisión</span>
               </>
             )}
           </span>
