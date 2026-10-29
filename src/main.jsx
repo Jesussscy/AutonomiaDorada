@@ -876,6 +876,8 @@ function App() {
       if (guide) {
         writeLocal(`p1-progress-${guide.id}`, String(next));
         writeLocal("p1-last-guide", guide.id);
+        writeLocal("p1-show-resume", "true");
+        setShowResume(true);
         setResumeGuideId(guide.id);
       }
       requestAnimationFrame(() => {

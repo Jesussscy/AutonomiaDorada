@@ -113,6 +113,7 @@ El tamaño de texto se ajusta entre 90 % y 130 % y se puede restablecer pulsando
 
 Las guías revisadas se pueden guardar como favoritas desde la tarjeta; la selección y el avance se almacenan únicamente en el navegador actual y no se envían a la API local. El modo **Ver solo favoritas** filtra el catálogo y funciona junto con la búsqueda y las categorías; al quitar la última guía guardada, se vuelve a la lista general. En cada paso aparece primero la instrucción y un ejemplo recreado con aspecto de teléfono, visible también en móvil; se puede ocultar con un botón. Es una orientación visual, no una pantalla real del proveedor. No hay control para subir capturas; cuando se entreguen imágenes autorizadas, se incorporarán tras revisar su procedencia.
 Al activar **Ver solo favoritas**, se limpian la búsqueda y la categoría anterior para mostrar todas las guías guardadas; después se pueden aplicar filtros nuevos.
+La sugerencia **Puedes continuar** se puede cerrar. Si la persona avanza a otro paso después, vuelve a aparecer con el progreso nuevo; cerrarla no la desactiva para siempre.
 
 El botón **Ayuda** abre un panel con instrucciones breves, acceso al catálogo y una línea ficticia (`1 2 3 4 5`) mostrada exclusivamente como ejemplo visual. No es un número de atención y la aplicación no intenta llamarlo. La cabecera y el pie incluyen accesos a las guías, inicio y ayuda. Las tarjetas usan marcas obtenidas de los sitios de las entidades cuando se pudo confirmar el recurso; SOAT lleva un distintivo propio porque no es una entidad.
 
