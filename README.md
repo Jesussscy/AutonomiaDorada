@@ -103,6 +103,7 @@ npm start
 
 Las guías marcadas como **Pendiente** aún no muestran pasos de operación. La guía genérica de facturas públicas de Nequi solo aplica si el proveedor aparece en el catálogo dentro de la aplicación; no confirma que Afinia esté disponible. Esta primera versión no afirma incluir todos los bancos o servicios. No se han incorporado capturas reales porque todavía no fueron entregadas.
 En las guías pendientes, una frase breve deja claro que los pasos siguen en revisión y el acceso al canal oficial aparece antes de la explicación detallada, también en teléfonos pequeños.
+El dominio de destino se muestra bajo ese acceso para que la persona pueda reconocerlo antes de abrir el sitio externo.
 
 El catálogo se muestra en dos estados visuales: tareas con pasos revisados y tareas que todavía no tienen instrucciones publicadas. Las guías revisadas aparecen primero; en una búsqueda se conserva la relevancia y solo se da prioridad a las revisadas cuando hay un empate. La sección **Transparencia y confianza** da acceso a los canales y fuentes que respaldan el catálogo, con el alcance y las limitaciones de cada consulta. La búsqueda acepta expresiones completas y términos de contexto; `Ctrl+K` o `⌘K` enfoca el campo de búsqueda desde el inicio. Los filtros por categoría trabajan junto con los resultados de búsqueda.
 

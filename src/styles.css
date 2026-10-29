@@ -1151,6 +1151,12 @@ button {
   margin: 10px 0 5px;
   text-decoration: none;
 }
+.pending-destination {
+  display: block;
+  color: #456d88;
+  font-size: calc(11px * var(--text-scale));
+  overflow-wrap: anywhere;
+}
 .pending-source-date {
   display: block;
   margin: 2px 0 8px;

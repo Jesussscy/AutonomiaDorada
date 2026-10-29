@@ -1846,17 +1846,20 @@ function PendingGuide({ guide, relatedLinks = [] }) {
         <h2>{guide.source?.url ? "Consulta el canal oficial" : "Guía en revisión"}</h2>
         <p>Aún no hemos revisado los pasos de esta tarea.</p>
         {guide.source?.url && (
-          <a
-            className="button button--primary"
-            href={guide.source.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {guide.id === "soat-purchase-pending"
-              ? "Leer recomendaciones oficiales sobre el SOAT"
-              : `Consultar canal oficial de ${guide.entity_name}`}
-            <ExternalLink size={17} />
-          </a>
+          <>
+            <a
+              className="button button--primary"
+              href={guide.source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {guide.id === "soat-purchase-pending"
+                ? "Leer recomendaciones oficiales sobre el SOAT"
+                : `Consultar canal oficial de ${guide.entity_name}`}
+              <ExternalLink size={17} />
+            </a>
+            <small className="pending-destination">Se abrirá: {new URL(guide.source.url).hostname}</small>
+          </>
         )}
         <p>{guide.description}</p>
         {guide.source?.checkedAt && (
