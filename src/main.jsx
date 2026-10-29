@@ -1169,7 +1169,14 @@ function App() {
                   <button
                     className="favorite-filter"
                     aria-pressed={showFavorites}
-                    onClick={() => setShowFavorites((v) => !v)}
+                    onClick={() => {
+                      if (!showFavorites) {
+                        setQuery("");
+                        setCategory("Todas");
+                      }
+                      setShowFavorites((value) => !value);
+                      focusCatalog();
+                    }}
                   >
                     <Bookmark
                       size={17}
