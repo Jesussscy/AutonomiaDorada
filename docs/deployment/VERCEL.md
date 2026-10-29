@@ -1,6 +1,6 @@
-# Preparación para Vercel
+# Despliegue en Vercel
 
-El repositorio queda preparado para una conexión posterior desde el panel de Vercel. No se ha creado un proyecto remoto, no se configuraron credenciales y no se desplegó el sitio.
+El proyecto `trabajo-social` está conectado a `Jesussscy/TrabajoSocial` en la rama `main`. La web de producción está en **https://trabajo-social-omega.vercel.app/**. El primer despliegue se verificó con la página principal, `/api/catalog` (13 guías, 4 revisadas) y una URL interna de la aplicación. No se configuraron variables secretas ni dominio personalizado.
 
 ## Cómo se publica el catálogo
 
@@ -8,11 +8,11 @@ El servidor local continúa usando SQLite (`data/prueba1.sqlite`) y conserva el 
 
 La función de Vercel no requiere un driver nativo de SQLite en producción. Para actualizar las guías del catálogo, primero se modifica y revisa la semilla local; el siguiente despliegue genera una nueva instantánea. No hay escritura pública a la base de datos ni endpoint de transacciones.
 
-## Configuración pendiente para la sesión de despliegue
+## Configuración usada
 
-1. Importar `Jesussscy/TrabajoSocial` en Vercel, usando la rama `main`.
-2. Confirmar el comando `npm run build:vercel` y el directorio de salida `dist` (ya declarados en `vercel.json`).
-3. Desplegar y revisar `/`, `/api/catalog` y una ruta interna de la aplicación.
-4. Añadir un dominio personalizado solo si se decide más adelante.
+1. Repositorio: `Jesussscy/TrabajoSocial`, rama de producción `main`.
+2. Preset: Vite; directorio raíz: `./`.
+3. Comando de compilación: `npm run build:vercel`; directorio de salida: `dist` (declarados en `vercel.json`).
+4. Los siguientes cambios publicados en `main` generan nuevos despliegues. Comprueba la página, `/api/catalog` y una guía después de cada cambio de contenido o infraestructura.
 
 El frontend usa rutas internas servidas por el fallback de `vercel.json`. El rewrite deja `/api/*` disponible para la función serverless. La app local puede seguir arrancándose con `Iniciar-Prueba1.bat`; la configuración de Vercel no cambia su ejecución local.

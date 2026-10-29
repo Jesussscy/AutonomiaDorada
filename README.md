@@ -59,9 +59,9 @@ Antes de ampliar el catálogo, revisar las fuentes oficiales actuales y dejar vi
 
 El ciclo de trabajo es deliberadamente continuo: observar la experiencia completa, identificar una mejora comprobable, implementarla, revisar escritorio y tamaños de teléfono, verificar build/API y comportamiento con movimiento reducido, documentar cualquier límite y volver a recorrer el flujo en busca de la siguiente fricción. El objetivo no se cumple al cerrar una lista de cambios: cada actualización del catálogo o de la interfaz debe poder dejar el producto más sencillo, comprensible, inclusivo y confiable.
 
-## Preparación de Vercel
+## Web publicada en Vercel
 
-La configuración base está lista en `vercel.json` y [docs/deployment/VERCEL.md](docs/deployment/VERCEL.md). El build de Vercel vuelve a crear el catálogo desde SQLite y lo exporta como instantánea JSON para la función de lectura `/api/catalog`; esto evita depender de SQLite nativo en las funciones de producción. Los cambios de contenido se revisan en el catálogo y se publican con un nuevo despliegue. La aplicación local mantiene su servidor SQLite. La carpeta queda lista para conectar el repositorio cuando se configure Vercel; este proyecto aún no se ha conectado ni desplegado allí.
+La aplicación está publicada en **https://trabajo-social-omega.vercel.app/** desde la rama `main` del repositorio. La configuración está en `vercel.json` y [docs/deployment/VERCEL.md](docs/deployment/VERCEL.md). El build de Vercel vuelve a crear el catálogo desde SQLite y lo exporta como instantánea JSON para la función de lectura `/api/catalog`; esto evita depender de SQLite nativo en las funciones de producción. Los cambios de contenido se revisan en el catálogo y se publican con un nuevo despliegue. La aplicación local mantiene su servidor SQLite.
 
 ## Accesibilidad y seguridad
 
