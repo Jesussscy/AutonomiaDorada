@@ -1962,10 +1962,6 @@ function PendingGuide({ guide, relatedLinks = [] }) {
       <div className="pending-copy">
         <h2>Aún no hay pasos revisados.</h2>
         <p>{guide.description}</p>
-        <p className="pending-limit">
-          <strong>Por ahora</strong> Consulta la fuente oficial enlazada antes de
-          actuar.
-        </p>
         {guide.source?.url && (
           <a
             className="button button--primary"

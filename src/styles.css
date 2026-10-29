@@ -1287,9 +1287,7 @@ button {
     gap: 9px;
   }
   .pending-symbol {
-    width: 52px;
-    height: 52px;
-    border-radius: 16px;
+    display: none;
   }
   .pending-copy h2 {
     font-size: calc((21px) * var(--text-scale));
@@ -2907,21 +2905,6 @@ html {
 .source-summary + .official-links {
   scroll-margin-top: 96px;
 }
-.pending-copy .pending-limit {
-  margin: 13px 0;
-  padding: 13px 15px;
-  background: #f4f2eb;
-  border: 1px solid #e7e2d4;
-  border-radius: 12px;
-  color: #53697a;
-  font-size: calc((13px) * var(--text-scale));
-  line-height: 1.6;
-}
-.pending-copy .pending-limit strong {
-  display: block;
-  margin-bottom: 4px;
-  color: #435e73;
-}
 @media (max-width: 760px) {
   .source-summary {
     grid-template-columns: 45px minmax(0, 1fr);
@@ -2978,10 +2961,6 @@ html {
   }
   .source-stats {
     grid-column: 1/-1;
-  }
-  .pending-copy .pending-limit {
-    padding: 11px;
-    font-size: calc((12px) * var(--text-scale));
   }
 }
 
