@@ -117,6 +117,7 @@ Las guías revisadas se pueden guardar como favoritas desde la tarjeta; la selec
 Al activar **Ver solo favoritas**, se limpian la búsqueda y la categoría anterior para mostrar todas las guías guardadas; después se pueden aplicar filtros nuevos.
 La sugerencia **Puedes continuar** se puede cerrar. Si la persona avanza a otro paso después, vuelve a aparecer con el progreso nuevo; cerrarla no la desactiva para siempre.
 La sugerencia no ocupa espacio durante una búsqueda ni al ver solo favoritas. El avance permanece guardado y la tarjeta vuelve al inicio cuando se despeja la búsqueda.
+Al buscar entre todas las guías, la sección de favoritas también se aparta para dejar los resultados a la vista; las guías guardadas regresan al limpiar la búsqueda.
 
 El botón **Ayuda** abre un panel con instrucciones breves, acceso al catálogo y una línea ficticia (`1 2 3 4 5`) mostrada exclusivamente como ejemplo visual. No es un número de atención y la aplicación no intenta llamarlo. La cabecera y el pie incluyen accesos a las guías, inicio y ayuda. Las tarjetas usan marcas obtenidas de los sitios de las entidades cuando se pudo confirmar el recurso; SOAT lleva un distintivo propio porque no es una entidad.
 

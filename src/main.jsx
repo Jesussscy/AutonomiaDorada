@@ -1165,7 +1165,7 @@ function App() {
                 </button>
               </div>
             )}
-            {favoriteGuides.length > 0 && (
+            {favoriteGuides.length > 0 && (!query.trim() || showFavorites) && (
               <section
                 className="favorites-section"
                 aria-labelledby="favorites-title"
