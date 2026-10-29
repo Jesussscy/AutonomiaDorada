@@ -2030,6 +2030,10 @@ h1, h2, h3, .card-main > strong {font-family: var(--display-face); font-weight: 
   .welcome-action {grid-column:auto;justify-self:end;min-height:44px;padding:6px 10px;font-size:calc(12px * var(--text-scale));}
   .welcome-dismiss {grid-column:auto;grid-row:auto;}
 }
+@media (max-width:760px) {
+  .welcome-dismiss {width:48px;min-width:48px;min-height:48px;justify-self:end;}
+  .category-filter-shell .category-tab {min-height:48px;padding-inline:13px;}
+}
 @media (min-width:761px) {
   .welcome-title-short {display:none;}
 }
