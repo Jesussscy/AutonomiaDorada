@@ -1539,7 +1539,9 @@ function App() {
                       </span>
                       <h3>Antes de empezar</h3>
                       <p>{guide.preparation}</p>
-                      <p className="prep-safety"><ShieldCheck size={17} /> Nunca compartas claves ni códigos.</p>
+                      {!/clave|código|contraseña/i.test(guide.preparation) && (
+                        <p className="prep-safety"><ShieldCheck size={17} /> Nunca compartas claves ni códigos.</p>
+                      )}
                     </div>
                     {guide.source && (
                       <a
