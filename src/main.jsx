@@ -830,7 +830,12 @@ function App() {
   };
   const matches = useMemo(() => {
     const terms = searchTokens(query);
-    if (!terms.length) return catalog.guides;
+    if (!terms.length)
+      return [...catalog.guides].sort(
+        (a, b) =>
+          Number(b.status === "verified") - Number(a.status === "verified") ||
+          a.title.localeCompare(b.title, "es"),
+      );
     return catalog.guides
       .map((g) => {
         const aliases = [...(g.aliases || []), ...(aliasesById[g.id] || [])];
@@ -863,7 +868,11 @@ function App() {
       })
       .filter((x) => x.score > 0 && x.matched >= Math.min(2, terms.length))
       .sort(
-        (a, b) => b.score - a.score || a.g.title.localeCompare(b.g.title, "es"),
+        (a, b) =>
+          b.score - a.score ||
+          Number(b.g.status === "verified") -
+            Number(a.g.status === "verified") ||
+          a.g.title.localeCompare(b.g.title, "es"),
       )
       .map((x) => x.g);
   }, [catalog, query]);
