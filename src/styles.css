@@ -160,6 +160,7 @@ button {
 .narrative-toggle[aria-pressed="true"] svg {
   color: #a27b26;
 }
+.narrative-label-mobile {display: none;}
 .font-controls {
   display: flex;
   align-items: center;
@@ -3137,4 +3138,6 @@ html {
   .guide-aside {display: flex; flex-direction: column; width: 100%;}
   .progress-card {display: none;}
   .step-card {width: 100%;}
+  .narrative-label-desktop {display: none;}
+  .narrative-label-mobile {display: inline;}
 }

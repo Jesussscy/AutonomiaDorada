@@ -976,9 +976,9 @@ function App() {
             aria-label={
               narrativeMode
                 ? narration === "speaking"
-                  ? "Desactivar lectura al pasar; se está leyendo"
-                  : "Desactivar lectura al pasar"
-                : "Activar lectura al pasar"
+                  ? "Desactivar lectura de texto; se está leyendo"
+                  : "Desactivar lectura de texto"
+                : "Activar lectura de texto al pasar el cursor o tocarlo"
             }
             onClick={() => setNarrativeEnabled(!narrativeMode)}
             title="Activa la lectura al pasar el cursor o tocar texto"
@@ -989,7 +989,7 @@ function App() {
                 ? narration === "speaking"
                   ? "Leyendo…"
                   : "Lectura activa"
-                : "Leer al pasar"}
+                : <><span className="narrative-label-desktop">Leer al pasar</span><span className="narrative-label-mobile">Leer al tocar</span></>}
             </span>
           </button>
           <div className="font-controls" aria-label="Tamaño del texto">

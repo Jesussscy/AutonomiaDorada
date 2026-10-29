@@ -49,7 +49,7 @@ Los pasos del RUNT son una orientación de entrada al servicio; la consulta ofic
 
 La interfaz combina azul pastel con fondos marfil y acentos amarillos suaves. El color ayuda a ordenar controles y estados sin depender solo de la percepción cromática; el estado y las acciones también se expresan con palabras e iconos. La animación es breve y acompaña la entrada de las tarjetas y el uso de controles. Se respeta la preferencia del dispositivo por movimiento reducido.
 
-El botón **Leer al pasar** activa de forma voluntaria la narración en español de Colombia. Con mouse, lee el bloque de texto donde está el puntero; en teléfono o tableta, se puede tocar un párrafo, encabezado o elemento de lista. Al activar el modo aparece también un botón **Escuchar** en cada tarjeta para oír su tarea sin abrir la guía. La voz se apaga por defecto, puede desactivarse desde el mismo botón y usa las voces del navegador. Si el dispositivo no ofrece síntesis de voz, la interfaz lo indica. Consulta [la procedencia y las limitaciones de los logotipos](public/brands/README.md).
+El botón **Leer al pasar** (**Leer al tocar** en teléfono) activa de forma voluntaria la narración en español de Colombia. Con mouse, lee el bloque de texto donde está el puntero; en teléfono o tableta, se puede tocar un párrafo, encabezado o elemento de lista. Al activar el modo aparece también un botón **Escuchar** en cada tarjeta para oír su tarea sin abrir la guía. La voz se apaga por defecto, puede desactivarse desde el mismo botón y usa las voces del navegador. Si el dispositivo no ofrece síntesis de voz, la interfaz lo indica. Consulta [la procedencia y las limitaciones de los logotipos](public/brands/README.md).
 
 ## Mejora continua
 
