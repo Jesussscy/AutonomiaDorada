@@ -260,6 +260,7 @@ const brandLogoPaths = {
 };
 const searchTokens = (value) =>
   searchWords(value).map((word) => searchSynonyms[word] || word);
+const genericEntityWords = new Set(["banco", "tiendas", "soat"]);
 const matchesQuery = (query, ...fields) => {
   const terms = searchTokens(query);
   if (!terms.length) return false;
@@ -654,7 +655,17 @@ function App() {
           Number(b.status === "verified") - Number(a.status === "verified") ||
           a.title.localeCompare(b.title, "es"),
       );
+    const namedEntities = new Set(
+      catalog.guides
+        .filter((g) =>
+          searchTokens(g.entity_name).some(
+            (word) => !genericEntityWords.has(word) && terms.includes(word),
+          ),
+        )
+        .map((g) => g.entity_id),
+    );
     return catalog.guides
+      .filter((g) => !namedEntities.size || namedEntities.has(g.entity_id))
       .map((g) => {
         const aliases = [...(g.aliases || []), ...(aliasesById[g.id] || [])];
         const title = `${g.title} ${g.task} ${g.entity_name}`;
@@ -1192,14 +1203,14 @@ function App() {
                   <span className="section-eyebrow">TU CENTRO DE GUÍAS</span>
                   <h2 id="catalog-heading" tabIndex={-1}>
                     {query
-                      ? `Resultados para “${query}”`
+                      ? "Resultados"
                       : showFavorites
                         ? "Solo tus favoritas"
                         : "Encuentra una tarea"}
                   </h2>
                   <p aria-live="polite" aria-atomic="true">
                     {query
-                      ? `${filteredMatches.length} ${filteredMatches.length === 1 ? "resultado" : "resultados"}${showFavorites ? " entre tus favoritas" : " para tu búsqueda"}.`
+                      ? `${filteredMatches.length} ${filteredMatches.length === 1 ? "resultado" : "resultados"}${showFavorites ? " entre tus favoritas" : ""} para “${query}”.`
                       : showFavorites
                         ? "Las guías que guardaste en este dispositivo."
                         : "Elige una categoría o busca con tus propias palabras."}

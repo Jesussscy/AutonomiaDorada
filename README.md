@@ -107,6 +107,8 @@ El catálogo se muestra en dos estados visuales: tareas con pasos revisados y ta
 
 Al abrir una guía desde el catálogo, el botón **Atrás** del navegador o el gesto equivalente en teléfono recupera la búsqueda anterior. **Volver a las guías** hace lo mismo; **Volver al inicio** limpia la búsqueda. Un enlace directo a una guía también permite volver al catálogo.
 
+La búsqueda reconoce nombres de entidades y evita ofrecer guías de otros proveedores cuando se escribe uno concreto. Una tarea sin coincidencia muestra un resultado vacío y permite volver a intentar; en móvil el encabezado de resultados deja espacio para leer el texto ampliado.
+
 El tamaño de texto se ajusta entre 90 % y 130 % y se puede restablecer pulsando su indicador. La interfaz conserva un ancho legible al aumentar la escala. El progreso de una guía revisada solo se guarda al avanzar un paso y se conserva localmente en el dispositivo; abrir una tarea pendiente no altera ese progreso.
 
 Las guías revisadas se pueden guardar como favoritas desde la tarjeta; la selección y el avance se almacenan únicamente en el navegador actual y no se envían a la API local. El modo **Ver solo favoritas** filtra el catálogo y funciona junto con la búsqueda y las categorías; al quitar la última guía guardada, se vuelve a la lista general. En cada paso aparece primero la instrucción y un ejemplo recreado con aspecto de teléfono, visible también en móvil; se puede ocultar con un botón. Es una orientación visual, no una pantalla real del proveedor. No hay control para subir capturas; cuando se entreguen imágenes autorizadas, se incorporarán tras revisar su procedencia.

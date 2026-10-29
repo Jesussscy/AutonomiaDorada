@@ -3083,6 +3083,8 @@ html {
   .topbar {min-height: 0; padding: 10px 17px 11px; row-gap: 7px;}
   .topbar .brand-pill {display: none;}
   .topbar .top-actions {gap: 7px;}
+  .section-heading {align-items: flex-start; flex-direction: column; gap: 9px;}
+  .section-heading .catalog-count {margin-bottom: 0;}
   .guide-card .card-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
