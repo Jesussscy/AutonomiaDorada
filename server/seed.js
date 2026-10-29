@@ -470,9 +470,9 @@ const guides = [
     title: "Consultar la vigencia del SOAT",
     task: "Consultar un trámite o seguro",
     description:
-      "El RUNT ofrece una consulta ciudadana de vehículos. Su instructivo oficial describe la búsqueda por placa con datos del propietario; el formulario puede cambiar y se abre directamente en el portal del RUNT.",
+      "Consulta el SOAT por placa en el portal del RUNT. El formulario puede cambiar.",
     preparation:
-      "Ten a mano la placa y el tipo y número de documento del propietario del vehículo. Ingrésalos únicamente en el formulario oficial del RUNT. Esta aplicación no los solicita, almacena ni recibe.",
+      "Ten la placa y el documento del propietario. Ingrésalos solo en el portal oficial del RUNT; esta aplicación no los pide ni guarda.",
     status: "verified",
     updated_at: "2026-10-28",
     source_id: "runt-soat-query",
@@ -792,7 +792,7 @@ const steps = [
   [
     "runt-soat-consult",
     1,
-    "Abre el enlace oficial del RUNT. En esta guía no te pediremos ningún dato.",
+    "Abre el enlace oficial del RUNT.",
     "link",
     "Entra a la página oficial del RUNT",
   ],

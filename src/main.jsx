@@ -1763,7 +1763,7 @@ function App() {
                       </span>
                       <h3>Antes de empezar</h3>
                       <p>{guide.preparation}</p>
-                      {!/clave|código|contraseña/i.test(guide.preparation) && (
+                      {guide.id !== "runt-soat-consult" && !/clave|código|contraseña/i.test(guide.preparation) && (
                         <p className="prep-safety"><ShieldCheck size={17} />
                           {guide.entity_id === "salud-mental" || guide.entity_id === "bienestar-fisico" || guide.entity_id === "rutas-salud" || ["Salud mental", "Bienestar físico", "Salud", "Rutas de salud"].includes(guide.category_group || guide.entity_category || guide.category)
                             ? "Confirma que consultes un sitio oficial."
