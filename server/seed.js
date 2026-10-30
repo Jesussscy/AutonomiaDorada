@@ -402,12 +402,12 @@ const guides = [
   {
     id: "nequi-public-bill",
     entity_id: "nequi",
-    title: "Pagar una factura de servicios públicos con Nequi",
+    title: "Pagar servicios públicos con Nequi",
     task: "Pagar una factura",
     description:
-      "La guía explica el recorrido general para encontrar servicios públicos en Nequi. No confirma que una empresa específica esté disponible; comprueba el catálogo que aparece hoy en la aplicación.",
+      "Busca servicios públicos en Nequi y revisa su catálogo actual. No confirmamos que una empresa específica esté disponible.",
     preparation:
-      "Ten la factura a mano. El número de referencia depende del servicio. No compartas ese dato aquí.",
+      "Ten la factura a mano. La referencia depende del servicio; no la compartas aquí.",
     status: "verified",
     updated_at: "2026-10-28",
     source_id: "nequi-public-bill-guide",
