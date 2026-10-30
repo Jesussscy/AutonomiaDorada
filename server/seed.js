@@ -1,3 +1,4 @@
+import { expandCatalog } from './catalog-expansion.js';
 import "dotenv/config";
 import Database from "better-sqlite3";
 import fs from "node:fs";
@@ -589,6 +590,8 @@ const guides = [
 ];
 guides.push(...evidenceLedHealthEntities.map(({ guide }) => guide));
 guides.push(...makeCandidateGuides());
+
+guides.push(...expandCatalog(guides, entities));
 
 const steps = [
   ...["depression","anxiety","grief","caregiver","family","crisis","suicide","territorial"].flatMap((slug) => [
