@@ -853,7 +853,7 @@ function App() {
         const bIndex = preferredTitles[group].indexOf(b.title);
         return (aIndex < 0 ? 99 : aIndex) - (bIndex < 0 ? 99 : bIndex);
       });
-      return ranked.slice(0, 2);
+      return ranked.slice(0, 4);
     });
   }, [filteredMatches, homeFeatured]);
   const pendingMatchesHidden =
@@ -1495,7 +1495,7 @@ function App() {
                   <Clock3 size={14} /> En revisión
                 </p>
               </div>}
-              {!showFavorites && !singleSearchResult && <div className="catalog-filter-note" aria-live="polite">{homeFeatured ? "Mostrando dos recomendaciones por cada una de las ocho áreas." : category !== "Todas" ? `Mostrando guías de ${category}.` : "Mostrando todas las guías disponibles."}</div>}
+              {!showFavorites && !singleSearchResult && <div className="catalog-filter-note" aria-live="polite">{homeFeatured ? "Explora cuatro guías por categoría." : category !== "Todas" ? `Mostrando guías de ${category}.` : "Mostrando todas las guías disponibles."}</div>}
               {visibleGuides.length ? (
                 homeFeatured ? (
                   <div className="featured-guide-groups">
@@ -1504,7 +1504,7 @@ function App() {
                       return (
                         <section className="featured-guide-group" key={group} aria-labelledby={`featured-${categorySlug(group)}`}>
                           <div className="featured-guide-heading">
-                            <div><span>2 recomendaciones</span><h3 id={`featured-${categorySlug(group)}`}>{group}</h3></div>
+                            <div><span>{groupGuides.length} guías</span><h3 id={`featured-${categorySlug(group)}`}>{group}</h3></div>
                             <button type="button" onClick={() => { setCategory(group); requestAnimationFrame(() => categoryTabsRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" })); }}>
                               Ver todas <ArrowRight size={16} />
                             </button>
@@ -1580,7 +1580,7 @@ function App() {
                   </small>
                 </div>
               )}
-              {homeFeatured && filteredMatches.length > visibleGuides.length && <div className="catalog-more"><span>16 recomendaciones iniciales · 20 temas propuestos en cada área cotidiana.</span><button type="button" onClick={() => {setShowAllGuides(true);setAllGuidesManuallyOpened(true);}}>Ver las {filteredMatches.length} guías <ArrowRight size={17}/></button></div>}
+              {homeFeatured && filteredMatches.length > visibleGuides.length && <div className="catalog-more"><span>Más temas para tu día a día.</span><button type="button" onClick={() => {setShowAllGuides(true);setAllGuidesManuallyOpened(true);}}>Ver las {filteredMatches.length} guías <ArrowRight size={17}/></button></div>}
               {!homeFeatured && !query.trim() && !showFavorites && category === "Todas" && allGuidesManuallyOpened && <div className="catalog-more"><span>Estás viendo el catálogo completo.</span><button type="button" onClick={() => {setShowAllGuides(false);setAllGuidesManuallyOpened(false);focusCatalog();}}>Volver a las recomendaciones</button></div>}
               <section
                 className="source-summary"
@@ -1756,7 +1756,8 @@ function App() {
                       <p>{guide.preparation}</p>
                       {guide.id !== "runt-soat-consult" && !/clave|código|contraseña/i.test(guide.preparation) && (
                         <p className="prep-safety"><ShieldCheck size={17} />
-                          {guide.entity_id === "salud-mental" || guide.entity_id === "bienestar-fisico" || guide.entity_id === "rutas-salud" || ["Salud mental", "Bienestar físico", "Salud", "Rutas de salud"].includes(guide.category_group || guide.entity_category || guide.category)
+                          <img className="guide-scene" src={`/guide-scenes/${categorySlug(categoryForGuide(guide))}.svg`} alt="" loading="lazy" decoding="async" />
+        {guide.entity_id === "salud-mental" || guide.entity_id === "bienestar-fisico" || guide.entity_id === "rutas-salud" || ["Salud mental", "Bienestar físico", "Salud", "Rutas de salud"].includes(guide.category_group || guide.entity_category || guide.category)
                             ? "Confirma que consultes un sitio oficial."
                             : "Nunca compartas claves ni códigos."}
                         </p>

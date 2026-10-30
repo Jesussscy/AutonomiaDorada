@@ -135,3 +135,5 @@ El botón **Ayuda** abre un panel con instrucciones breves, acceso al catálogo 
 En teléfono, **Ayuda** mantiene su nombre visible junto al icono. La narración opcional se aplica al contenido y evita leer los propios controles de cabecera o pie cuando se pasa el cursor por ellos.
 
 En teléfonos, las tarjetas muestran un resumen de hasta tres líneas y una acción explícita: **Abrir guía** o **Ver información**. El detalle conserva el texto completo y las advertencias de cada tarea.
+
+El catálogo visual presenta cuatro guías por área y una ilustración temática local en cada tarjeta. Los resúmenes se limitan a dos líneas; las advertencias y las instrucciones completas permanecen al abrir la guía. Las ilustraciones identifican el tema y no son capturas de proveedores.
