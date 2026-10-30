@@ -4,6 +4,7 @@ Los archivos de esta carpeta se usan para identificar entidades en el catálogo.
 
 | Archivo | Entidad | Página oficial de origen | Archivo publicado por |
 | --- | --- | --- | --- |
+| `autonomia-dorada-logo.jpg` | Autonomía Dorada | Proporcionado por la persona responsable del proyecto | Logotipo propio recibido para esta aplicación; se usa en la cabecera, bienvenida, pie y favicon |
 | `nequi.svg` | Nequi | https://www.nequi.com.co/conocenos/sala-de-prensa | CDN oficial de Nequi; la sala de prensa indica que ofrece descarga de logos |
 | `bancolombia.svg` | Bancolombia | https://www.bancolombia.com/ | Sitio oficial Bancolombia |
 | `bbva-logo.png` | BBVA | https://www.bbva.com/en/bbva-deploys-its-new-brand-identity-worldwide/ | Logotipo del sitio corporativo oficial de BBVA |

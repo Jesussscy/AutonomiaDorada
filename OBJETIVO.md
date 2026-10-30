@@ -8,9 +8,9 @@ Mejorar Autonomía Dorada de manera continua hasta que la experiencia se sienta 
 
 - Mantener una interfaz amable, directa y breve, con jerarquía visual evidente, lenguaje cotidiano y acciones fáciles de reconocer.
 - Diseñar para móvil desde el inicio: tipografía legible, controles táctiles amplios, contenido sin desbordamiento horizontal, lectura y navegación cómodas con una mano.
-- Usar una identidad azul pastel, marfil y amarillo suave, coherente y con contraste suficiente. Añadir movimiento donde aporte comprensión, respuesta o continuidad; evitar animación que distraiga y respetar `prefers-reduced-motion`.
+- Aplicar el logotipo propio entregado en cabecera, bienvenida, pie y favicon. Basar la identidad en su verde profundo, dorado y marfil, con contraste suficiente. Añadir movimiento donde aporte comprensión, respuesta o continuidad; evitar animación que distraiga y respetar `prefers-reduced-motion`.
 - Mantener búsqueda, filtros, favoritos, progreso y estados de carga, vacío, pendiente, error y recuperación comprensibles y funcionales.
-- Implementar narración voluntaria al activar “Leer al pasar”: lectura al pasar el puntero por texto con mouse y al tocar texto en pantallas táctiles. Ofrecer control visible, español de Colombia cuando esté disponible y apagado por defecto.
+- Implementar narración voluntaria con el control breve “Escuchar”: lectura al pasar el puntero por texto con mouse y al tocar texto en pantallas táctiles. Usar español de Colombia cuando esté disponible, evitar clasificar las voces por género y mantener la lectura apagada por defecto.
 - Identificar los servicios con sus logotipos oficiales cuando se pueda confirmar su procedencia y guardarlos como recursos locales; documentar sus fuentes y derechos. Mantener un símbolo neutral si el archivo oficial no puede verificarse.
 - Usar ilustraciones propias únicamente como demostraciones, identificarlas con claridad y nunca hacerlas pasar por capturas oficiales.
 

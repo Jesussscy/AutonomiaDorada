@@ -1,6 +1,8 @@
 # Autonomía Dorada
 
-Aplicación web móvil primero para que las personas mayores encuentren orientación clara y accesible, conserven el control de sus decisiones y realicen tareas cotidianas con mayor autonomía. Su lema es: **Más que asistencia, es tu autonomía.** Esta versión prioriza guías de salud y apoyo emocional en Colombia.
+![Logotipo de Autonomía Dorada](public/brands/autonomia-dorada-logo.jpg)
+
+Aplicación web móvil primero para que las personas adultas encuentren orientación clara y accesible, conserven el control de sus decisiones y realicen tareas cotidianas con mayor autonomía. Su lema es: **Más que asistencia, es tu autonomía.** Reúne guías de salud, apoyo emocional, gestiones digitales y trámites en Colombia.
 
 ## Abrir la aplicación local
 
@@ -49,9 +51,9 @@ Los pasos del RUNT son una orientación de entrada al servicio; la consulta ofic
 
 ## Identidad visual y narración
 
-La identidad combina superficies marfil, tinta verde petróleo y señales doradas, con el símbolo vectorial propio. El catálogo se presenta como índice de tareas y las guías como un recorrido con progreso visible. Atkinson Hyperlegible Next para lectura y Newsreader para encabezados se sirven localmente desde `public/fonts/`; cada familia incluye su licencia OFL. El movimiento de entrada es breve y se desactiva cuando el dispositivo solicita movimiento reducido.
+La identidad aplica el logotipo entregado para el proyecto en la cabecera, bienvenida, pie de página y favicon. La paleta recoge su verde profundo, oro y marfil; las superficies son claras y las acciones mantienen contraste. El catálogo muestra iconos, marcas y textos breves; las guías conservan el progreso visible. Atkinson Hyperlegible Next para lectura y Newsreader para encabezados se sirven localmente desde `public/fonts/`; cada familia incluye su licencia OFL. El movimiento de entrada es breve y se desactiva cuando el dispositivo solicita movimiento reducido.
 
-El botón **Leer al pasar** (**Leer al tocar** en teléfono) activa de forma voluntaria la narración. En un celular, también se puede iniciar cada instrucción con **Escuchar**. En **Configuración**, A− disminuye el tamaño de la letra, A+ lo aumenta y **Normal** restablece el tamaño; desde allí se elige una voz de mujer o de hombre cuando el teléfono las ofrece y las identifica. Si no, aparecen los nombres de las voces disponibles. La preferencia se guarda en el dispositivo. La disponibilidad de narración depende del navegador; el texto permanece visible.
+El botón **Escuchar** activa voluntariamente la lectura al pasar el cursor o tocar texto; también se puede narrar un paso desde su propio control. La voz se elige en español, con preferencia automática por español de Colombia cuando está disponible. El selector usa nombres de idioma y voz, sin clasificarla por género. En **Configuración**, A− disminuye el tamaño de la letra, A+ lo aumenta y **Normal** restablece el tamaño. La preferencia se guarda en el dispositivo. La disponibilidad depende del navegador; el texto permanece visible.
 
 ## Mejora continua
 

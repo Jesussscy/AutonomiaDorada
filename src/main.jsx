@@ -39,6 +39,7 @@ import {
   Stethoscope,
 } from "lucide-react";
 import "./styles.css";
+import "./brand-theme.css";
 
 const aliasesById = {
   "nequi-send": [
@@ -245,9 +246,7 @@ function chooseNarrationVoice(voices, preference) {
   const spanish = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
   if (!spanish.length) return null;
   if (preference.startsWith("voice:")) return spanish.find((voice) => voice.voiceURI === preference.slice(6)) || null;
-  if (preference === "auto") return spanish.find((voice) => voice.lang?.toLowerCase() === "es-co") || spanish[0];
-  const pattern = preference === "female" ? /female|mujer|paulina|helena|sofia|mónica|monica|lucía|lucia|sabina|elena|laura/i : /male|hombre|jorge|carlos|diego|miguel|andrés|andres|pablo|juan|enrique/i;
-  return spanish.find((voice) => pattern.test(`${voice.name || ""} ${voice.voiceURI || ""}`)) || spanish[0];
+  return spanish.find((voice) => voice.lang?.toLowerCase() === "es-co") || spanish[0];
 }
 const entityColors = {
   nequi: { accent: "#de3f83", soft: "#fae7f0", word: "NEQUI" },
@@ -374,10 +373,10 @@ function SiteFooter({ onHome, onHelp, compact = false }) {
     <footer className={`site-footer${compact ? " site-footer--compact" : ""}`}>
       <div className="site-footer-main">
         <div className="site-footer-identity">
-          <span className="brand-mark" aria-hidden="true"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
+          <span className="brand-mark" aria-hidden="true"><img src="/brands/autonomia-dorada-logo.jpg" alt="" /></span>
           <div>
             <strong>Autonomía Dorada</strong>
-            <span>Más que asistencia, es tu autonomía.</span>
+            <span>Tu autonomía, a tu ritmo.</span>
           </div>
         </div>
         <div className="site-footer-actions">
@@ -496,8 +495,10 @@ function App() {
   const [voice, setVoice] = useState("idle");
   const [voiceAvailable, setVoiceAvailable] = useState(false);
   const [availableVoices, setAvailableVoices] = useState([]);
-  const [voicePreference, setVoicePreference] = useState(() => readLocalText("autonomia-dorada-voice-preference") || "auto");
-  const [voiceGenderOptions, setVoiceGenderOptions] = useState({ female: false, male: false });
+  const [voicePreference, setVoicePreference] = useState(() => {
+    const saved = readLocalText("autonomia-dorada-voice-preference");
+    return saved === "female" || saved === "male" ? "auto" : saved || "auto";
+  });
   const [showSettings, setShowSettings] = useState(false);
   const [narrativeMode, setNarrativeMode] = useState(() => readLocalBool(
     "autonomia-dorada-narrative-mode",
@@ -642,11 +643,6 @@ function App() {
     const updateVoices = () => {
       const voices = window.speechSynthesis?.getVoices?.() || [];
       setAvailableVoices(voices);
-      const spanish = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
-      setVoiceGenderOptions({
-        female: spanish.some((voice) => /female|mujer|paulina|helena|sofia|sabina|monica|lucia/i.test(voice.name || "")),
-        male: spanish.some((voice) => /male|hombre|jorge|carlos|diego|miguel|andres|ra[uú]l/i.test(voice.name || "")),
-      });
     };
     updateVoices();
     window.speechSynthesis?.addEventListener?.("voiceschanged", updateVoices);
@@ -976,7 +972,7 @@ function App() {
     const generation = speechGeneration.current;
     const utterance = new SpeechSynthesisUtterance(text.trim());
     utterance.lang = "es-CO";
-    utterance.rate = 0.84;
+    utterance.rate = 0.9;
     const selectedVoice = chooseNarrationVoice(availableVoices, voicePreference);
     if (selectedVoice) utterance.voice = selectedVoice;
     setNarration("speaking");
@@ -1078,9 +1074,7 @@ function App() {
   if (catalogState === "loading")
     return (
       <div className="boot-screen">
-        <span className="boot-mark">
-          A<span>D</span>
-        </span>
+        <span className="boot-mark"><img src="/brands/autonomia-dorada-logo.jpg" alt="" /></span>
         <LoaderCircle size={24} className="spin" />
         <strong>Abriendo tus guías</strong>
         <p>Un momento, estamos preparando el catálogo.</p>
@@ -1089,9 +1083,7 @@ function App() {
   if (catalogState === "error")
     return (
       <div className="boot-screen boot-screen--error">
-        <span className="boot-mark">
-          A<span>D</span>
-        </span>
+        <span className="boot-mark"><img src="/brands/autonomia-dorada-logo.jpg" alt="" /></span>
         <span className="boot-error-icon">
           <Info size={24} />
         </span>
@@ -1129,9 +1121,8 @@ function App() {
           onClick={goHome}
           aria-label="Autonomía Dorada, volver al inicio"
         >
-          <span className="brand-mark" aria-hidden="true"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
+          <span className="brand-mark" aria-hidden="true"><img src="/brands/autonomia-dorada-logo.jpg" alt="" /></span>
           <span className="brand-name">Autonomía Dorada</span>
-          <span className="brand-pill">Más que asistencia, es tu autonomía</span>
         </button>
         <nav className="top-nav" aria-label="Navegación principal">
           <button type="button" onClick={() => guide ? backToGuides() : focusCatalog()}>
@@ -1159,7 +1150,7 @@ function App() {
                 ? narration === "speaking"
                   ? "Leyendo…"
                   : "Lectura activa"
-                : <><span className="narrative-label-desktop">Leer al pasar</span><span className="narrative-label-mobile">Leer al tocar</span></>}
+                : <><span className="narrative-label-desktop">Escuchar</span><span className="narrative-label-mobile">Escuchar</span></>}
             </span>
           </button>
           <div className="font-controls" aria-label="Tamaño del texto">
@@ -1214,7 +1205,7 @@ function App() {
           <div className="settings-font-preview"><span>Texto de ejemplo</span><div className="font-controls" aria-label="Tamaño del texto">
             <button type="button" aria-label="Reducir tamaño de letra" title="Disminuir tamaño" disabled={font <= 0.9} onClick={() => setFont((value) => Math.max(0.9, +(value - 0.1).toFixed(1)))}>A−</button><button type="button" className="font-status" onClick={resetFont}>{font === 1 ? "Normal" : font < 1 ? "Pequeño" : "Grande"}</button><button type="button" aria-label="Aumentar tamaño de letra" title="Aumentar tamaño" disabled={font >= 1.3} onClick={() => setFont((value) => Math.min(1.3, +(value + 0.1).toFixed(1)))}>A+</button>
           </div></div>
-          <div className="settings-voice"><strong><Headphones size={17}/> Voz de narración</strong>{voiceAvailable ? <><label htmlFor="settings-voice-select">Elige una voz disponible</label><select id="settings-voice-select" value={voicePreference} onChange={(event) => setVoicePreference(event.target.value)}><option value="auto">Automática · español de Colombia si está disponible</option>{voiceGenderOptions.female && <option value="female">Voz de mujer</option>}{voiceGenderOptions.male && <option value="male">Voz de hombre</option>}{!(voiceGenderOptions.female && voiceGenderOptions.male) && availableVoices.filter((item) => item.lang?.toLowerCase().startsWith("es")).map((item) => <option key={item.voiceURI} value={`voice:${item.voiceURI}`}>{item.name} · {item.lang}</option>)}</select><small>Las voces dependen del teléfono y del navegador. Si no se reconoce el género, podrás elegir por nombre.</small></> : <small>Este navegador no ofrece narración de texto; la guía sigue disponible por escrito.</small>}</div>
+          <div className="settings-voice"><strong><Headphones size={17}/> Voz de lectura</strong>{voiceAvailable ? <><label htmlFor="settings-voice-select">Idioma y voz</label><select id="settings-voice-select" value={voicePreference} onChange={(event) => setVoicePreference(event.target.value)}><option value="auto">Automática · español de Colombia si está disponible</option>{availableVoices.filter((item) => item.lang?.toLowerCase().startsWith("es")).map((item) => <option key={item.voiceURI} value={`voice:${item.voiceURI}`}>{item.name} · {item.lang}</option>)}</select><small>Depende del teléfono y del navegador. Puedes elegir otra voz en español cuando esté disponible.</small></> : <small>Este navegador no ofrece lectura en voz alta; la guía sigue disponible por escrito.</small>}</div>
         </section>}
         {showHelp && (
           <section id="help-panel" className="help-panel" aria-labelledby="help-title">
@@ -1265,8 +1256,8 @@ function App() {
         {showResults ? (
           <>
             {showWelcome && <section className={`welcome-card${welcomeLeaving ? " is-leaving" : ""}`} aria-labelledby="welcome-title">
-              <span className="welcome-mark"><img src="/brands/autonomia-dorada.svg" alt="" /></span>
-              <div className="welcome-copy"><h2 id="welcome-title"><span className="welcome-title-full">Bienvenido a Autonomía Dorada</span><span className="welcome-title-short">Bienvenido</span></h2><p>¿Qué quieres consultar hoy? Encuentra orientación clara y avanza a tu ritmo.</p></div>
+              <span className="welcome-mark"><img src="/brands/autonomia-dorada-logo.jpg" alt="" /></span>
+              <div className="welcome-copy"><h2 id="welcome-title"><span className="welcome-title-full">Te damos la bienvenida</span><span className="welcome-title-short">¡Hola!</span></h2><p>Encuentra orientación clara y avanza a tu ritmo.</p></div>
               <button type="button" className="welcome-action" onClick={dismissWelcome}>Empezar <ArrowRight size={17}/></button>
               <button type="button" className="welcome-dismiss" aria-label="Omitir bienvenida" title="Omitir bienvenida" onClick={dismissWelcome}><X size={18}/></button>
             </section>}
@@ -1276,7 +1267,7 @@ function App() {
                 <br className="mobile-break" /> hacer hoy?
               </h1>
               <p>
-                Encuentra orientación sencilla para cuidar tu salud y hacer tus trámites con confianza. Tú decides cada paso.
+                Trámites, salud y tareas digitales. Tú decides cada paso.
               </p>
               <form
                 className="search-box"
@@ -1423,7 +1414,7 @@ function App() {
                       ? "Resultados"
                       : showFavorites
                         ? "Solo tus favoritas"
-                        : "Encuentra orientación para tu bienestar"}
+                        : "Guías para cada día"}
                   </h2>
                   <p aria-live="polite" aria-atomic="true">
                     {query
@@ -1829,7 +1820,7 @@ function App() {
                       >
                         <div className="voice-title">
                           <Headphones size={19} />
-                          <span>Escucha este paso</span>
+                          <span>Escuchar este paso</span>
                           <span className="voice-status">
                             {voice === "speaking"
                               ? "Leyendo en voz alta"
@@ -2104,9 +2095,7 @@ class AppErrorBoundary extends React.Component {
     if (this.state.hasError)
       return (
         <main className="boot-screen boot-screen--error" role="alert">
-          <span className="boot-mark">
-          A<span>D</span>
-          </span>
+          <span className="boot-mark"><img src="/brands/autonomia-dorada-logo.jpg" alt="" /></span>
           <span className="boot-error-icon">
             <Info size={24} />
           </span>
