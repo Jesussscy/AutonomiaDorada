@@ -3980,6 +3980,7 @@ html {
   .guide-heading p {margin-top:6px;line-height:1.4;}
   .prep-safety {font-size:calc(12px * var(--text-scale));}
   .source-link {min-height:62px;padding-block:8px;}
+  .favorite-button {width:48px;height:48px;}
 }
 @media (max-width:360px) {
   .topbar #help-toggle span {display:none;}
