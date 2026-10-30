@@ -1,3 +1,4 @@
+import { additionalTopics } from './catalog-additional-topics.js';
 import { expandCatalog } from './catalog-expansion.js';
 import "dotenv/config";
 import Database from "better-sqlite3";
@@ -592,6 +593,7 @@ guides.push(...evidenceLedHealthEntities.map(({ guide }) => guide));
 guides.push(...makeCandidateGuides());
 
 guides.push(...expandCatalog(guides, entities));
+guides.push(...additionalTopics(guides, entities));
 
 const steps = [
   ...["depression","anxiety","grief","caregiver","family","crisis","suicide","territorial"].flatMap((slug) => [
