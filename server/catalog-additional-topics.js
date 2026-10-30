@@ -10,6 +10,7 @@ const contexts={
   "Comercios": "Garantía de electrodomésticos|Garantía de muebles|Garantía de equipos de comunicación|Garantía de productos de segunda mano|Entrega de compras por internet|Entrega de compras por catálogo|Compras en redes sociales|Compras por teléfono|Devolución de dinero por una compra|Reparación de un producto|Cambio de producto defectuoso|Uso de bonos de regalo|Aplicación de promociones|Reservas de servicios comerciales|Cobros de una suscripción comercial|Financiación de una compra|Servicio técnico de un producto|Costos de envío de una compra|Facturación de una compra|Reclamación por información comercial"
 };
 const facets=["Encontrar atención oficial para","Consultar requisitos de","Preparar documentos para","Preguntar por costos de","Preguntar por tiempos de respuesta de","Solicitar atención accesible para","Consultar seguimiento de una solicitud de","Preparar una reclamación sobre","Verificar una comunicación sobre","Preguntar por protección de datos en"];
+const categoryTargets={"Salud mental":233,"Bienestar físico":241,"Salud":249,"Bancos":237,"Billeteras":247,"Servicios":239,"Trámites":243,"Comercios":231};
 export function additionalTopics(guides,entities){
  const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
  const group=s=>({'Servicios públicos':'Servicios','Trámites y seguros':'Trámites','Rutas de salud':'Salud'})[s]||s;
@@ -20,6 +21,6 @@ export function additionalTopics(guides,entities){
  return topics.split('|').flatMap(context=>facets.map(facet=>{
  const title=facet+' '+context.charAt(0).toLowerCase()+context.slice(1);
  return {id:'consulta-'+normalize(category)+'-'+normalize(title),entity_id:base.entity_id,title,task:context,description:'Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.',preparation:'Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.',status:'pending',updated_at:null,source_id:base.source_id,common_errors:[],aliases:[context.toLowerCase(),title.toLowerCase()]};
- }));
+ })).slice(0, Math.max(0, categoryTargets[category] - guides.filter(g=>group(entityMap.get(g.entity_id)?.category)===category).length));
  });
 }

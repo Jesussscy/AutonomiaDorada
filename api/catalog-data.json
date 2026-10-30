@@ -497,39 +497,6 @@
       "steps": []
     },
     {
-      "id": "consulta-servicios-consultar-requisitos-de-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Consultar requisitos de atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "consultar requisitos de atención presencial del prestador"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-servicios-consultar-requisitos-de-cambio-de-plan-de-telefonia",
       "entity_id": "afinia",
       "title": "Consultar requisitos de cambio de plan de telefonía",
@@ -1137,39 +1104,6 @@
       "aliases": [
         "acuerdo de pago del servicio",
         "consultar seguimiento de una solicitud de acuerdo de pago del servicio"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-servicios-consultar-seguimiento-de-una-solicitud-de-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Consultar seguimiento de una solicitud de atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "consultar seguimiento de una solicitud de atención presencial del prestador"
       ],
       "entity_name": "Afinia",
       "entity_category": "Servicios públicos",
@@ -1870,39 +1804,6 @@
       "aliases": [
         "acuerdo de pago del servicio",
         "encontrar atención oficial para acuerdo de pago del servicio"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-servicios-encontrar-atencion-oficial-para-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Encontrar atención oficial para atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "encontrar atención oficial para atención presencial del prestador"
       ],
       "entity_name": "Afinia",
       "entity_category": "Servicios públicos",
@@ -2754,39 +2655,6 @@
       "steps": []
     },
     {
-      "id": "consulta-servicios-preguntar-por-costos-de-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Preguntar por costos de atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "preguntar por costos de atención presencial del prestador"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-servicios-preguntar-por-costos-de-cambio-de-plan-de-telefonia",
       "entity_id": "afinia",
       "title": "Preguntar por costos de cambio de plan de telefonía",
@@ -3478,39 +3346,6 @@
       "steps": []
     },
     {
-      "id": "consulta-servicios-preguntar-por-proteccion-de-datos-en-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Preguntar por protección de datos en atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "preguntar por protección de datos en atención presencial del prestador"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-servicios-preguntar-por-proteccion-de-datos-en-cambio-de-plan-de-telefonia",
       "entity_id": "afinia",
       "title": "Preguntar por protección de datos en cambio de plan de telefonía",
@@ -3907,39 +3742,6 @@
       "steps": []
     },
     {
-      "id": "consulta-servicios-preguntar-por-proteccion-de-datos-en-peticiones-ante-el-prestador",
-      "entity_id": "afinia",
-      "title": "Preguntar por protección de datos en peticiones ante el prestador",
-      "task": "Peticiones ante el prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "peticiones ante el prestador",
-        "preguntar por protección de datos en peticiones ante el prestador"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-servicios-preguntar-por-proteccion-de-datos-en-reconexion-de-un-servicio",
       "entity_id": "afinia",
       "title": "Preguntar por protección de datos en reconexión de un servicio",
@@ -4214,39 +4016,6 @@
       "aliases": [
         "acuerdo de pago del servicio",
         "preguntar por tiempos de respuesta de acuerdo de pago del servicio"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-servicios-preguntar-por-tiempos-de-respuesta-de-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Preguntar por tiempos de respuesta de atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "preguntar por tiempos de respuesta de atención presencial del prestador"
       ],
       "entity_name": "Afinia",
       "entity_category": "Servicios públicos",
@@ -4926,39 +4695,6 @@
       "steps": []
     },
     {
-      "id": "consulta-servicios-preparar-documentos-para-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Preparar documentos para atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "preparar documentos para atención presencial del prestador"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-servicios-preparar-documentos-para-cambio-de-plan-de-telefonia",
       "entity_id": "afinia",
       "title": "Preparar documentos para cambio de plan de telefonía",
@@ -5566,39 +5302,6 @@
       "aliases": [
         "acuerdo de pago del servicio",
         "preparar una reclamación sobre acuerdo de pago del servicio"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-servicios-preparar-una-reclamacion-sobre-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Preparar una reclamación sobre atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "preparar una reclamación sobre atención presencial del prestador"
       ],
       "entity_name": "Afinia",
       "entity_category": "Servicios públicos",
@@ -6320,39 +6023,6 @@
       "steps": []
     },
     {
-      "id": "consulta-servicios-solicitar-atencion-accesible-para-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Solicitar atención accesible para atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "solicitar atención accesible para atención presencial del prestador"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-servicios-solicitar-atencion-accesible-para-cambio-de-plan-de-telefonia",
       "entity_id": "afinia",
       "title": "Solicitar atención accesible para cambio de plan de telefonía",
@@ -6960,39 +6630,6 @@
       "aliases": [
         "acuerdo de pago del servicio",
         "verificar una comunicación sobre acuerdo de pago del servicio"
-      ],
-      "entity_name": "Afinia",
-      "entity_category": "Servicios públicos",
-      "entity_icon": "A",
-      "source_title": "Canales virtuales y de atención de Afinia",
-      "source_url": "https://www.afinia.com.co/",
-      "source_publisher": "Afinia",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso.",
-      "commonErrors": [],
-      "source": {
-        "title": "Canales virtuales y de atención de Afinia",
-        "url": "https://www.afinia.com.co/",
-        "publisher": "Afinia",
-        "checkedAt": "2026-10-28",
-        "result": "Dominio HTTPS oficial. Fuente confirma oficina virtual, aplicación y canales de atención, pero no se verificó un flujo de pago paso a paso."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-servicios-verificar-una-comunicacion-sobre-atencion-presencial-del-prestador",
-      "entity_id": "afinia",
-      "title": "Verificar una comunicación sobre atención presencial del prestador",
-      "task": "Atención presencial del prestador",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "afinia-channels",
-      "common_errors": "[]",
-      "aliases": [
-        "atención presencial del prestador",
-        "verificar una comunicación sobre atención presencial del prestador"
       ],
       "entity_name": "Afinia",
       "entity_category": "Servicios públicos",
@@ -9640,39 +9277,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-consultar-requisitos-de-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Consultar requisitos de atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "consultar requisitos de atención bancaria presencial"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-consultar-requisitos-de-atencion-del-consumidor-financiero",
       "entity_id": "bancolombia",
       "title": "Consultar requisitos de atención del consumidor financiero",
@@ -10280,39 +9884,6 @@
       "aliases": [
         "actualización de datos bancarios",
         "consultar seguimiento de una solicitud de actualización de datos bancarios"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bancos-consultar-seguimiento-de-una-solicitud-de-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Consultar seguimiento de una solicitud de atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "consultar seguimiento de una solicitud de atención bancaria presencial"
       ],
       "entity_name": "Bancolombia",
       "entity_category": "Bancos",
@@ -10996,39 +10567,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-encontrar-atencion-oficial-para-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Encontrar atención oficial para atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "encontrar atención oficial para atención bancaria presencial"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-encontrar-atencion-oficial-para-atencion-del-consumidor-financiero",
       "entity_id": "bancolombia",
       "title": "Encontrar atención oficial para atención del consumidor financiero",
@@ -11636,39 +11174,6 @@
       "aliases": [
         "actualización de datos bancarios",
         "preguntar por costos de actualización de datos bancarios"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bancos-preguntar-por-costos-de-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Preguntar por costos de atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "preguntar por costos de atención bancaria presencial"
       ],
       "entity_name": "Bancolombia",
       "entity_category": "Bancos",
@@ -12316,39 +11821,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-preguntar-por-proteccion-de-datos-en-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Preguntar por protección de datos en atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "preguntar por protección de datos en atención bancaria presencial"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-preguntar-por-proteccion-de-datos-en-atencion-del-consumidor-financiero",
       "entity_id": "bancolombia",
       "title": "Preguntar por protección de datos en atención del consumidor financiero",
@@ -12679,39 +12151,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-preguntar-por-proteccion-de-datos-en-recepcion-de-giros",
-      "entity_id": "bancolombia",
-      "title": "Preguntar por protección de datos en recepción de giros",
-      "task": "Recepción de giros",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "recepción de giros",
-        "preguntar por protección de datos en recepción de giros"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-preguntar-por-proteccion-de-datos-en-reposicion-de-tarjeta",
       "entity_id": "bancolombia",
       "title": "Preguntar por protección de datos en reposición de tarjeta",
@@ -12956,39 +12395,6 @@
       "aliases": [
         "actualización de datos bancarios",
         "preguntar por tiempos de respuesta de actualización de datos bancarios"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bancos-preguntar-por-tiempos-de-respuesta-de-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Preguntar por tiempos de respuesta de atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "preguntar por tiempos de respuesta de atención bancaria presencial"
       ],
       "entity_name": "Bancolombia",
       "entity_category": "Bancos",
@@ -13636,39 +13042,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-preparar-documentos-para-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Preparar documentos para atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "preparar documentos para atención bancaria presencial"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-preparar-documentos-para-atencion-del-consumidor-financiero",
       "entity_id": "bancolombia",
       "title": "Preparar documentos para atención del consumidor financiero",
@@ -14296,39 +13669,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-preparar-una-reclamacion-sobre-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Preparar una reclamación sobre atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "preparar una reclamación sobre atención bancaria presencial"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-preparar-una-reclamacion-sobre-atencion-del-consumidor-financiero",
       "entity_id": "bancolombia",
       "title": "Preparar una reclamación sobre atención del consumidor financiero",
@@ -14659,39 +13999,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-preparar-una-reclamacion-sobre-recepcion-de-giros",
-      "entity_id": "bancolombia",
-      "title": "Preparar una reclamación sobre recepción de giros",
-      "task": "Recepción de giros",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "recepción de giros",
-        "preparar una reclamación sobre recepción de giros"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-preparar-una-reclamacion-sobre-reposicion-de-tarjeta",
       "entity_id": "bancolombia",
       "title": "Preparar una reclamación sobre reposición de tarjeta",
@@ -14972,39 +14279,6 @@
       "aliases": [
         "actualización de datos bancarios",
         "solicitar atención accesible para actualización de datos bancarios"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bancos-solicitar-atencion-accesible-para-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Solicitar atención accesible para atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "solicitar atención accesible para atención bancaria presencial"
       ],
       "entity_name": "Bancolombia",
       "entity_category": "Bancos",
@@ -15748,39 +15022,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bancos-verificar-una-comunicacion-sobre-atencion-bancaria-presencial",
-      "entity_id": "bancolombia",
-      "title": "Verificar una comunicación sobre atención bancaria presencial",
-      "task": "Atención bancaria presencial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención bancaria presencial",
-        "verificar una comunicación sobre atención bancaria presencial"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bancos-verificar-una-comunicacion-sobre-atencion-del-consumidor-financiero",
       "entity_id": "bancolombia",
       "title": "Verificar una comunicación sobre atención del consumidor financiero",
@@ -16091,39 +15332,6 @@
       "aliases": [
         "pago de obligaciones",
         "verificar una comunicación sobre pago de obligaciones"
-      ],
-      "entity_name": "Bancolombia",
-      "entity_category": "Bancos",
-      "entity_icon": "B",
-      "source_title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-      "source_url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-      "source_publisher": "Bancolombia — Centro de ayuda",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo hago transferencias a cuentas por la app Mi Bancolombia?",
-        "url": "https://www.bancolombia.com/centro-de-ayuda/preguntas-frecuentes/trasferencias-cuentas-inscritas-app-personas",
-        "publisher": "Bancolombia — Centro de ayuda",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial HTTPS. Guía para transferir a cuenta Bancolombia revisada; no generalizar a otros bancos."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bancos-verificar-una-comunicacion-sobre-recepcion-de-giros",
-      "entity_id": "bancolombia",
-      "title": "Verificar una comunicación sobre recepción de giros",
-      "task": "Recepción de giros",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "bancolombia-transfer-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "recepción de giros",
-        "verificar una comunicación sobre recepción de giros"
       ],
       "entity_name": "Bancolombia",
       "entity_category": "Bancos",
@@ -17614,39 +16822,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bienestar-fisico-consultar-requisitos-de-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Consultar requisitos de educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "consultar requisitos de educación sobre hidratación"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bienestar-fisico-consultar-requisitos-de-educacion-sobre-proteccion-solar",
       "entity_id": "bienestar-fisico",
       "title": "Consultar requisitos de educación sobre protección solar",
@@ -18289,39 +17464,6 @@
       "aliases": [
         "educación para personas cuidadoras",
         "consultar seguimiento de una solicitud de educación para personas cuidadoras"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bienestar-fisico-consultar-seguimiento-de-una-solicitud-de-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Consultar seguimiento de una solicitud de educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "consultar seguimiento de una solicitud de educación sobre hidratación"
       ],
       "entity_name": "Bienestar físico",
       "entity_category": "Bienestar físico",
@@ -20002,39 +19144,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bienestar-fisico-preguntar-por-costos-de-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Preguntar por costos de educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "preguntar por costos de educación sobre hidratación"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bienestar-fisico-preguntar-por-costos-de-educacion-sobre-proteccion-solar",
       "entity_id": "bienestar-fisico",
       "title": "Preguntar por costos de educación sobre protección solar",
@@ -20758,39 +19867,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bienestar-fisico-preguntar-por-proteccion-de-datos-en-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Preguntar por protección de datos en educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "preguntar por protección de datos en educación sobre hidratación"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bienestar-fisico-preguntar-por-proteccion-de-datos-en-educacion-sobre-proteccion-solar",
       "entity_id": "bienestar-fisico",
       "title": "Preguntar por protección de datos en educación sobre protección solar",
@@ -21462,39 +20538,6 @@
       "aliases": [
         "educación para personas cuidadoras",
         "preguntar por tiempos de respuesta de educación para personas cuidadoras"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bienestar-fisico-preguntar-por-tiempos-de-respuesta-de-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Preguntar por tiempos de respuesta de educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "preguntar por tiempos de respuesta de educación sobre hidratación"
       ],
       "entity_name": "Bienestar físico",
       "entity_category": "Bienestar físico",
@@ -22218,39 +21261,6 @@
       "aliases": [
         "educación para personas cuidadoras",
         "preparar documentos para educación para personas cuidadoras"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bienestar-fisico-preparar-documentos-para-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Preparar documentos para educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "preparar documentos para educación sobre hidratación"
       ],
       "entity_name": "Bienestar físico",
       "entity_category": "Bienestar físico",
@@ -23186,39 +22196,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bienestar-fisico-preparar-una-reclamacion-sobre-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Preparar una reclamación sobre educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "preparar una reclamación sobre educación sobre hidratación"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bienestar-fisico-preparar-una-reclamacion-sobre-educacion-sobre-proteccion-solar",
       "entity_id": "bienestar-fisico",
       "title": "Preparar una reclamación sobre educación sobre protección solar",
@@ -23846,39 +22823,6 @@
       "steps": []
     },
     {
-      "id": "consulta-bienestar-fisico-solicitar-atencion-accesible-para-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Solicitar atención accesible para educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "solicitar atención accesible para educación sobre hidratación"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-bienestar-fisico-solicitar-atencion-accesible-para-educacion-sobre-proteccion-solar",
       "entity_id": "bienestar-fisico",
       "title": "Solicitar atención accesible para educación sobre protección solar",
@@ -24486,39 +23430,6 @@
       "aliases": [
         "educación para personas cuidadoras",
         "verificar una comunicación sobre educación para personas cuidadoras"
-      ],
-      "entity_name": "Bienestar físico",
-      "entity_category": "Bienestar físico",
-      "entity_icon": "+",
-      "source_title": "Vacunación para personas adultas mayores",
-      "source_url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud.",
-      "commonErrors": [],
-      "source": {
-        "title": "Vacunación para personas adultas mayores",
-        "url": "https://vacunacion.minsalud.gov.co/EV/Paginas/adultos-mayores.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "Esquema y orientación oficial para adultos mayores; las decisiones particulares deben consultarse con personal de salud."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-bienestar-fisico-verificar-una-comunicacion-sobre-educacion-sobre-hidratacion",
-      "entity_id": "bienestar-fisico",
-      "title": "Verificar una comunicación sobre educación sobre hidratación",
-      "task": "Educación sobre hidratación",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-adult-vaccines",
-      "common_errors": "[]",
-      "aliases": [
-        "educación sobre hidratación",
-        "verificar una comunicación sobre educación sobre hidratación"
       ],
       "entity_name": "Bienestar físico",
       "entity_category": "Bienestar físico",
@@ -29969,39 +28880,6 @@
       "steps": []
     },
     {
-      "id": "consulta-billeteras-preguntar-por-proteccion-de-datos-en-atencion-de-reclamaciones-digitales",
-      "entity_id": "nequi",
-      "title": "Preguntar por protección de datos en atención de reclamaciones digitales",
-      "task": "Atención de reclamaciones digitales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "nequi-send-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención de reclamaciones digitales",
-        "preguntar por protección de datos en atención de reclamaciones digitales"
-      ],
-      "entity_name": "Nequi",
-      "entity_category": "Billeteras",
-      "entity_icon": "N",
-      "source_title": "¿Cómo enviar plata a otro Nequi?",
-      "source_url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
-      "source_publisher": "Centro de ayuda Nequi",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo enviar plata a otro Nequi?",
-        "url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
-        "publisher": "Centro de ayuda Nequi",
-        "checkedAt": "2026-10-26",
-        "result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-billeteras-preguntar-por-proteccion-de-datos-en-cambio-de-dispositivo",
       "entity_id": "nequi",
       "title": "Preguntar por protección de datos en cambio de dispositivo",
@@ -32109,39 +30987,6 @@
       "steps": []
     },
     {
-      "id": "consulta-billeteras-preparar-una-reclamacion-sobre-atencion-de-reclamaciones-digitales",
-      "entity_id": "nequi",
-      "title": "Preparar una reclamación sobre atención de reclamaciones digitales",
-      "task": "Atención de reclamaciones digitales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "nequi-send-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención de reclamaciones digitales",
-        "preparar una reclamación sobre atención de reclamaciones digitales"
-      ],
-      "entity_name": "Nequi",
-      "entity_category": "Billeteras",
-      "entity_icon": "N",
-      "source_title": "¿Cómo enviar plata a otro Nequi?",
-      "source_url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
-      "source_publisher": "Centro de ayuda Nequi",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo enviar plata a otro Nequi?",
-        "url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
-        "publisher": "Centro de ayuda Nequi",
-        "checkedAt": "2026-10-26",
-        "result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-billeteras-preparar-una-reclamacion-sobre-cambio-de-dispositivo",
       "entity_id": "nequi",
       "title": "Preparar una reclamación sobre cambio de dispositivo",
@@ -33446,39 +32291,6 @@
       "aliases": [
         "actualización del documento",
         "verificar una comunicación sobre actualización del documento"
-      ],
-      "entity_name": "Nequi",
-      "entity_category": "Billeteras",
-      "entity_icon": "N",
-      "source_title": "¿Cómo enviar plata a otro Nequi?",
-      "source_url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
-      "source_publisher": "Centro de ayuda Nequi",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28.",
-      "commonErrors": [],
-      "source": {
-        "title": "¿Cómo enviar plata a otro Nequi?",
-        "url": "https://ayuda.nequi.com.co/hc/es/articles/35293860820493--C%C3%B3mo-enviar-plata-a-otro-Nequi",
-        "publisher": "Centro de ayuda Nequi",
-        "checkedAt": "2026-10-26",
-        "result": "Página oficial HTTPS. Instrucciones revisadas en la consulta de 2026-10-28."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-billeteras-verificar-una-comunicacion-sobre-atencion-de-reclamaciones-digitales",
-      "entity_id": "nequi",
-      "title": "Verificar una comunicación sobre atención de reclamaciones digitales",
-      "task": "Atención de reclamaciones digitales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "nequi-send-guide",
-      "common_errors": "[]",
-      "aliases": [
-        "atención de reclamaciones digitales",
-        "verificar una comunicación sobre atención de reclamaciones digitales"
       ],
       "entity_name": "Nequi",
       "entity_category": "Billeteras",
@@ -36324,39 +35136,6 @@
       "steps": []
     },
     {
-      "id": "consulta-tramites-consultar-seguimiento-de-una-solicitud-de-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Consultar seguimiento de una solicitud de solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "consultar seguimiento de una solicitud de solicitud de orientación pensional"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-tramites-consultar-seguimiento-de-una-solicitud-de-traspaso-de-vehiculo",
       "entity_id": "runt",
       "title": "Consultar seguimiento de una solicitud de traspaso de vehículo",
@@ -37708,39 +36487,6 @@
       "steps": []
     },
     {
-      "id": "consulta-tramites-preguntar-por-costos-de-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Preguntar por costos de solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "preguntar por costos de solicitud de orientación pensional"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-tramites-preguntar-por-costos-de-traspaso-de-vehiculo",
       "entity_id": "runt",
       "title": "Preguntar por costos de traspaso de vehículo",
@@ -38368,39 +37114,6 @@
       "steps": []
     },
     {
-      "id": "consulta-tramites-preguntar-por-proteccion-de-datos-en-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Preguntar por protección de datos en solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "preguntar por protección de datos en solicitud de orientación pensional"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-tramites-preguntar-por-proteccion-de-datos-en-traspaso-de-vehiculo",
       "entity_id": "runt",
       "title": "Preguntar por protección de datos en traspaso de vehículo",
@@ -39008,39 +37721,6 @@
       "aliases": [
         "solicitud de información pública",
         "preguntar por tiempos de respuesta de solicitud de información pública"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-tramites-preguntar-por-tiempos-de-respuesta-de-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Preguntar por tiempos de respuesta de solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "preguntar por tiempos de respuesta de solicitud de orientación pensional"
       ],
       "entity_name": "RUNT",
       "entity_category": "Trámites y seguros",
@@ -40348,39 +39028,6 @@
       "steps": []
     },
     {
-      "id": "consulta-tramites-preparar-una-reclamacion-sobre-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Preparar una reclamación sobre solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "preparar una reclamación sobre solicitud de orientación pensional"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-tramites-preparar-una-reclamacion-sobre-traspaso-de-vehiculo",
       "entity_id": "runt",
       "title": "Preparar una reclamación sobre traspaso de vehículo",
@@ -41008,39 +39655,6 @@
       "steps": []
     },
     {
-      "id": "consulta-tramites-solicitar-atencion-accesible-para-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Solicitar atención accesible para solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "solicitar atención accesible para solicitud de orientación pensional"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-tramites-solicitar-atencion-accesible-para-traspaso-de-vehiculo",
       "entity_id": "runt",
       "title": "Solicitar atención accesible para traspaso de vehículo",
@@ -41648,39 +40262,6 @@
       "aliases": [
         "solicitud de información pública",
         "verificar una comunicación sobre solicitud de información pública"
-      ],
-      "entity_name": "RUNT",
-      "entity_category": "Trámites y seguros",
-      "entity_icon": "R",
-      "source_title": "Consulta de vehículos por placa",
-      "source_url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-      "source_publisher": "RUNT",
-      "source_checked_at": "2026-10-28",
-      "source_result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulta de vehículos por placa",
-        "url": "https://www.runt.gov.co/actores/ciudadano/consulta-de-vehiculos-por-placa",
-        "publisher": "RUNT",
-        "checkedAt": "2026-10-28",
-        "result": "Página oficial vigente del RUNT: Consulta de vehículos por placa. Enlaza a «Ingrese aquí al módulo», que lleva al portal público. El instructivo oficial RUNT2-IN-1010 versión 1 (03-10-2025) indica para la consulta por placa el número de placa y el tipo y número de documento del propietario. La dirección antigua del formulario redirige al portal público general. Consultado el 28 de octubre de 2026."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-tramites-verificar-una-comunicacion-sobre-solicitud-de-orientacion-pensional",
-      "entity_id": "runt",
-      "title": "Verificar una comunicación sobre solicitud de orientación pensional",
-      "task": "Solicitud de orientación pensional",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "runt-soat-query",
-      "common_errors": "[]",
-      "aliases": [
-        "solicitud de orientación pensional",
-        "verificar una comunicación sobre solicitud de orientación pensional"
       ],
       "entity_name": "RUNT",
       "entity_category": "Trámites y seguros",
@@ -42931,39 +41512,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-consultar-requisitos-de-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Consultar requisitos de atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "consultar requisitos de atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-consultar-requisitos-de-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Consultar requisitos de atención psicológica familiar",
@@ -43591,39 +42139,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-consultar-seguimiento-de-una-solicitud-de-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Consultar seguimiento de una solicitud de atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "consultar seguimiento de una solicitud de atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-consultar-seguimiento-de-una-solicitud-de-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Consultar seguimiento de una solicitud de atención psicológica familiar",
@@ -43769,39 +42284,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "consultar seguimiento de una solicitud de orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-consultar-seguimiento-de-una-solicitud-de-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Consultar seguimiento de una solicitud de orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "consultar seguimiento de una solicitud de orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -44389,39 +42871,6 @@
       "aliases": [
         "atención psicológica con intérprete",
         "encontrar atención oficial para atención psicológica con intérprete"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-encontrar-atencion-oficial-para-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Encontrar atención oficial para atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "encontrar atención oficial para atención psicológica en otra ciudad"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -45754,39 +44203,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-preguntar-por-costos-de-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Preguntar por costos de atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "preguntar por costos de atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-preguntar-por-costos-de-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Preguntar por costos de atención psicológica familiar",
@@ -45932,39 +44348,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "preguntar por costos de orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-preguntar-por-costos-de-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Preguntar por costos de orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "preguntar por costos de orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -46446,39 +44829,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-preguntar-por-proteccion-de-datos-en-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Preguntar por protección de datos en atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "preguntar por protección de datos en atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-preguntar-por-proteccion-de-datos-en-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Preguntar por protección de datos en atención psicológica familiar",
@@ -46624,39 +44974,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "preguntar por protección de datos en orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-preguntar-por-proteccion-de-datos-en-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Preguntar por protección de datos en orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "preguntar por protección de datos en orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -47106,39 +45423,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-preguntar-por-tiempos-de-respuesta-de-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Preguntar por tiempos de respuesta de atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "preguntar por tiempos de respuesta de atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-preguntar-por-tiempos-de-respuesta-de-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Preguntar por tiempos de respuesta de atención psicológica familiar",
@@ -47284,39 +45568,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "preguntar por tiempos de respuesta de orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-preguntar-por-tiempos-de-respuesta-de-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Preguntar por tiempos de respuesta de orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "preguntar por tiempos de respuesta de orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -47746,39 +45997,6 @@
       "aliases": [
         "atención psicológica con intérprete",
         "preparar documentos para atención psicológica con intérprete"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-preparar-documentos-para-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Preparar documentos para atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "preparar documentos para atención psicológica en otra ciudad"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -48618,39 +46836,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-preparar-una-reclamacion-sobre-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Preparar una reclamación sobre atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "preparar una reclamación sobre atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-preparar-una-reclamacion-sobre-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Preparar una reclamación sobre atención psicológica familiar",
@@ -48796,39 +46981,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "preparar una reclamación sobre orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-preparar-una-reclamacion-sobre-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Preparar una reclamación sobre orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "preparar una reclamación sobre orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -49471,39 +47623,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-solicitar-atencion-accesible-para-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Solicitar atención accesible para atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "solicitar atención accesible para atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-solicitar-atencion-accesible-para-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Solicitar atención accesible para atención psicológica familiar",
@@ -49649,39 +47768,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "solicitar atención accesible para orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-solicitar-atencion-accesible-para-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Solicitar atención accesible para orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "solicitar atención accesible para orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -50195,39 +48281,6 @@
       "steps": []
     },
     {
-      "id": "consulta-salud-mental-verificar-una-comunicacion-sobre-atencion-psicologica-en-otra-ciudad",
-      "entity_id": "salud-mental",
-      "title": "Verificar una comunicación sobre atención psicológica en otra ciudad",
-      "task": "Atención psicológica en otra ciudad",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "atención psicológica en otra ciudad",
-        "verificar una comunicación sobre atención psicológica en otra ciudad"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-salud-mental-verificar-una-comunicacion-sobre-atencion-psicologica-familiar",
       "entity_id": "salud-mental",
       "title": "Verificar una comunicación sobre atención psicológica familiar",
@@ -50373,39 +48426,6 @@
       "aliases": [
         "orientación para personas cuidadoras",
         "verificar una comunicación sobre orientación para personas cuidadoras"
-      ],
-      "entity_name": "Salud mental",
-      "entity_category": "Salud mental",
-      "entity_icon": "♥",
-      "source_title": "Línea Nacional de Salud Mental 106",
-      "source_url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-      "source_publisher": "Ministerio de Salud y Protección Social",
-      "source_checked_at": "2026-10-26",
-      "source_result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar.",
-      "commonErrors": [],
-      "source": {
-        "title": "Línea Nacional de Salud Mental 106",
-        "url": "https://minsalud.gov.co/salud/publica/salud-mental/Paginas/linea-106.aspx",
-        "publisher": "Ministerio de Salud y Protección Social",
-        "checkedAt": "2026-10-26",
-        "result": "La página oficial describe la Línea 106 como orientación y apoyo inicial en salud mental, gratuita, confidencial y disponible 24/7, y ofrece directorio de líneas territoriales. Para Cartagena, la Alcaldía y DADIS reportan además la línea 125 del CRUED como canal de escucha y orientación 24/7; confirma alcance y disponibilidad al llamar."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-mental-verificar-una-comunicacion-sobre-orientacion-para-retomar-vinculos-sociales",
-      "entity_id": "salud-mental",
-      "title": "Verificar una comunicación sobre orientación para retomar vínculos sociales",
-      "task": "Orientación para retomar vínculos sociales",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "minsalud-mental-106",
-      "common_errors": "[]",
-      "aliases": [
-        "orientación para retomar vínculos sociales",
-        "verificar una comunicación sobre orientación para retomar vínculos sociales"
       ],
       "entity_name": "Salud mental",
       "entity_category": "Salud mental",
@@ -54287,39 +52307,6 @@
       "aliases": [
         "atención domiciliaria",
         "preguntar por protección de datos en atención domiciliaria"
-      ],
-      "entity_name": "Salud y atención médica",
-      "entity_category": "Salud",
-      "entity_icon": "+",
-      "source_title": "Consulte su EPS (Afiliación en la BDUA)",
-      "source_url": "https://www.adres.gov.co/tramites/ciudadania/consulta-afiliacion",
-      "source_publisher": "ADRES",
-      "source_checked_at": "2026-10-26",
-      "source_result": "Trámite oficial, gratuito y virtual. Muestra la información reportada a la BDUA; si hay diferencias, deben aclararse con la EPS. No funciona como certificado de afiliación.",
-      "commonErrors": [],
-      "source": {
-        "title": "Consulte su EPS (Afiliación en la BDUA)",
-        "url": "https://www.adres.gov.co/tramites/ciudadania/consulta-afiliacion",
-        "publisher": "ADRES",
-        "checkedAt": "2026-10-26",
-        "result": "Trámite oficial, gratuito y virtual. Muestra la información reportada a la BDUA; si hay diferencias, deben aclararse con la EPS. No funciona como certificado de afiliación."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-salud-preguntar-por-proteccion-de-datos-en-atencion-medica-con-acompanante",
-      "entity_id": "rutas-salud",
-      "title": "Preguntar por protección de datos en atención médica con acompañante",
-      "task": "Atención médica con acompañante",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "adres-eps-consult",
-      "common_errors": "[]",
-      "aliases": [
-        "atención médica con acompañante",
-        "preguntar por protección de datos en atención médica con acompañante"
       ],
       "entity_name": "Salud y atención médica",
       "entity_category": "Salud",
@@ -61161,39 +59148,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-consultar-requisitos-de-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Consultar requisitos de facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "consultar requisitos de facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-consultar-requisitos-de-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Consultar requisitos de financiación de una compra",
@@ -61339,39 +59293,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "consultar requisitos de garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-consultar-requisitos-de-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Consultar requisitos de reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "consultar requisitos de reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -61821,39 +59742,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-consultar-seguimiento-de-una-solicitud-de-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Consultar seguimiento de una solicitud de facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "consultar seguimiento de una solicitud de facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-consultar-seguimiento-de-una-solicitud-de-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Consultar seguimiento de una solicitud de financiación de una compra",
@@ -61999,39 +59887,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "consultar seguimiento de una solicitud de garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-consultar-seguimiento-de-una-solicitud-de-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Consultar seguimiento de una solicitud de reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "consultar seguimiento de una solicitud de reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -62679,39 +60534,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-encontrar-atencion-oficial-para-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Encontrar atención oficial para reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "encontrar atención oficial para reclamación por información comercial"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-encontrar-atencion-oficial-para-reparacion-de-un-producto",
       "entity_id": "ara",
       "title": "Encontrar atención oficial para reparación de un producto",
@@ -63141,39 +60963,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-preguntar-por-costos-de-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Preguntar por costos de facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "preguntar por costos de facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-preguntar-por-costos-de-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Preguntar por costos de financiación de una compra",
@@ -63319,39 +61108,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "preguntar por costos de garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-preguntar-por-costos-de-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Preguntar por costos de reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "preguntar por costos de reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -63801,39 +61557,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-preguntar-por-proteccion-de-datos-en-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Preguntar por protección de datos en facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "preguntar por protección de datos en facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-preguntar-por-proteccion-de-datos-en-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Preguntar por protección de datos en financiación de una compra",
@@ -63979,39 +61702,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "preguntar por protección de datos en garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-preguntar-por-proteccion-de-datos-en-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Preguntar por protección de datos en reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "preguntar por protección de datos en reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -64461,39 +62151,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-preguntar-por-tiempos-de-respuesta-de-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Preguntar por tiempos de respuesta de facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "preguntar por tiempos de respuesta de facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-preguntar-por-tiempos-de-respuesta-de-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Preguntar por tiempos de respuesta de financiación de una compra",
@@ -64639,39 +62296,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "preguntar por tiempos de respuesta de garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-preguntar-por-tiempos-de-respuesta-de-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Preguntar por tiempos de respuesta de reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "preguntar por tiempos de respuesta de reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -65153,39 +62777,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-preparar-documentos-para-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Preparar documentos para facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "preparar documentos para facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-preparar-documentos-para-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Preparar documentos para financiación de una compra",
@@ -65331,39 +62922,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "preparar documentos para garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-preparar-documentos-para-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Preparar documentos para reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "preparar documentos para reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -65845,39 +63403,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-preparar-una-reclamacion-sobre-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Preparar una reclamación sobre facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "preparar una reclamación sobre facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-preparar-una-reclamacion-sobre-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Preparar una reclamación sobre financiación de una compra",
@@ -66023,39 +63548,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "preparar una reclamación sobre garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-preparar-una-reclamacion-sobre-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Preparar una reclamación sobre reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "preparar una reclamación sobre reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -66729,39 +64221,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-solicitar-atencion-accesible-para-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Solicitar atención accesible para facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "solicitar atención accesible para facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-solicitar-atencion-accesible-para-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Solicitar atención accesible para financiación de una compra",
@@ -66907,39 +64366,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "solicitar atención accesible para garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-solicitar-atencion-accesible-para-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Solicitar atención accesible para reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "solicitar atención accesible para reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",
@@ -67389,39 +64815,6 @@
       "steps": []
     },
     {
-      "id": "consulta-comercios-verificar-una-comunicacion-sobre-facturacion-de-una-compra",
-      "entity_id": "ara",
-      "title": "Verificar una comunicación sobre facturación de una compra",
-      "task": "Facturación de una compra",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "facturación de una compra",
-        "verificar una comunicación sobre facturación de una compra"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
       "id": "consulta-comercios-verificar-una-comunicacion-sobre-financiacion-de-una-compra",
       "entity_id": "ara",
       "title": "Verificar una comunicación sobre financiación de una compra",
@@ -67567,39 +64960,6 @@
       "aliases": [
         "garantía de productos de segunda mano",
         "verificar una comunicación sobre garantía de productos de segunda mano"
-      ],
-      "entity_name": "Tiendas Ara",
-      "entity_category": "Comercios",
-      "entity_icon": "•",
-      "source_title": "Sitio oficial de Tiendas ara",
-      "source_url": "https://aratiendas.com/home/centro/",
-      "source_publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-      "source_checked_at": "2026-10-28",
-      "source_result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago.",
-      "commonErrors": [],
-      "source": {
-        "title": "Sitio oficial de Tiendas ara",
-        "url": "https://aratiendas.com/home/centro/",
-        "publisher": "Tiendas ara — Jerónimo Martins Colombia S.A.S.",
-        "checkedAt": "2026-10-28",
-        "result": "El dominio sirve materiales oficiales de Tiendas ara y la URL del centro fue publicada como sitio oficial. La página no permitió revisar su contenido en esta consulta; no se encontró un canal de pagos verificable. La guía sigue pendiente y no se muestra este enlace como canal de pago."
-      },
-      "steps": []
-    },
-    {
-      "id": "consulta-comercios-verificar-una-comunicacion-sobre-reclamacion-por-informacion-comercial",
-      "entity_id": "ara",
-      "title": "Verificar una comunicación sobre reclamación por información comercial",
-      "task": "Reclamación por información comercial",
-      "description": "Tema propuesto. Confirma con la entidad si ofrece este trámite o atención.",
-      "preparation": "Este tema aún no tiene pasos comprobados. Consulta disponibilidad y requisitos en el canal oficial.",
-      "status": "pending",
-      "updated_at": null,
-      "source_id": "ara-official-channel",
-      "common_errors": "[]",
-      "aliases": [
-        "reclamación por información comercial",
-        "verificar una comunicación sobre reclamación por información comercial"
       ],
       "entity_name": "Tiendas Ara",
       "entity_category": "Comercios",

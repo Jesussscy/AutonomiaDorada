@@ -41,7 +41,7 @@ Vite abre `http://localhost:5173` y envía las peticiones de `/api` al puerto `P
 
 El catálogo inicial está en `server/seed.js` y su estructura en `server/schema.sql`. Ejecuta `npm run seed` para instalar o refrescar el catálogo. Las tablas relacionan entidades, guías, pasos, ilustraciones, enlaces y fuentes con fecha y resultado de revisión. La interfaz actual dibuja esquemas demostrativos por paso en `GuideArtwork` dentro de `src/main.jsx`; los SVG heredados de `public/illustrations/` son recursos de referencia y no se presentan como capturas oficiales. Cuando se entreguen capturas autorizadas, se podrán guardar ordenadamente en `public/guides/<id-de-guia>/` y relacionar mediante `steps.image_path` y `steps.image_alt`.
 
-El catálogo incluye **2.000 temas**, con **250 guías por cada una de las ocho categorías**. La portada presenta cuatro opciones por área y “Ver todas” abre su catálogo completo. Hay 34 guías con pasos revisados y 1.966 temas en revisión. Los temas nuevos conservan imágenes temáticas y acceso al canal oficial; no publican instrucciones operativas hasta revisar su procedimiento concreto.
+El catálogo incluye **1.920 temas**, con cantidades diferentes e impares por categoría (entre 231 y 249). La portada presenta cuatro opciones por área y “Ver todas” abre su catálogo completo. Hay 34 guías con pasos revisados y 1.886 temas en revisión. Los temas nuevos conservan imágenes temáticas y acceso al canal oficial; no publican instrucciones operativas hasta revisar su procedimiento concreto.
 
 Las rutas explican cómo consultar afiliación, pedir citas médicas y de psicología, preguntar por cobertura, hacer seguimiento y presentar una queja. Cada EPS define sus canales y confirma disponibilidad; el catálogo no recomienda una IPS ni una clínica. ADRES muestra los datos reportados a la BDUA, pero los certificados los expide la EPS. La Línea 106 ofrece orientación inicial y no reemplaza la atención de urgencia ni una consulta clínica.
 
@@ -138,4 +138,6 @@ En teléfonos, las tarjetas muestran un resumen de hasta tres líneas y una acci
 
 El catálogo visual presenta cuatro guías por área y una ilustración temática local en cada tarjeta. Los resúmenes se limitan a dos líneas; las advertencias y las instrucciones completas permanecen al abrir la guía. Las ilustraciones identifican el tema y no son capturas de proveedores.
 
-La ampliación de 200 temas por área organiza preguntas de orientación por servicio (requisitos, documentos, tiempos, costos, accesibilidad, seguimiento y reclamaciones). Son propuestas diferenciadas de consulta: no acreditan la disponibilidad del servicio ni sustituyen un procedimiento revisado.
+La ampliación temática por área organiza preguntas de orientación por servicio (requisitos, documentos, tiempos, costos, accesibilidad, seguimiento y reclamaciones). Son propuestas diferenciadas de consulta: no acreditan la disponibilidad del servicio ni sustituyen un procedimiento revisado.
+
+Distribución actual: salud mental 233, bienestar físico 241, salud 249, bancos 237, billeteras 247, servicios 239, trámites 243 y comercios 231.
