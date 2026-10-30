@@ -3974,8 +3974,10 @@ html {
 @media (max-width:420px) {
   .topbar .brand {gap:6px;}
   .topbar .brand-name {max-width:132px;font-size:13px;}
-  .guide-heading {padding-block:12px;}
+  .guide-page {padding-top:16px;}
+  .guide-heading {padding-block:8px;}
   .guide-heading h1 {font-size:clamp(30px,8.4vw,35px);}
+  .guide-heading p {margin-top:6px;line-height:1.4;}
   .prep-safety {font-size:calc(12px * var(--text-scale));}
   .source-link {min-height:62px;padding-block:8px;}
 }

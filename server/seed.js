@@ -428,12 +428,12 @@ const guides = [
   {
     id: "bancolombia-own-transfer",
     entity_id: "bancolombia",
-    title: "Transferir entre cuentas Bancolombia",
+    title: "Transferir en Bancolombia",
     task: "Hacer una transferencia",
     description:
-      "Envía plata desde la app Mi Bancolombia a una cuenta Bancolombia.",
+      "Envía desde la app Mi Bancolombia.",
     preparation:
-      "Necesitas una cuenta activa con saldo disponible y la app Mi Bancolombia. Las cuentas destino no inscritas pueden requerir pasos diferentes.",
+      "Necesitas la app, una cuenta activa y saldo. Una cuenta destino no inscrita puede requerir otros pasos.",
     status: "verified",
     updated_at: "2026-10-28",
     source_id: "bancolombia-transfer-guide",
