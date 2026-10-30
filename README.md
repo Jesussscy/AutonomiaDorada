@@ -141,3 +141,5 @@ El catálogo visual presenta cuatro guías por área y una ilustración temátic
 La ampliación temática por área organiza preguntas de orientación por servicio (requisitos, documentos, tiempos, costos, accesibilidad, seguimiento y reclamaciones). Son propuestas diferenciadas de consulta: no acreditan la disponibilidad del servicio ni sustituyen un procedimiento revisado.
 
 Distribución actual: salud mental 233, bienestar físico 241, salud 249, bancos 237, billeteras 247, servicios 239, trámites 243 y comercios 231.
+
+Los resultados se presentan en bloques de 50. “Mostrar más” amplía la lista sin perder la búsqueda ni la categoría; cambiar los filtros vuelve al primer bloque. Esto evita renderizar las 1.920 tarjetas a la vez.

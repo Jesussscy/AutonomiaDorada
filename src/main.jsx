@@ -515,6 +515,7 @@ function App() {
   const [category, setCategory] = useState("Todas");
   const [showPending, setShowPending] = useState(true);
   const [showAllGuides, setShowAllGuides] = useState(false);
+  const [catalogLimit, setCatalogLimit] = useState(50);
   const [allGuidesManuallyOpened, setAllGuidesManuallyOpened] = useState(false);
   const [showOfficialLinks, setShowOfficialLinks] = useState(false);
   const [showWelcome, setShowWelcome] = useState(() => {
@@ -832,10 +833,11 @@ function App() {
       ),
     [categoryMatches, showPending, showFavorites, favorites],
   );
+  useEffect(() => setCatalogLimit(50), [query, category, showFavorites]);
   const homeFeatured = !query.trim() && !showFavorites && category === "Todas" && !showAllGuides;
   const featuredGuideGroups = ["Salud mental", "Bienestar físico", "Salud", "Bancos", "Billeteras", "Servicios", "Trámites", "Comercios"];
   const visibleGuides = useMemo(() => {
-    if (!homeFeatured) return filteredMatches;
+    if (!homeFeatured) return filteredMatches.slice(0, catalogLimit);
     const preferredTitles = {
       "Salud mental": ["Pedir orientación emocional o psicológica", "Ansiedad y manejo del estrés"],
       "Bienestar físico": ["Consultar el programa nacional de vacunación PAI", "Consultar orientación de salud bucal"],
@@ -855,7 +857,7 @@ function App() {
       });
       return ranked.slice(0, 4);
     });
-  }, [filteredMatches, homeFeatured]);
+  }, [filteredMatches, homeFeatured, catalogLimit]);
   const pendingMatchesHidden =
     !showFavorites &&
     !showPending &&
@@ -1580,6 +1582,7 @@ function App() {
                   </small>
                 </div>
               )}
+              {!homeFeatured && visibleGuides.length > 0 && visibleGuides.length < filteredMatches.length && <div className="catalog-more"><span aria-live="polite">{visibleGuides.length} de {filteredMatches.length} guías</span><button type="button" onClick={() => setCatalogLimit(limit => limit + 50)}>Mostrar {Math.min(50, filteredMatches.length - visibleGuides.length)} más <ArrowRight size={17}/></button></div>}
               {homeFeatured && filteredMatches.length > visibleGuides.length && <div className="catalog-more"><span>Más temas para tu día a día.</span><button type="button" onClick={() => {setShowAllGuides(true);setAllGuidesManuallyOpened(true);}}>Ver las {filteredMatches.length} guías <ArrowRight size={17}/></button></div>}
               {!homeFeatured && !query.trim() && !showFavorites && category === "Todas" && allGuidesManuallyOpened && <div className="catalog-more"><span>Estás viendo el catálogo completo.</span><button type="button" onClick={() => {setShowAllGuides(false);setAllGuidesManuallyOpened(false);focusCatalog();}}>Volver a las recomendaciones</button></div>}
               <section
